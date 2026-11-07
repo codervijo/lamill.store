@@ -1,0 +1,10 @@
+---
+// Folded "L" mark
+const { class: className = "h-9 w-9" } = Astro.props;
+---
+<svg viewBox="0 0 40 40" class={className} aria-hidden="true">
+  <rect width="40" height="40" rx="9" class="fill-primary" />
+  <path d="M12 8h7v17h-7z" class="fill-primary-foreground" />
+  <path d="M12 25h7l-7 7z" class="fill-brand-light" />
+  <path d="M19 25h10v7H12z" class="fill-primary-foreground" opacity=".85" />
+</svg>

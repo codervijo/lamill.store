@@ -1,0 +1,41 @@
+---
+import { ExternalLink } from "lucide-react";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { etsyShops } from "../config/site";
+---
+<SiteLayout
+  title="Etsy Shops | LaMill Store"
+  description="Meet the LaMill family of Etsy shops — printables, stationery and gifts."
+  ogTitle="LaMill Etsy Shops"
+  ogDescription="Browse every LaMill brand on Etsy."
+>
+  <section class="mx-auto max-w-6xl px-4 pt-12">
+    <h1 class="font-display text-4xl font-semibold text-primary">Etsy Shops</h1>
+    <p class="mt-2 max-w-xl text-muted-foreground">Each LaMill brand has its own Etsy storefront. Take a look inside.</p>
+  </section>
+  <div class="mx-auto mt-8 grid max-w-6xl gap-8 px-4">
+    {etsyShops.map((s) => (
+      <article class="rounded-2xl border border-border bg-card p-6 shadow-card">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h2 class="font-display text-2xl font-semibold text-primary">{s.name}</h2>
+            <p class="mt-1 text-muted-foreground">{s.intro}</p>
+          </div>
+          {s.url && (
+            <a href={s.url} target="_blank" rel="noopener noreferrer" class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
+              Shop on Etsy <ExternalLink className="h-4 w-4" />
+            </a>
+          )}
+        </div>
+        <div class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {s.previews.map((p) => (
+            <figure>
+              <img src={p.image} alt={p.title} loading="lazy" class="aspect-square w-full rounded-xl object-cover" />
+              <figcaption class="mt-2 text-sm text-muted-foreground">{p.title}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</SiteLayout>

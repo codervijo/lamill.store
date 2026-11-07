@@ -1,0 +1,87 @@
+---
+import "../styles/global.css";
+import Logo from "../components/site/Logo.astro";
+import { MobileNav } from "../components/site/MobileNav";
+import { navLinks } from "../config/site";
+import { href, isActive } from "../lib/paths";
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+}
+
+const site = "https://lamill.store";
+const {
+  title = "LaMill Store",
+  description = "Kids’ activities, Etsy shops and physical goods from LaMill.",
+  ogTitle = title,
+  ogDescription = description,
+} = Astro.props;
+const currentPath = Astro.url.pathname;
+// Canonical MUST end in "/" (trailingSlash: 'always', CHECK_161).
+const canonical = `${site}${href(currentPath)}`;
+const hasHeadSlot = Astro.slots.has("head");
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {hasHeadSlot ? (
+      <slot name="head" />
+    ) : (
+      <>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonical} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:site_name" content="lamill.store" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={ogTitle} />
+        <meta name="twitter:description" content={ogDescription} />
+      </>
+    )}
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600&display=swap" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-background text-foreground">
+      <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+          <a href="/" class="flex items-center gap-2">
+            <Logo />
+            <span class="font-display text-xl font-semibold text-primary">LaMill Store</span>
+          </a>
+          <nav class="hidden gap-1 md:flex" aria-label="Main">
+            {navLinks.map((l) => (
+              <a
+                href={href(l.to)}
+                class:list={[
+                  "rounded-md px-3 py-2 text-sm font-medium hover:text-primary",
+                  isActive(currentPath, l.to) ? "text-primary bg-secondary" : "text-muted-foreground",
+                ]}
+              >
+                {l.label}
+              </a>
+            ))}
+          </nav>
+          <MobileNav client:load currentPath={currentPath} />
+        </div>
+      </header>
+      <main><slot /></main>
+      <footer class="mt-20 border-t border-border">
+        <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
+          <span>© {new Date().getFullYear()} LaMill Store · lamill.store</span>
+          <span>Made with care for curious families.</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

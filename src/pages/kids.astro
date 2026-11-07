@@ -1,0 +1,44 @@
+---
+import { Sparkles } from "lucide-react";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import { KidsCollections } from "../components/kids/KidsCollections";
+import { collections } from "../config/site";
+---
+<SiteLayout
+  title="Kids’ Activities — Free printables | LaMill Store"
+  description="Free coloring pages and mazes: Bible Adventures, Dinosaurs & Space, Trucks & Trains, and Travel & Quiet Time."
+  ogTitle="Free Kids’ Printables from LaMill"
+  ogDescription="Download free coloring pages and quiet-time activities."
+>
+  <div class="kids">
+    <section class="bg-kids-sky">
+      <div class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 md:grid-cols-2">
+        <div>
+          <h1 class="font-kids text-4xl font-bold text-primary sm:text-5xl">Kids’ Activities</h1>
+          <p class="mt-3 text-lg text-foreground">Free printables to color, solve and enjoy. Just tap download and print!</p>
+          <nav class="mt-5 flex flex-wrap gap-2" aria-label="Collections">
+            {collections.map((c) => (
+              <a href={`#${c.id}`} class="rounded-full bg-card px-4 py-2 font-kids font-semibold text-primary shadow-card">
+                {c.emoji} {c.title}
+              </a>
+            ))}
+          </nav>
+        </div>
+        <img src="/images/kids.jpg" alt="Dinosaur, rocket and train illustration" width={1024} height={768} class="rounded-3xl" />
+      </div>
+    </section>
+
+    <section class="mx-auto mt-10 max-w-6xl px-4">
+      <div class="flex flex-col gap-3 rounded-3xl border-2 border-dashed border-brand bg-card p-6 sm:flex-row sm:items-center">
+        <Sparkles className="h-8 w-8 shrink-0 text-brand" />
+        <div class="flex-1">
+          <h2 class="font-kids text-2xl font-bold text-primary">Put your child in the story</h2>
+          <p class="text-muted-foreground">Personalized pages with your child’s name and picture.</p>
+        </div>
+        <span class="self-start rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-primary sm:self-center">Coming soon</span>
+      </div>
+    </section>
+
+    <KidsCollections client:load />
+  </div>
+</SiteLayout>
