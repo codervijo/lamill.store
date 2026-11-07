@@ -7,7 +7,7 @@ export function KidsCollections() {
     <>
       {collections.map((c) => (
         <section key={c.id} id={c.id} className="mx-auto mt-12 max-w-6xl scroll-mt-24 px-4">
-          <h2 className="font-kids text-3xl font-bold text-primary">{c.emoji} {c.title}</h2>
+          <h2 className="flex items-center gap-2 font-kids text-3xl font-bold text-primary"><c.icon className="h-7 w-7 shrink-0" aria-hidden="true" /> {c.title}</h2>
           <p className="mt-1 text-muted-foreground">{c.blurb}</p>
           <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {c.printables.map((p) => (

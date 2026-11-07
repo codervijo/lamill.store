@@ -1,3 +1,5 @@
+import { BookOpen, type LucideIcon } from "lucide-react";
+
 /**
  * LaMill Store — single source of truth for storefronts, collections,
  * Etsy shops and physical goods. Edit this file to add or change content.
@@ -51,7 +53,7 @@ export type Collection = {
   id: string;
   title: string;
   blurb: string;
-  emoji: string;
+  icon: LucideIcon;
   printables: Printable[];
 };
 
@@ -60,7 +62,7 @@ export const collections: Collection[] = [
     id: "bible",
     title: "Bible Adventures",
     blurb: "Favorite Bible stories to color, starting with Noah’s Ark.",
-    emoji: "🌈",
+    icon: BookOpen,
     printables: [
       { id: "noah", title: "Noah’s Ark Coloring Page", preview: "/printables/noahs-ark.svg", file: "/printables/noahs-ark.svg" },
     ],
