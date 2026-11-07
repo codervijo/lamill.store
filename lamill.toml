@@ -1,0 +1,61 @@
+# lamill.toml — per-site config consumed by lamill (portfolio/ops) and rankmill (content/audits).
+# [content] = stable identity, authored by hand. [todo] = volatile work state.
+# rankmill output lives in sites/<domain>/rankmill-output/, not here.
+
+schema = "lamill-toml-v1"
+
+[deploy]
+platform = "cf-pages"
+production_branch = "main"
+custom_domains = [
+    "lamill.store",
+]
+
+[index]
+indexnow_key = "cbcb00a9fb68c8b7062d9e0632bdc92a"
+indexnow_enabled = true
+
+[stack]
+framework = "astro"
+
+# Tracked todos for lamill.store. status: "done" | "open".
+[[todo]]
+status = "open"
+priority = "high"
+task = "Fill in [content] block: tone"
+
+[[todo]]
+status = "open"
+priority = "medium"
+task = "Check SEO: GSC indexation + coverage (revisit ~2026-11-21)"
+
+[[todo]]
+status = "open"
+priority = "medium"
+task = "Verify GA4 is receiving data (check Realtime after first traffic)"
+
+[[todo]]
+status = "open"
+priority = "low"
+task = "Confirm GSC verification + sitemap submitted (re-run deploy if it timed out)"
+
+[content]
+# Declarative content identity for this site.
+# Authored by the human; consumed by rankmill to generate drafts and run audits.
+# Leave fields empty until you have a deliberate answer. Empty is better than wrong.
+site_type = "b2b"
+primary_keyword = "LaMill storefronts"
+secondary_keywords = [
+    "Kids' Activities",
+    "free coloring pages",
+    "puzzles and mazes",
+    "Etsy shop profiles",
+    "physical goods catalog",
+    "storefront case studies",
+    "branded storefront",
+]
+icp = "An owner-operated ecommerce business, such as an Etsy seller or small product brand, with existing products and some sales. The owner wants a branded storefront, better product pages, or a way to attract customers directly. Parents of children aged 5–9 are the first consumer cohort for testing the Kids’ Activities storefront."
+urgency_trigger = "Test free kids' downloads now to measure visitor attraction and retention before committing to paid storefront features."
+penalty = "Missing early engagement and referral data, which slows storefront growth and customer acquisition."
+tone = ""                 # e.g. "direct, technical, no fluff" or "warm, plainspoken"
+law = ""                  # statute or regulation if applicable, else empty
