@@ -13,10 +13,10 @@ not translate.
   `lovable-error-reporting.ts` — Lovable runtime error reporting + root
   `ErrorComponent` ("This page didn't load / Try again"). Dropped; static
   pages have no SSR error boundary. 404 page ported to `src/pages/404.astro`.
-- TODO: Kids email signup (`src/components/kids/KidsCollections.tsx`,
-  `EmailPrompt`) — source has no backend either; submit only shows
-  "Thanks!". Needs a real endpoint (e.g. a Cloudflare Worker / email
-  provider) before it collects anything.
+- REMOVED (2026-11-07): Kids email signup (`EmailPrompt` in
+  `src/components/kids/KidsCollections.tsx`) — it had no backend and only
+  showed "Thanks!", so it collected nothing. Re-add only with a real endpoint
+  (e.g. a Cloudflare Worker / email provider).
 
 Not ported (unused by any route): `genai/src/components/ui/*` (shadcn/ui
 library, ~45 files + Radix deps), `genai/src/hooks/use-mobile.tsx`,

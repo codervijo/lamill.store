@@ -6,10 +6,10 @@ import { collections, featuredPrintable, storefronts } from "../config/site";
 import { href } from "../lib/paths";
 
 const site = "https://lamill.store";
-const title = "LaMill Store — Kids’ activities, Etsy shops & goods";
-const description = "The home of LaMill: free kids’ printables, our Etsy shops and printed activity books.";
+const title = "LaMill Store — Free Bible activities for kids";
+const description = "Free printable Bible coloring pages for kids from LaMill. Our Etsy shop and physical goods store are coming soon.";
 const ogTitle = "LaMill Store";
-const ogDescription = "Free kids’ printables, LaMill Etsy shops and physical goods in one place.";
+const ogDescription = "Free printable Bible coloring pages for kids from LaMill.";
 // Canonical MUST match the served URL incl. trailing slash (trailingSlash:
 // 'always' in astro.config.mjs). A no-slash canonical 308-redirects and
 // breaks indexing (CHECK_161).
@@ -66,20 +66,30 @@ const p = col?.printables.find((x) => x.id === featuredPrintable.printableId);
       One home for everything we make.
     </h1>
     <p class="mx-auto mt-4 max-w-xl text-muted-foreground">
-      Pick a storefront below to explore free printables, our Etsy brands, or goods we ship ourselves.
+      Start with free Bible coloring pages for kids. Our Etsy shop and physical goods store are coming soon.
     </p>
   </section>
 
   <section class="mx-auto grid max-w-6xl gap-6 px-4 md:grid-cols-3">
     {storefronts.map((s, i) => (
       <article class="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-card">
-        <img src={s.image} alt="" width={1024} height={768} loading={i === 0 ? "eager" : "lazy"} class="aspect-[4/3] w-full object-cover" />
+        {s.image ? (
+          <img src={s.image} alt="" width={850} height={1100} loading={i === 0 ? "eager" : "lazy"} class="aspect-[4/3] w-full bg-white object-contain p-4" />
+        ) : (
+          <div class="flex aspect-[4/3] w-full items-center justify-center bg-secondary">
+            <span class="rounded-full bg-card px-4 py-2 text-sm font-semibold text-primary">Coming soon</span>
+          </div>
+        )}
         <div class="flex flex-1 flex-col p-6">
           <h2 class="font-display text-2xl font-semibold text-primary">{s.title}</h2>
           <p class="mt-2 flex-1 text-muted-foreground">{s.description}</p>
-          <a href={href(s.path)} class="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
-            {s.cta} <ArrowRight className="h-4 w-4" />
-          </a>
+          {s.status === "live" ? (
+            <a href={href(s.path)} class="mt-5 inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
+              {s.cta} <ArrowRight className="h-4 w-4" />
+            </a>
+          ) : (
+            <span class="mt-5 inline-flex items-center justify-center rounded-lg bg-muted px-5 py-3 font-medium text-muted-foreground">{s.cta}</span>
+          )}
         </div>
       </article>
     ))}

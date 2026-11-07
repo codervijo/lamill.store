@@ -9,14 +9,17 @@ const label: Record<Product["status"], string> = {
 };
 ---
 <SiteLayout
-  title="Physical Goods | LaMill Store"
-  description="Printed activity books and party kits made by LaMill."
+  title="Physical Goods — Coming soon | LaMill Store"
+  description="LaMill’s physical goods store is coming soon."
   ogTitle="LaMill Physical Goods"
-  ogDescription="Activity books and party kits, shipped directly from LaMill."
+  ogDescription="LaMill’s physical goods store is coming soon."
 >
   <section class="mx-auto max-w-6xl px-4 pt-12">
     <h1 class="font-display text-4xl font-semibold text-primary">Physical Goods</h1>
-    <p class="mt-2 max-w-xl text-muted-foreground">Things we make and ship ourselves. Online checkout is on the way.</p>
+    <p class="mt-2 max-w-xl text-muted-foreground">
+      {products.length ? "Things we make and ship ourselves. Online checkout is on the way." : "Our physical goods store is coming soon. In the meantime, enjoy our free Bible coloring pages for kids."}
+    </p>
+    {!products.length && <a href="/kids/" class="mt-5 inline-flex rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">Free kids’ activities</a>}
   </section>
   <div class="mx-auto mt-8 grid max-w-6xl gap-6 px-4 sm:grid-cols-2 lg:grid-cols-3">
     {products.map((p) => (
