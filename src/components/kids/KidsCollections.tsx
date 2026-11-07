@@ -1,5 +1,5 @@
 import { Download } from "lucide-react";
-import { collections, type Printable } from "../../config/site";
+import { collections, coloringPagePath, type Printable } from "../../config/site";
 
 /** Printable collections (island). */
 export function KidsCollections() {
@@ -23,11 +23,11 @@ export function KidsCollections() {
 function PrintableCard({ p }: { p: Printable }) {
   return (
     <article className="overflow-hidden rounded-3xl border-2 border-border bg-card">
-      <div className="bg-muted p-4">
-        <img src={p.preview} alt={`${p.title} preview`} loading="lazy" className={`mx-auto h-56 rounded-lg bg-card ${p.file ? "" : "opacity-40"}`} />
-      </div>
+      <a href={coloringPagePath(p)} className="block bg-muted p-4">
+        <img src={p.preview} alt={`${p.title} preview`} loading="lazy" width={p.width} height={p.height} className={`mx-auto h-56 w-auto rounded-lg bg-card ${p.file ? "" : "opacity-40"}`} />
+      </a>
       <div className="flex items-center justify-between gap-3 p-4">
-        <h3 className="font-kids text-lg font-bold">{p.title}</h3>
+        <h3 className="font-kids text-lg font-bold"><a href={coloringPagePath(p)} className="hover:underline">{p.title}</a></h3>
         {p.file ? (
           <a href={p.file} download className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
             <Download className="h-4 w-4" /> Free

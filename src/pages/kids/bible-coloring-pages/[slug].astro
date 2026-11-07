@@ -1,0 +1,60 @@
+---
+import { Download, Printer, ArrowLeft } from "lucide-react";
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import { collections, coloringPagePath, type Printable } from "../../../config/site";
+
+export function getStaticPaths() {
+  const all = collections.flatMap((c) => c.printables);
+  return all.map((p) => ({ params: { slug: p.slug }, props: { p, all } }));
+}
+
+const { p, all } = Astro.props as { p: Printable; all: Printable[] };
+const related = all.filter((x) => x.slug !== p.slug);
+---
+<SiteLayout
+  title={`${p.title} — Free Printable | LaMill Store`}
+  description={`Free printable ${p.title.toLowerCase()} for kids (${p.passage}). ${p.blurb} Download or print at home, no sign-up needed.`}
+  ogTitle={`${p.title} — Free Printable`}
+  ogDescription={`${p.blurb} Free to download and print.`}
+>
+  <div class="kids mx-auto max-w-4xl px-4 pt-8">
+    <a href="/kids/" class="print:hidden inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary">
+      <ArrowLeft className="h-4 w-4" /> All kids’ activities
+    </a>
+
+    <header class="print:hidden mt-4">
+      <h1 class="font-kids text-4xl font-bold text-primary">{p.title}</h1>
+      <p class="mt-2 text-muted-foreground">{p.blurb} <span class="font-semibold">Bible story: {p.passage}.</span></p>
+      {p.file && (
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href={p.file} download class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
+            <Download className="h-4 w-4" /> Download free
+          </a>
+          <button type="button" onclick="window.print()" class="inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
+            <Printer className="h-4 w-4" /> Print
+          </button>
+        </div>
+      )}
+    </header>
+
+    <figure class="mt-8 rounded-3xl border-2 border-border bg-white p-4 print:mt-0 print:border-0 print:p-0">
+      <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} class="mx-auto h-auto w-full max-w-2xl print:max-w-none" />
+    </figure>
+
+    {related.length > 0 && (
+      <section class="print:hidden mt-12">
+        <h2 class="font-kids text-2xl font-bold text-primary">More Bible coloring pages</h2>
+        <div class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {related.map((r) => (
+            <a href={coloringPagePath(r)} class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
+              <div class="bg-muted p-4">
+                <img src={r.preview} alt={`${r.title} preview`} loading="lazy" width={r.width} height={r.height} class="mx-auto h-48 w-auto rounded-lg bg-card" />
+              </div>
+              <p class="p-4 font-kids text-lg font-bold">{r.title}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</SiteLayout>

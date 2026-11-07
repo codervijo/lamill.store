@@ -44,10 +44,17 @@ export const storefronts: Storefront[] = [
 
 export type Printable = {
   id: string;
+  slug: string; // detail page: /kids/bible-coloring-pages/<slug>/
   title: string;
+  passage: string; // Bible reference the picture illustrates
+  blurb: string;
   preview: string; // image path shown as preview
   file?: string; // download path; omit to show "coming soon"
+  width: number;
+  height: number;
 };
+
+export const coloringPagePath = (p: Printable) => `/kids/bible-coloring-pages/${p.slug}/`;
 
 export type Collection = {
   id: string;
@@ -61,10 +68,24 @@ export const collections: Collection[] = [
   {
     id: "bible",
     title: "Bible Adventures",
-    blurb: "Favorite Bible stories to color, starting with Noah’s Ark.",
+    blurb: "Favorite Bible stories to color: Noah’s Ark, David and Goliath, Jonah and the Big Fish.",
     icon: BookOpen,
     printables: [
-      { id: "noah", title: "Noah’s Ark Coloring Page", preview: "/printables/noahs-ark.svg", file: "/printables/noahs-ark.svg" },
+      {
+        id: "noah", slug: "noahs-ark", title: "Noah’s Ark Coloring Page", passage: "Genesis 6–9",
+        blurb: "Noah’s ark floating on the water, with a rainbow overhead.",
+        preview: "/printables/noahs-ark.svg", file: "/printables/noahs-ark.svg", width: 850, height: 1100,
+      },
+      {
+        id: "david", slug: "david-and-goliath", title: "David and Goliath Coloring Page", passage: "1 Samuel 17",
+        blurb: "Young David with his sling, facing the giant Goliath.",
+        preview: "/printables/david-and-goliath.png", file: "/printables/david-and-goliath.png", width: 1152, height: 1536,
+      },
+      {
+        id: "jonah", slug: "jonah-and-the-big-fish", title: "Jonah and the Big Fish Coloring Page", passage: "Jonah 1–2",
+        blurb: "Jonah inside the big fish, deep under the sea.",
+        preview: "/printables/jonah-and-the-big-fish.png", file: "/printables/jonah-and-the-big-fish.png", width: 1152, height: 1536,
+      },
     ],
   },
 ];

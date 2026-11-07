@@ -53,7 +53,7 @@ const hasHeadSlot = Astro.slots.has("head");
   </head>
   <body>
     <div class="min-h-screen bg-background text-foreground">
-      <header class="sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
+      <header class="print:hidden sticky top-0 z-40 border-b border-border bg-background/90 backdrop-blur">
         <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <a href="/" class="flex items-center gap-2">
             <Logo />
@@ -76,7 +76,7 @@ const hasHeadSlot = Astro.slots.has("head");
         </div>
       </header>
       <main><slot /></main>
-      <footer class="mt-20 border-t border-border">
+      <footer class="print:hidden mt-20 border-t border-border">
         <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:flex-row sm:justify-between">
           <span>© {new Date().getFullYear()} LaMill Store · lamill.store</span>
           <span>Made with care for curious families.</span>
