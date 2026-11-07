@@ -96,7 +96,7 @@ docker exec -w /usr/src/app <name> make test proj=lamill.store
 
 *what content this site needs — page types, initial topics, format mix (long-form vs reference vs tool)*
 
-Link each storefront from the homepage and add a clear “Work with LaMill” path for ecommerce prospects. Publish free coloring pages, puzzles, and mazes across Bible and everyday themes. Add Etsy shop profiles, a physical goods catalog, and short case studies as results come in.
+Link each storefront from the homepage and add a clear “Work with LaMill” path for ecommerce prospects. Kids’ Activities is the first live storefront; the Etsy shop and physical goods store appear on the homepage as “coming soon.” Start by publishing free Bible-based coloring pages, puzzles, and mazes; everyday themes come later (phase not yet placed — see `docs/prd.md` § Open questions). Add Etsy shop profiles, a physical goods catalog, and short case studies as results come in.
 
 ### Post-deploy checklist (do these once after the first successful deploy)
 
