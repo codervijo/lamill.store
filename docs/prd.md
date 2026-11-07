@@ -53,7 +53,7 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | Version | Theme | Acceptance |
 |---|---|---|
 | v0 | scaffold | local builds, CF wrangler.jsonc + public/_headers in place, repo initialized |
-| v1 | storefront hub + free Bible-based Kids' Activities | homepage with Kids' Activities live and Etsy shop + physical goods store marked "coming soon"; "Work with LaMill" path for ecommerce prospects; free Bible-based coloring pages, puzzles, and mazes downloadable; deployed and indexed in GSC |
+| v1 | storefront hub + free Bible-based Kids' Activities | homepage with Kids' Activities live and Etsy shop + physical goods store marked "coming soon"; "Work with LaMill" path for ecommerce prospects; free Bible-based printables live as three hubs (coloring pages incl. Christmas set, word searches, mazes); deployed and indexed in GSC |
 
 ## 5. Phases
 
@@ -62,7 +62,15 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v0.A** | scaffolded | `portfolio new bootstrap` ran; standard files written; git initialized | ✅ |
 | **v1.A** | planning / decisions lock | lock v1 scope, storefront list, download-measurement method | planned |
 | **v1.B** | storefront hub | homepage: Kids' Activities live; Etsy shop + physical goods store marked "coming soon"; "Work with LaMill" path | planned |
-| **v1.C** | free Bible-based Kids' Activities | free Bible-based coloring pages, puzzles, mazes; deploy + GSC verify + sitemap submit | planned |
+| **v1.C** | Bible coloring pages hub | `/kids/bible-coloring-pages/`: free printable Bible coloring pages; sub-sets for Bible stories, verses, preschoolers, characters (King David, Ruth, Paul & Silas), books of the Bible; deploy + GSC verify + sitemap submit. Targets: "bible coloring pages to print" 5,400*/KD 5, "free bible coloring page" 1,300/KD 3, "bible story coloring sheets" 1,000/KD 4, "bible coloring pages for preschoolers" 1,000/KD 4 | planned |
+| **v1.D** | Christmas Bible coloring pages | nativity / Christmas-story coloring pages under the coloring hub; seasonal — must be live and indexed before mid-December. Target: "christmas bible coloring pages" 140/KD 8 | planned |
+| **v1.E** | Bible word search hub | `/kids/bible-word-search/`: free printable Bible word searches; kids' and books-of-the-Bible sets. Targets: "word search bible puzzles" 5,400*/KD 1–18 (cluster scores conflict), "bible word search puzzle free" 880/KD 9, "bible books word search" 720/KD 4, "children's bible word search puzzles" 260/KD 8 | planned |
+| **v1.F** | Bible mazes page | `/kids/bible-mazes/`: free printable Bible-story mazes. Targets: "maze bible" 390/KD 6, "bible maze" 140/KD 6, "bible mazes" 110/KD 5 | planned |
+
+Keyword figures: Serpstat via treg, Google US, pulled 2026-11-07; US monthly
+search volume / Serpstat difficulty (0–100). Single source, not cross-checked.
+\* Serpstat assigns one volume to a cluster of near-identical phrasings —
+one page target per cluster, volumes not additive.
 
 ## 6. Open questions
 
