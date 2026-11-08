@@ -47,6 +47,8 @@ const hasHeadSlot = Astro.slots.has("head");
         <meta name="twitter:description" content={ogDescription} />
       </>
     )}
+    {/* Additive head content (JSON-LD etc.). "head" REPLACES the default metadata; "extra-head" never does. */}
+    <slot name="extra-head" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600&display=swap" />

@@ -1,0 +1,173 @@
+---
+// v1.C hub — targets "bible coloring pages to print" (+ "free bible coloring page",
+// "bible story coloring sheets", "bible coloring pages for preschoolers").
+import { Printer, FileDown } from "lucide-react";
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import { collections, coloringPagePath, type Printable } from "../../../config/site";
+
+const site = "https://lamill.store";
+const url = `${site}/kids/bible-coloring-pages/`;
+
+// Sections in Bible order. Christmas = the "christmas" collection; the rest split by book.
+const OT_BOOKS = ["Genesis", "Exodus", "Numbers", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "Esther", "Daniel", "Jonah"];
+const isOT = (p: Printable) => OT_BOOKS.some((b) => p.passage.startsWith(b + " "));
+const christmas = collections.find((c) => c.id === "christmas")?.printables ?? [];
+const rest = collections.filter((c) => c.id !== "christmas").flatMap((c) => c.printables);
+const sections = [
+  { id: "old-testament", title: "Old Testament stories", intro: "From the first day of creation to Jonah’s three days inside the big fish.", pages: rest.filter(isOT) },
+  { id: "christmas", title: "The Christmas story", intro: "Six pages that tell the nativity in order, from the angel’s visit to Mary to the wise men’s gifts. Color one a day in the week before Christmas.", pages: christmas },
+  { id: "jesus", title: "Jesus’ life and teaching", intro: "Stories Jesus lived and stories he told.", pages: rest.filter((p) => !isOT(p)) },
+].filter((s) => s.pages.length > 0);
+const all = sections.flatMap((s) => s.pages);
+const total = all.length;
+const byId = (id: string) => all.find((p) => p.id === id);
+const easy = ["noah", "gabriel", "star"].map(byId).filter(Boolean) as Printable[];
+const busy = ["creation", "moses", "shepherds"].map(byId).filter(Boolean) as Printable[];
+const names = (ps: Printable[]) => ps.map((p) => p.title.replace(/ Coloring Page$/, ""));
+
+const faq = [
+  {
+    q: "Are these Bible coloring pages really free?",
+    a: "Yes. Every page can be printed or downloaded as a PDF for free, with no account and no email address.",
+  },
+  {
+    q: "What paper size do they print on?",
+    a: "The PDFs are US Letter (8.5 × 11 inches), one picture per page. On A4 paper, choose “Fit to page” in the print dialog and the picture shrinks slightly to fit.",
+  },
+  {
+    q: "Can I print them from my phone?",
+    a: "Yes. Open a coloring page and tap Print; your phone shows the printers it can reach (AirPrint on iPhone, the Print option on Android). If nothing appears, download the PDF and print it from the Files app or a computer.",
+  },
+  {
+    q: "Why did my printout come out on two pages or with a web address on it?",
+    a: "That happens when a browser prints the whole web page instead of just the picture. Use the Print button on the coloring page itself, or download the PDF, which is already laid out as a single page.",
+  },
+  {
+    q: "Which pages are best for preschoolers?",
+    a: `Pages with a few large shapes: ${names(easy).join(", ")}. Busier scenes such as ${names(busy).join(", ")} suit children who already color inside smaller spaces.`,
+  },
+];
+
+const ld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Kids’ Activities", item: `${site}/kids/` },
+      { "@type": "ListItem", position: 2, name: "Bible Coloring Pages", item: url },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Bible Coloring Pages to Print",
+    url,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: total,
+      itemListElement: all.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.title, url: `${site}${coloringPagePath(p)}` })),
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+---
+<SiteLayout
+  title="Free Bible Coloring Pages to Print (PDF) | LaMill Store"
+  description={`${total} Bible story coloring sheets, Creation to the wise men, each with its Bible passage. One page each, Letter PDF, no sign-up.`}
+  ogTitle="Bible Coloring Pages to Print"
+  ogDescription={`${total} free Bible story coloring sheets for kids, each one a single printable page.`}
+>
+  <script slot="extra-head" type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <div class="kids mx-auto max-w-6xl px-4 pt-8">
+    <nav aria-label="Breadcrumb" class="text-sm text-muted-foreground">
+      <a href="/kids/" class="hover:text-primary">Kids’ Activities</a> <span aria-hidden="true">›</span>
+      <span aria-current="page">Bible Coloring Pages</span>
+    </nav>
+
+    <header class="mt-4 max-w-3xl">
+      <h1 class="font-kids text-4xl font-bold text-primary sm:text-5xl">Bible Coloring Pages to Print</h1>
+      <p class="mt-4 text-lg">
+        Here are {total} free Bible story coloring sheets, in the order the stories appear in the Bible, from
+        Creation to the wise men. Each one prints on a single page: open it and tap <strong>Print</strong>, or
+        download the ready-made PDF. Every page names the Bible passage it comes from, so you can read the story
+        together before your child colors it. No sign-up, no email.
+      </p>
+      <nav class="mt-5 flex flex-wrap gap-2" aria-label="Sections">
+        {sections.map((s) => (
+          <a href={`#${s.id}`} class="rounded-full bg-card px-4 py-2 font-kids font-semibold text-primary shadow-card">{s.title}</a>
+        ))}
+      </nav>
+    </header>
+
+    {sections.map((s) => (
+      <section id={s.id} class="mt-12 scroll-mt-20">
+        <h2 class="font-kids text-3xl font-bold text-primary">{s.title}</h2>
+        <p class="mt-1 text-muted-foreground">{s.intro}</p>
+        <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {s.pages.map((p) => (
+            <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
+              <a href={coloringPagePath(p)} class="block p-3">
+                <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} loading="lazy" class="mx-auto h-56 w-auto" />
+                <span class="mt-2 block font-kids text-lg font-semibold leading-tight text-primary">{p.title.replace(/ Coloring Page$/, "")}</span>
+                <span class="block text-sm text-muted-foreground">{p.passage}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <section class="mt-14 max-w-3xl">
+      <h2 class="font-kids text-3xl font-bold text-primary">Getting a clean printout</h2>
+      <p class="mt-3">
+        Printing a coloring page straight from a web page often goes wrong: the picture splits across two sheets,
+        or the site’s menu and the web address print along with it. Each page here is set up to avoid that.
+      </p>
+      <ul class="mt-4 space-y-3">
+        <li class="flex gap-3"><Printer className="mt-1 h-5 w-5 shrink-0 text-brand" aria-hidden="true" />
+          <span><strong>The Print button</strong> sends only the picture to the printer, sized to fill one portrait page with a white margin. The print dialog that opens is your device’s own, so it lists the printers your phone or computer can reach.</span></li>
+        <li class="flex gap-3"><FileDown className="mt-1 h-5 w-5 shrink-0 text-brand" aria-hidden="true" />
+          <span><strong>The PDF</strong> is the fallback when the browser won’t cooperate. It is one US Letter page of crisp black lines on white, and it prints the same from any device.</span></li>
+      </ul>
+      <p class="mt-4">
+        Plain printer paper is fine for crayons and colored pencils. Markers can bleed through thin paper, so slip a
+        spare sheet underneath or print on heavier paper if your printer takes it.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="font-kids text-3xl font-bold text-primary">Choosing pages for preschoolers</h2>
+      <p class="mt-3">
+        The drawings are made for children about 5 to 9 years old, but several work well for younger kids. Small
+        hands do best with a few big shapes and lots of open space. Start with
+        {easy.map((p, i) => (<>{i > 0 && (i === easy.length - 1 ? ", and " : ", ")}<a href={coloringPagePath(p)} class="font-semibold text-primary underline">{p.title.replace(/ Coloring Page$/, "")}</a></>))}.
+        Save the busier scenes, like {names(busy).join(", ")}, for when they can stay inside smaller spaces, or
+        color those together.
+      </p>
+      <p class="mt-3">
+        A short routine helps the story stick: read the passage printed on the page (or tell it in your own words),
+        ask your child who is in the picture, then let them color while you talk about what happened next.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="font-kids text-3xl font-bold text-primary">Questions parents ask</h2>
+      <dl class="mt-4 space-y-5">
+        {faq.map((f) => (
+          <div>
+            <dt class="font-semibold">{f.q}</dt>
+            <dd class="mt-1 text-muted-foreground">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <p class="mt-12 max-w-3xl text-muted-foreground">
+      Looking for something besides coloring? See all of our <a href="/kids/" class="font-semibold text-primary underline">free kids’ activities</a>.
+    </p>
+  </div>
+</SiteLayout>
