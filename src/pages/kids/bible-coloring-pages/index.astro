@@ -107,6 +107,9 @@ const ld = [
       <section id={s.id} class="mt-12 scroll-mt-20">
         <h2 class="font-kids text-3xl font-bold text-primary">{s.title}</h2>
         <p class="mt-1 text-muted-foreground">{s.intro}</p>
+        {s.id === "christmas" && (
+          <p class="mt-1"><a href="/kids/bible-coloring-pages/christmas/" class="font-semibold text-primary underline">Read the Christmas story scene by scene, or print all six at once</a></p>
+        )}
         <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {s.pages.map((p) => (
             <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">

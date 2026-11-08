@@ -1,0 +1,150 @@
+---
+// v1.D — targets "christmas bible coloring pages".
+import { FileDown } from "lucide-react";
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import { collections, coloringPagePath } from "../../../config/site";
+
+const site = "https://lamill.store";
+const url = `${site}/kids/bible-coloring-pages/christmas/`;
+const setPdf = "/printables/christmas-story.pdf"; // scripts/printable_pdfs.py SETS
+const pages = collections.find((c) => c.id === "christmas")?.printables ?? [];
+
+// What happens in each scene, with the verses it comes from.
+const story: Record<string, { verses: string; text: string }> = {
+  gabriel: { verses: "Luke 1:26–38", text: "The angel Gabriel visits Mary in Nazareth and tells her she will have a son, and that she is to name him Jesus." },
+  bethlehem: { verses: "Luke 2:1–5", text: "The emperor orders everyone to be counted in their family’s hometown, so Joseph and Mary travel from Nazareth to Bethlehem." },
+  nativity: { verses: "Luke 2:6–7", text: "Jesus is born in Bethlehem. Mary wraps him in cloths and lays him in a manger, because there is no room for them in the inn." },
+  shepherds: { verses: "Luke 2:8–20", text: "Angels appear to shepherds in the fields at night with the good news. The shepherds hurry to Bethlehem and find the baby, just as the angels said." },
+  star: { verses: "Matthew 2:1–10", text: "Wise men from the east see a star and travel to find the newborn king. The star leads them to Bethlehem." },
+  gifts: { verses: "Matthew 2:11", text: "The wise men find the child with Mary in a house, bow down, and give him gold, frankincense and myrrh." },
+};
+
+const faq = [
+  {
+    q: "Can I print all six Christmas pages at once?",
+    a: "Yes. Download the Christmas story PDF: it has all six pages in story order, one picture per US Letter page, so one print job gives you the whole set.",
+  },
+  {
+    q: "Were the wise men at the manger?",
+    a: "Not according to Matthew. Matthew 2:11 says they found the child with Mary “in the house”, so the gift-giving page shows a house rather than the stable. Nativity scenes often place them together, but the Bible tells it as a later visit.",
+  },
+  {
+    q: "What ages are these for?",
+    a: "They are drawn for children about 5 to 9. The angel visiting Mary and the wise men following the star have the fewest shapes, so they work best for preschoolers.",
+  },
+  {
+    q: "Do I need to sign up or give an email?",
+    a: "No. Every page and the full-set PDF download directly.",
+  },
+];
+
+const ld = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Kids’ Activities", item: `${site}/kids/` },
+      { "@type": "ListItem", position: 2, name: "Bible Coloring Pages", item: `${site}/kids/bible-coloring-pages/` },
+      { "@type": "ListItem", position: 3, name: "Christmas", item: url },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Christmas Bible Coloring Pages",
+    url,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: pages.length,
+      itemListElement: pages.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p.title, url: `${site}${coloringPagePath(p)}` })),
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+---
+<SiteLayout
+  title="Christmas Bible Coloring Pages: The Nativity Story in 6 Pages"
+  description="Six free Christmas Bible coloring pages that tell the nativity in order, from Gabriel’s visit to the wise men’s gifts. Print one or all six as a PDF."
+  ogTitle="Christmas Bible Coloring Pages"
+  ogDescription="The nativity story in six free printable coloring pages, with the Bible verses for each scene."
+>
+  <script slot="extra-head" type="application/ld+json" set:html={JSON.stringify(ld)} />
+  <div class="kids mx-auto max-w-5xl px-4 pt-8">
+    <nav aria-label="Breadcrumb" class="text-sm text-muted-foreground">
+      <a href="/kids/" class="hover:text-primary">Kids’ Activities</a> <span aria-hidden="true">›</span>
+      <a href="/kids/bible-coloring-pages/" class="hover:text-primary">Bible Coloring Pages</a> <span aria-hidden="true">›</span>
+      <span aria-current="page">Christmas</span>
+    </nav>
+
+    <header class="mt-4 max-w-3xl">
+      <h1 class="font-kids text-4xl font-bold text-primary sm:text-5xl">Christmas Bible Coloring Pages</h1>
+      <p class="mt-4 text-lg">
+        These {pages.length} free coloring pages tell the Christmas story from the Bible in order: the angel’s
+        visit to Mary, the trip to Bethlehem, Jesus’ birth, the shepherds, and the wise men. Each scene comes with
+        the verses it is drawn from, so you can read the story aloud while your child colors. Print them one at a
+        time, or download all six in one PDF.
+      </p>
+      <a href={setPdf} download class="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:bg-primary/90">
+        <FileDown className="h-5 w-5" aria-hidden="true" /> Download all {pages.length} (PDF)
+      </a>
+    </header>
+
+    <section class="mt-12">
+      <h2 class="font-kids text-3xl font-bold text-primary">The story, one page at a time</h2>
+      <ol class="mt-6 space-y-6">
+        {pages.map((p, i) => (
+          <li class="grid gap-4 rounded-3xl border-2 border-border bg-card p-4 sm:grid-cols-[10rem_1fr] sm:items-center">
+            <a href={coloringPagePath(p)} class="block">
+              <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} loading="lazy" class="mx-auto h-56 w-auto sm:h-auto sm:w-40" />
+            </a>
+            <div>
+              <h3 class="font-kids text-2xl font-bold text-primary">
+                <span class="text-muted-foreground">{i + 1}.</span> <a href={coloringPagePath(p)} class="hover:underline">{p.title.replace(/ Coloring Page$/, "")}</a>
+              </h3>
+              {story[p.id] && (
+                <>
+                  <p class="mt-1">{story[p.id].text}</p>
+                  <p class="mt-1 text-sm font-semibold text-muted-foreground">Read: {story[p.id].verses}</p>
+                </>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="font-kids text-3xl font-bold text-primary">A page a day before Christmas</h2>
+      <p class="mt-3">
+        Six pages fit the six days from December 19 to Christmas Eve. Read that day’s verses at breakfast or bedtime,
+        color the scene, and tape the finished pages to a wall or door in order. By Christmas Eve your child has
+        the whole story laid out in their own colors, and can retell it from the pictures.
+      </p>
+      <p class="mt-3">
+        If you are short on time, the <a href={coloringPagePath(pages.find((p) => p.id === "nativity") ?? pages[0])} class="font-semibold text-primary underline">nativity page</a> on its own
+        covers the heart of the story.
+      </p>
+    </section>
+
+    <section class="mt-12 max-w-3xl">
+      <h2 class="font-kids text-3xl font-bold text-primary">Questions parents ask</h2>
+      <dl class="mt-4 space-y-5">
+        {faq.map((f) => (
+          <div>
+            <dt class="font-semibold">{f.q}</dt>
+            <dd class="mt-1 text-muted-foreground">{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+
+    <p class="mt-12 max-w-3xl text-muted-foreground">
+      More stories to color, from Creation to the Good Samaritan, are on the
+      <a href="/kids/bible-coloring-pages/" class="font-semibold text-primary underline">Bible coloring pages</a> page.
+    </p>
+  </div>
+</SiteLayout>
