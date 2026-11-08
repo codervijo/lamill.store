@@ -26,19 +26,25 @@ const related = all.filter((x) => x.slug !== p.slug);
       <h1 class="font-kids text-4xl font-bold text-primary">{p.title}</h1>
       <p class="mt-2 text-muted-foreground">{p.blurb} <span class="font-semibold">Bible story: {p.passage}.</span></p>
       {p.file && (
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a href={p.file} download class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
-            <Download className="h-4 w-4" /> Download free
-          </a>
-          <button type="button" onclick="window.print()" class="inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
-            <Printer className="h-4 w-4" /> Print
-          </button>
-        </div>
+        <>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <button type="button" data-print class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:bg-primary/90">
+              <Printer className="h-5 w-5" /> Print
+            </button>
+            <a href={p.pdf ?? p.file} download class="inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
+              <Download className="h-4 w-4" /> Download {p.pdf ? "PDF" : "free"}
+            </a>
+          </div>
+          <p class="mt-3 text-sm text-muted-foreground">
+            Prints on one page. If printing doesn’t work on your device, download the PDF and print that.
+            {p.pdf && <> Or <a href={p.file} download class="underline">download the picture</a>.</>}
+          </p>
+        </>
       )}
     </header>
 
-    <figure class="mt-8 rounded-3xl border-2 border-border bg-white p-4 print:mt-0 print:border-0 print:p-0">
-      <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} class="mx-auto h-auto w-full max-w-2xl print:max-w-none" />
+    <figure class="print-sheet mt-8 rounded-3xl border-2 border-border bg-white p-4">
+      <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} class="mx-auto h-auto w-full max-w-2xl" />
     </figure>
 
     {related.length > 0 && (
@@ -58,3 +64,34 @@ const related = all.filter((x) => x.slug !== p.slug);
     )}
   </div>
 </SiteLayout>
+
+<script>
+  // One tap → the device's own print dialog (a web page can't reach printers
+  // directly). Wait for the picture so the dialog never previews a blank page.
+  for (const btn of document.querySelectorAll<HTMLButtonElement>("[data-print]")) {
+    btn.addEventListener("click", async () => {
+      const img = document.querySelector<HTMLImageElement>(".print-sheet img");
+      if (img && !img.complete) await new Promise((r) => img.addEventListener("load", r, { once: true }));
+      window.print();
+    });
+  }
+</script>
+
+<style is:global>
+  /* Print-ready: exactly one portrait page, picture fitted inside safe margins
+     on Letter or A4. margin: 0 drops the browser's own header/footer (URL,
+     date); the sheet's padding is the real margin. Only this page loads it. */
+  @page { size: portrait; margin: 0; }
+  @media print {
+    html, body { background: #fff !important; margin: 0 !important; }
+    .min-h-screen { min-height: 0 !important; }
+    main, main > .kids { margin: 0 !important; padding: 0 !important; max-width: none !important; }
+    .print-sheet {
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 !important; padding: 0.4in !important; border: 0 !important; border-radius: 0 !important;
+      break-inside: avoid; page-break-inside: avoid;
+    }
+    /* 7.4 x 9.9 in fits inside both Letter (8.5x11) and A4 (8.27x11.69) minus 0.4 in margins. */
+    .print-sheet img { width: auto !important; height: auto !important; max-width: 7.4in !important; max-height: 9.9in !important; }
+  }
+</style>

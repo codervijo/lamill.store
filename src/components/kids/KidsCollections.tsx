@@ -29,7 +29,7 @@ function PrintableCard({ p }: { p: Printable }) {
       <div className="flex items-center justify-between gap-3 p-4">
         <h3 className="font-kids text-lg font-bold"><a href={coloringPagePath(p)} className="hover:underline">{p.title}</a></h3>
         {p.file ? (
-          <a href={p.file} download className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
+          <a href={p.pdf ?? p.file} download className="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">
             <Download className="h-4 w-4" /> Free
           </a>
         ) : (
