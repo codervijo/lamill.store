@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#3b82f6"/>
-  <text x="32" y="32"
-        font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="40" font-weight="700" fill="white"
-        text-anchor="middle" dominant-baseline="central">L</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <!-- LaMill Store folded "L" mark — same geometry as src/components/site/Logo.astro -->
+  <rect width="40" height="40" rx="9" fill="#132b5a"/>
+  <path d="M12 8h7v17h-7z" fill="#f8fafd"/>
+  <path d="M12 25h7l-7 7z" fill="#56acf0"/>
+  <path d="M19 25h10v7H12z" fill="#f8fafd" fill-opacity=".85"/>
 </svg>
