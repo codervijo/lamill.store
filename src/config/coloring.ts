@@ -41,6 +41,44 @@ export type ThemeCollection = {
 
 export const themeCollections: ThemeCollection[] = [
   {
+    id: "thanksgiving",
+    hub: "thanksgiving-coloring-pages",
+    keyword: "thanksgiving coloring pages",
+    h1: "Thanksgiving Coloring Pages",
+    metaTitle: "Thanksgiving Coloring Pages for Kids — Free Printable PDFs",
+    description: "Free printable Thanksgiving coloring pages for kids: a turkey, pumpkin pie, a cornucopia, a scarecrow, a thankful tree and a harvest table. Print one or all.",
+    nav: "Thanksgiving",
+    intro:
+      "Seven free Thanksgiving coloring pages, from a big friendly turkey for preschoolers to a full harvest table for older kids, plus a thankful tree with blank leaves to write on. Every page prints on one US Letter sheet, and one PDF holds the whole set, handy for the kids’ table. No sign-up, no email.",
+    sections: [
+      {
+        heading: "Something for every age at the table",
+        body:
+          "The turkey and the pumpkin pie are single, chunky shapes for the youngest guests. The cornucopia, the scarecrow with its crow and the thankful tree give five- to eight-year-olds more to fill. The harvest table and the autumn farm, with its barn, wagon and pumpkin patch, are detailed scenes that keep older kids busy while dinner cooks.",
+      },
+      {
+        heading: "Use the thankful tree as a family activity",
+        body:
+          "The thankful tree has large empty leaves. Before or after the meal, ask each person to write or draw one thing they are thankful for in a leaf, then color the rest. Younger children can draw a picture and have a grown-up write the word. Hang it up and you have a keepsake from the day.",
+      },
+    ],
+    faq: [
+      { q: "Are these Thanksgiving coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account and no email address." },
+      { q: "How do I print enough for the kids’ table?", a: "Download the full-set PDF and print as many copies as you need, or open one picture and set the number of copies in your print dialog." },
+      { q: "What is the thankful tree page for?", a: "Its leaves are left blank so children can write or draw what they are thankful for, then color the tree." },
+    ],
+    related: ["winter", "christmas"],
+    designs: [
+      { slug: "turkey", stem: "thanksgiving-turkey", title: "Happy Turkey", level: "easy", alt: "Smiling turkey with big round tail feathers" },
+      { slug: "pumpkin-pie", stem: "thanksgiving-pumpkin-pie", title: "Pumpkin Pie", level: "easy", alt: "Pumpkin pie topped with whipped cream on a plate" },
+      { slug: "cornucopia", stem: "thanksgiving-cornucopia", title: "Cornucopia", level: "medium", alt: "Cornucopia overflowing with pumpkins, apples, corn, squash and grapes" },
+      { slug: "scarecrow", stem: "thanksgiving-scarecrow", title: "Scarecrow and Crow", level: "medium", alt: "Friendly scarecrow in a straw hat with a crow, standing among pumpkins" },
+      { slug: "thankful-tree", stem: "thanksgiving-thankful-tree", title: "Thankful Tree", level: "medium", alt: "Tree with large blank leaves to write or draw in" },
+      { slug: "harvest-table", stem: "thanksgiving-harvest-table", title: "Harvest Dinner Table", level: "detailed", alt: "Long dinner table with a roast turkey, pies, pumpkins and candles" },
+      { slug: "fall-farm", stem: "thanksgiving-fall-farm", title: "Autumn Farm", level: "detailed", alt: "Autumn farm with a barn, hay bales, a wagon, a pumpkin patch and a turkey" },
+    ],
+  },
+  {
     id: "christmas",
     hub: "christmas-coloring-pages",
     keyword: "cute christmas coloring pages",
@@ -108,7 +146,7 @@ export const themeCollections: ThemeCollection[] = [
       { q: "Are these the same as your Christmas pages?", a: "No. These are general winter scenes with nothing Christmas-specific. Christmas pictures such as Santa’s sleigh and a gingerbread house are on our Christmas coloring pages." },
       { q: "What should my child use to color snow?", a: "Leave it white, or shade it lightly with light blue or gray so it stands out from the paper." },
     ],
-    related: ["christmas", "dog"],
+    related: ["christmas", "thanksgiving"],
     designs: [
       { slug: "mittens-and-hat", stem: "winter-mittens-and-hat", title: "Mittens and a Pom-Pom Hat", level: "easy", alt: "Pair of mittens and a knitted pom-pom hat with snowflakes" },
       { slug: "penguin-on-ice", stem: "winter-penguin-on-ice", title: "Penguin on the Ice", level: "easy", alt: "Happy penguin in a striped scarf standing on a block of ice" },

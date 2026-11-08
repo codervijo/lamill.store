@@ -607,6 +607,139 @@
     "name": "Moses parting the red sea",
     "width": 1024
   },
+  "thanksgiving-cornucopia": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Cornucopia overflowing with pumpkins, apples, corn and grapes",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-cornucopia.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Cornucopia overflowing with pumpkins, apples, corn and grapes",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving cornucopia",
+    "width": 1024
+  },
+  "thanksgiving-fall-farm": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Autumn farm with a barn, pumpkin patch, hay bales and a turkey",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-fall-farm.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Autumn farm with a barn, pumpkin patch, hay bales and a turkey",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving fall farm",
+    "width": 1024
+  },
+  "thanksgiving-harvest-table": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Harvest dinner table with a turkey, pies, pumpkins and candles",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-harvest-table.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Harvest dinner table with a turkey, pies, pumpkins and candles",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving harvest table",
+    "width": 1024
+  },
+  "thanksgiving-pumpkin-pie": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Pumpkin pie with whipped cream on a plate",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-pumpkin-pie.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Pumpkin pie with whipped cream on a plate",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving pumpkin pie",
+    "width": 1024
+  },
+  "thanksgiving-scarecrow": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Friendly scarecrow in a pumpkin field with a crow",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-scarecrow.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Friendly scarecrow in a pumpkin field with a crow",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving scarecrow",
+    "width": 1024
+  },
+  "thanksgiving-thankful-tree": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Tree with large blank leaves to fill in",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-thankful-tree.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Tree with large blank leaves to fill in",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving thankful tree",
+    "width": 1024
+  },
+  "thanksgiving-turkey": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Happy turkey with big round tail feathers",
+    "contentUrl": "https://lamill.store/printables/thanksgiving-turkey.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Happy turkey with big round tail feathers",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Thanksgiving turkey",
+    "width": 1024
+  },
   "the-angel-visits-mary": {
     "@context": "https://schema.org",
     "@type": "ImageObject",

@@ -109,3 +109,24 @@ Christmas ↔ general Christmas cross-linked.
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
 
+
+## 2026-11-08 — v2.B add-on: Thanksgiving hub (fast-ranking test)
+
+**Status:** active · **Review:** 2026-11-27 (day after Thanksgiving), then 2026-12-06 with the other v2.B hubs
+
+**Hypothesis:** a new Thanksgiving hub can earn impressions before the holiday
+(2026-11-26), even though the site isn't indexed yet. Added by the operator
+after the v2.A review had deferred it ("sometimes Google ranks pages fast").
+
+**KPI:** GSC impressions / clicks on `/kids/thanksgiving-coloring-pages/` and
+its 7 design pages between deploy and 2026-11-26. Any impressions before the
+holiday = test passed; zero = keep the page for 2027 and judge it then.
+
+**Target:** thanksgiving coloring pages — Ahrefs 27K / KD 2 (operator), Serpstat 40.5K / KD 17.
+**Gap seen (DataForSEO top 10, 2026-11-08):** mid-size blogs (DLTK, honeyandlime,
+thebestideasforkids, hessunacademy, Monday Mandala, a Yahoo listicle) plus a
+Pinterest pin; none sorts by age, and none has a blank "thankful tree" page.
+**URL:** `/kids/thanksgiving-coloring-pages/` (7 designs, print-all PDF).
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*
