@@ -2,6 +2,7 @@
 import { Download, Printer, ArrowLeft } from "lucide-react";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
 import { collections, coloringPagePath, type Printable } from "../../../config/site";
+import imageLd from "../../../data/images.jsonld.json";
 
 export function getStaticPaths() {
   const all = collections.flatMap((c) => c.printables);
@@ -10,6 +11,7 @@ export function getStaticPaths() {
 
 const { p, all } = Astro.props as { p: Printable; all: Printable[] };
 const related = all.filter((x) => x.slug !== p.slug);
+const ld = (imageLd as Record<string, unknown>)[p.slug]; // imagemill export (ImageObject + rights)
 ---
 <SiteLayout
   title={`${p.title} — Free Printable | LaMill Store`}
@@ -17,6 +19,7 @@ const related = all.filter((x) => x.slug !== p.slug);
   ogTitle={`${p.title} — Free Printable`}
   ogDescription={`${p.blurb} Free to download and print.`}
 >
+  {ld && <script slot="head" type="application/ld+json" set:html={JSON.stringify(ld)} />}
   <div class="kids mx-auto max-w-4xl px-4 pt-8">
     <a href="/kids/" class="print:hidden inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary">
       <ArrowLeft className="h-4 w-4" /> All kids’ activities

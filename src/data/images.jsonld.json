@@ -1,0 +1,116 @@
+{
+  "creation": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "God creates the world",
+    "contentUrl": "https://lamill.store/printables/creation.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of creation with sun, stars, plants, fish, birds and animals",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Creation",
+    "width": 1024
+  },
+  "daniel-and-the-lions": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Daniel in the lions' den",
+    "contentUrl": "https://lamill.store/printables/daniel-and-the-lions.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Daniel in the lions' den with calm lions and an angel",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Daniel and the lions",
+    "width": 1024
+  },
+  "jesus-calms-the-storm": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus calms the storm",
+    "contentUrl": "https://lamill.store/printables/jesus-calms-the-storm.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus calming the storm from a fishing boat",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus calms the storm",
+    "width": 1024
+  },
+  "moses-parting-the-red-sea": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Moses parts the Red Sea",
+    "contentUrl": "https://lamill.store/printables/moses-parting-the-red-sea.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Moses parting the Red Sea as people walk through",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Moses parting the red sea",
+    "width": 1024
+  },
+  "the-good-samaritan": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The Good Samaritan",
+    "contentUrl": "https://lamill.store/printables/the-good-samaritan.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the Good Samaritan helping a hurt traveler",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The good samaritan",
+    "width": 1024
+  },
+  "the-nativity": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The birth of Jesus",
+    "contentUrl": "https://lamill.store/printables/the-nativity.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the nativity: baby Jesus in the manger with Mary and Joseph",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The nativity",
+    "width": 1024
+  }
+}

@@ -73,9 +73,19 @@ export const collections: Collection[] = [
     icon: BookOpen,
     printables: [
       {
+        id: "creation", slug: "creation", title: "Creation Coloring Page", passage: "Genesis 1",
+        blurb: "God makes the world: a smiling sun and moon, stars, trees, flowers, fish, birds, an elephant, a giraffe and a rabbit.",
+        preview: "/printables/creation.webp", file: "/printables/creation.png", pdf: "/printables/creation.pdf", width: 1024, height: 1536,
+      },
+      {
         id: "noah", slug: "noahs-ark", title: "Noah’s Ark Coloring Page", passage: "Genesis 6–9",
         blurb: "Noah’s ark floating on the water, with a rainbow overhead.",
         preview: "/printables/noahs-ark.svg", file: "/printables/noahs-ark.svg", pdf: "/printables/noahs-ark.pdf", width: 850, height: 1100,
+      },
+      {
+        id: "moses", slug: "moses-parting-the-red-sea", title: "Moses Parting the Red Sea Coloring Page", passage: "Exodus 14",
+        blurb: "Moses raises his staff as the sea parts, and families walk through on dry ground with their sheep.",
+        preview: "/printables/moses-parting-the-red-sea.webp", file: "/printables/moses-parting-the-red-sea.png", pdf: "/printables/moses-parting-the-red-sea.pdf", width: 1024, height: 1536,
       },
       {
         id: "david", slug: "david-and-goliath", title: "David and Goliath Coloring Page", passage: "1 Samuel 17",
@@ -83,9 +93,29 @@ export const collections: Collection[] = [
         preview: "/printables/david-and-goliath.png", file: "/printables/david-and-goliath.png", pdf: "/printables/david-and-goliath.pdf", width: 1152, height: 1536,
       },
       {
+        id: "daniel", slug: "daniel-and-the-lions", title: "Daniel and the Lions Coloring Page", passage: "Daniel 6",
+        blurb: "Daniel sits safe in the lions’ den while the lions sleep and an angel stands beside him.",
+        preview: "/printables/daniel-and-the-lions.webp", file: "/printables/daniel-and-the-lions.png", pdf: "/printables/daniel-and-the-lions.pdf", width: 1024, height: 1536,
+      },
+      {
         id: "jonah", slug: "jonah-and-the-big-fish", title: "Jonah and the Big Fish Coloring Page", passage: "Jonah 1–2",
         blurb: "Jonah inside the big fish, deep under the sea.",
         preview: "/printables/jonah-and-the-big-fish.png", file: "/printables/jonah-and-the-big-fish.png", pdf: "/printables/jonah-and-the-big-fish.pdf", width: 1152, height: 1536,
+      },
+      {
+        id: "nativity", slug: "the-nativity", title: "Nativity Coloring Page", passage: "Luke 2",
+        blurb: "Baby Jesus in the manger with Mary and Joseph, a donkey, a lamb and the bright star above the stable.",
+        preview: "/printables/the-nativity.webp", file: "/printables/the-nativity.png", pdf: "/printables/the-nativity.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "storm", slug: "jesus-calms-the-storm", title: "Jesus Calms the Storm Coloring Page", passage: "Mark 4",
+        blurb: "Jesus stands in the fishing boat and calms the wind and waves while his friends hold on.",
+        preview: "/printables/jesus-calms-the-storm.webp", file: "/printables/jesus-calms-the-storm.png", pdf: "/printables/jesus-calms-the-storm.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "samaritan", slug: "the-good-samaritan", title: "Good Samaritan Coloring Page", passage: "Luke 10",
+        blurb: "A kind traveler kneels by the road to bandage a hurt man, with his donkey waiting nearby.",
+        preview: "/printables/the-good-samaritan.webp", file: "/printables/the-good-samaritan.png", pdf: "/printables/the-good-samaritan.pdf", width: 1024, height: 1536,
       },
     ],
   },

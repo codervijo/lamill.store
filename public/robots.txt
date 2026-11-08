@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lamill.store/sitemap-index.xml
+Sitemap: https://lamill.store/image-sitemap.xml
