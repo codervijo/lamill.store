@@ -75,6 +75,25 @@
     "name": "Moses parting the red sea",
     "width": 1024
   },
+  "the-angel-visits-mary": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The angel visits Mary",
+    "contentUrl": "https://lamill.store/printables/the-angel-visits-mary.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the angel Gabriel visiting Mary",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The angel visits mary",
+    "width": 1024
+  },
   "the-good-samaritan": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -94,6 +113,25 @@
     "name": "The good samaritan",
     "width": 1024
   },
+  "the-journey-to-bethlehem": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The journey to Bethlehem",
+    "contentUrl": "https://lamill.store/printables/the-journey-to-bethlehem.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Mary and Joseph traveling to Bethlehem with a donkey",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The journey to bethlehem",
+    "width": 1024
+  },
   "the-nativity": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -111,6 +149,63 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "The nativity",
+    "width": 1024
+  },
+  "the-shepherds-and-the-angels": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The shepherds and the angels",
+    "contentUrl": "https://lamill.store/printables/the-shepherds-and-the-angels.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of shepherds and sheep seeing the angels at night",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The shepherds and the angels",
+    "width": 1024
+  },
+  "the-wise-men-bring-gifts": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The wise men bring gifts",
+    "contentUrl": "https://lamill.store/printables/the-wise-men-bring-gifts.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the wise men bringing gifts to young Jesus",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The wise men bring gifts",
+    "width": 1024
+  },
+  "the-wise-men-follow-the-star": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The wise men follow the star",
+    "contentUrl": "https://lamill.store/printables/the-wise-men-follow-the-star.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of three wise men on camels following the star",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The wise men follow the star",
     "width": 1024
   }
 }

@@ -1,4 +1,4 @@
-import { BookOpen, type LucideIcon } from "lucide-react";
+import { BookOpen, Star, type LucideIcon } from "lucide-react";
 
 /**
  * LaMill Store — single source of truth for storefronts, collections,
@@ -69,7 +69,7 @@ export const collections: Collection[] = [
   {
     id: "bible",
     title: "Bible Adventures",
-    blurb: "Favorite Bible stories to color: Noah’s Ark, David and Goliath, Jonah and the Big Fish.",
+    blurb: "Favorite Bible stories to color, from Creation and Noah’s Ark to Daniel, Jonah and the Good Samaritan.",
     icon: BookOpen,
     printables: [
       {
@@ -103,11 +103,6 @@ export const collections: Collection[] = [
         preview: "/printables/jonah-and-the-big-fish.png", file: "/printables/jonah-and-the-big-fish.png", pdf: "/printables/jonah-and-the-big-fish.pdf", width: 1152, height: 1536,
       },
       {
-        id: "nativity", slug: "the-nativity", title: "Nativity Coloring Page", passage: "Luke 2",
-        blurb: "Baby Jesus in the manger with Mary and Joseph, a donkey, a lamb and the bright star above the stable.",
-        preview: "/printables/the-nativity.webp", file: "/printables/the-nativity.png", pdf: "/printables/the-nativity.pdf", width: 1024, height: 1536,
-      },
-      {
         id: "storm", slug: "jesus-calms-the-storm", title: "Jesus Calms the Storm Coloring Page", passage: "Mark 4",
         blurb: "Jesus stands in the fishing boat and calms the wind and waves while his friends hold on.",
         preview: "/printables/jesus-calms-the-storm.webp", file: "/printables/jesus-calms-the-storm.png", pdf: "/printables/jesus-calms-the-storm.pdf", width: 1024, height: 1536,
@@ -116,6 +111,44 @@ export const collections: Collection[] = [
         id: "samaritan", slug: "the-good-samaritan", title: "Good Samaritan Coloring Page", passage: "Luke 10",
         blurb: "A kind traveler kneels by the road to bandage a hurt man, with his donkey waiting nearby.",
         preview: "/printables/the-good-samaritan.webp", file: "/printables/the-good-samaritan.png", pdf: "/printables/the-good-samaritan.pdf", width: 1024, height: 1536,
+      },
+    ],
+  },
+  {
+    id: "christmas",
+    title: "The Christmas Story",
+    blurb: "Christmas Bible coloring pages, from the angel’s visit to Mary to the wise men’s gifts.",
+    icon: Star,
+    printables: [
+      {
+        id: "gabriel", slug: "the-angel-visits-mary", title: "The Angel Visits Mary Coloring Page", passage: "Luke 1",
+        blurb: "The angel Gabriel brings Mary good news as she kneels to listen.",
+        preview: "/printables/the-angel-visits-mary.webp", file: "/printables/the-angel-visits-mary.png", pdf: "/printables/the-angel-visits-mary.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "bethlehem", slug: "the-journey-to-bethlehem", title: "Journey to Bethlehem Coloring Page", passage: "Luke 2",
+        blurb: "Mary rides a donkey and Joseph walks beside her on the road to Bethlehem under the stars.",
+        preview: "/printables/the-journey-to-bethlehem.webp", file: "/printables/the-journey-to-bethlehem.png", pdf: "/printables/the-journey-to-bethlehem.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "nativity", slug: "the-nativity", title: "Nativity Coloring Page", passage: "Luke 2",
+        blurb: "Baby Jesus in the manger with Mary and Joseph, a donkey, a lamb and the bright star above the stable.",
+        preview: "/printables/the-nativity.webp", file: "/printables/the-nativity.png", pdf: "/printables/the-nativity.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "shepherds", slug: "the-shepherds-and-the-angels", title: "Shepherds and the Angels Coloring Page", passage: "Luke 2",
+        blurb: "Shepherds watching their sheep at night look up to see angels in the starry sky.",
+        preview: "/printables/the-shepherds-and-the-angels.webp", file: "/printables/the-shepherds-and-the-angels.png", pdf: "/printables/the-shepherds-and-the-angels.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "star", slug: "the-wise-men-follow-the-star", title: "Wise Men Follow the Star Coloring Page", passage: "Matthew 2",
+        blurb: "Three wise men ride their camels toward Bethlehem, following the bright star.",
+        preview: "/printables/the-wise-men-follow-the-star.webp", file: "/printables/the-wise-men-follow-the-star.png", pdf: "/printables/the-wise-men-follow-the-star.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "gifts", slug: "the-wise-men-bring-gifts", title: "Wise Men Bring Gifts Coloring Page", passage: "Matthew 2",
+        blurb: "The wise men kneel and offer their gifts to young Jesus on Mary’s lap.",
+        preview: "/printables/the-wise-men-bring-gifts.webp", file: "/printables/the-wise-men-bring-gifts.png", pdf: "/printables/the-wise-men-bring-gifts.pdf", width: 1024, height: 1536,
       },
     ],
   },
