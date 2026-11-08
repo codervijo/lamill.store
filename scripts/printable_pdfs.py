@@ -15,6 +15,7 @@ Re-run whenever a printable is added or changed; commit the PDFs.
 from __future__ import annotations
 
 import io
+import json
 import sys
 from pathlib import Path
 
@@ -25,16 +26,11 @@ PAGE_W, PAGE_H = int(8.5 * DPI), int(11 * DPI)
 MARGIN = int(0.4 * DPI)
 THRESHOLD = 160  # gray → black/white cutoff for line art
 
-# Multi-page "print the whole set" PDFs: output stem → printable stems, in order.
-SETS = {
-    "christmas-story": [
-        "the-angel-visits-mary", "the-journey-to-bethlehem", "the-nativity",
-        "the-shepherds-and-the-angels", "the-wise-men-follow-the-star", "the-wise-men-bring-gifts",
-    ],
-}
-
+# Multi-page "print the whole set" PDFs live in src/data/print-sets.json
+# (output stem → printable stems, in order); the site reads the same file.
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "public" / "printables"
+SETS = json.loads((ROOT / "src" / "data" / "print-sets.json").read_text())
 
 
 def load(path: Path) -> Image.Image:
@@ -69,6 +65,8 @@ def main() -> None:
         sys.exit(f"✗ no .png/.svg printables in {SRC}")
     for src in sources:
         out = src.with_suffix(".pdf")
+        if out.exists() and out.stat().st_mtime >= src.stat().st_mtime:
+            continue  # up to date — rewriting would only churn git
         to_page(load(src)).save(out, "PDF", resolution=DPI)
         print(f"✓ {out.relative_to(ROOT)}  ({out.stat().st_size // 1024} KB)", flush=True)
     by_stem = {p.stem: p for p in sources}
@@ -76,8 +74,10 @@ def main() -> None:
         missing = [x for x in stems if x not in by_stem]
         if missing:
             sys.exit(f"✗ set {name}: no printable for {', '.join(missing)}")
-        pages = [to_page(load(by_stem[x])) for x in stems]
         out = SRC / f"{name}.pdf"
+        if out.exists() and all(out.stat().st_mtime >= by_stem[x].stat().st_mtime for x in stems):
+            continue
+        pages = [to_page(load(by_stem[x])) for x in stems]
         pages[0].save(out, "PDF", resolution=DPI, save_all=True, append_images=pages[1:])
         print(f"✓ {out.relative_to(ROOT)}  ({len(pages)} pages, {out.stat().st_size // 1024} KB)", flush=True)
 

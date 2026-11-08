@@ -3,25 +3,27 @@ import { Sparkles } from "lucide-react";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import { KidsCollections } from "../components/kids/KidsCollections";
 import { collections } from "../config/site";
+import { themeCollections, hubPath, designFiles, DESIGN_W, DESIGN_H } from "../config/coloring";
 ---
 <SiteLayout
   title="Kids’ Activities — Free printables | LaMill Store"
-  description="Free printable Bible coloring pages for kids. Print at home, no sign-up needed."
+  description="Free printable coloring pages for kids: Bible stories, Christmas, winter, dogs, dragons and monster trucks. Print at home, no sign-up needed."
   ogTitle="Free Kids’ Printables from LaMill"
-  ogDescription="Download free Bible coloring pages for kids."
+  ogDescription="Free printable coloring pages for kids: Bible stories, Christmas, winter, dogs, dragons and monster trucks."
 >
   <div class="kids">
     <section class="bg-kids-sky">
       <div class="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 md:grid-cols-2">
         <div>
           <h1 class="font-kids text-4xl font-bold text-primary sm:text-5xl">Kids’ Activities</h1>
-          <p class="mt-3 text-lg text-foreground">Free Bible coloring pages for kids. Just tap download and print! Or browse <a href="/kids/bible-coloring-pages/" class="font-semibold text-primary underline">all Bible coloring pages by story</a>.</p>
+          <p class="mt-3 text-lg text-foreground">Free coloring pages for kids, from Bible stories to dragons and monster trucks. Just tap download and print! Or browse <a href="/kids/bible-coloring-pages/" class="font-semibold text-primary underline">all Bible coloring pages by story</a>.</p>
           <nav class="mt-5 flex flex-wrap gap-2" aria-label="Collections">
             {collections.map((c) => (
               <a href={`#${c.id}`} class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 font-kids font-semibold text-primary shadow-card">
                 <c.icon className="h-4 w-4" aria-hidden="true" /> {c.title}
               </a>
             ))}
+            <a href="#themes" class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 font-kids font-semibold text-primary shadow-card">By theme</a>
           </nav>
         </div>
         <img src="/printables/noahs-ark.svg" alt="Noah’s Ark coloring page" width={850} height={1100} class="mx-auto max-h-96 w-auto rounded-3xl bg-card p-4 shadow-card" />
@@ -37,6 +39,21 @@ import { collections } from "../config/site";
         </div>
         <span class="self-start rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-primary sm:self-center">Coming soon</span>
       </div>
+    </section>
+
+    <section id="themes" class="mx-auto mt-12 max-w-6xl scroll-mt-24 px-4">
+      <h2 class="font-kids text-3xl font-bold text-primary">Coloring pages by theme</h2>
+      <p class="mt-1 text-muted-foreground">Seven free pages in each set, from easy to detailed, with one PDF to print them all.</p>
+      <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        {themeCollections.map((c) => (
+          <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
+            <a href={hubPath(c)} class="block p-3">
+              <img src={designFiles(c.designs[1] ?? c.designs[0]).preview} alt={`${c.h1}: ${(c.designs[1] ?? c.designs[0]).alt}`} width={DESIGN_W} height={DESIGN_H} loading="lazy" class="mx-auto h-auto w-full" />
+              <span class="mt-2 block font-kids text-lg font-semibold leading-tight text-primary">{c.h1}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
 
     <KidsCollections client:load />

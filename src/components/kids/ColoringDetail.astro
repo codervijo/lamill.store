@@ -1,0 +1,113 @@
+---
+// One coloring page: large preview, one-tap Print, PDF download, related pages.
+// Shared by the Bible detail pages and the v2 theme detail pages so both print
+// identically (one portrait page, no site chrome, no browser header/footer).
+import { Download, Printer, ArrowLeft } from "lucide-react";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+
+export type RelatedCard = { href: string; title: string; preview: string; width: number; height: number };
+
+interface Props {
+  metaTitle: string;
+  description: string;
+  ogTitle: string;
+  ogDescription: string;
+  h1: string;
+  backHref: string;
+  backLabel: string;
+  preview: string;
+  file?: string; // full picture download
+  pdf?: string;
+  alt: string;
+  width: number;
+  height: number;
+  ld?: unknown[]; // JSON-LD objects
+  relatedTitle: string;
+  related: RelatedCard[];
+}
+
+const p = Astro.props;
+const lds = (p.ld ?? []).filter(Boolean);
+---
+<SiteLayout title={p.metaTitle} description={p.description} ogTitle={p.ogTitle} ogDescription={p.ogDescription}>
+  {lds.length > 0 && <script slot="extra-head" type="application/ld+json" set:html={JSON.stringify(lds.length === 1 ? lds[0] : lds)} />}
+  <div class="kids mx-auto max-w-4xl px-4 pt-8">
+    <a href={p.backHref} class="print:hidden inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary">
+      <ArrowLeft className="h-4 w-4" /> {p.backLabel}
+    </a>
+
+    <header class="print:hidden mt-4">
+      <h1 class="font-kids text-4xl font-bold text-primary">{p.h1}</h1>
+      <p class="mt-2 text-muted-foreground"><slot name="context" /></p>
+      {p.file && (
+        <>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <button type="button" data-print class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:bg-primary/90">
+              <Printer className="h-5 w-5" /> Print
+            </button>
+            <a href={p.pdf ?? p.file} download class="inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
+              <Download className="h-4 w-4" /> Download {p.pdf ? "PDF" : "free"}
+            </a>
+          </div>
+          <p class="mt-3 text-sm text-muted-foreground">
+            Prints on one page. If printing doesn’t work on your device, download the PDF and print that.
+            {p.pdf && <> Or <a href={p.file} download class="underline">download the picture</a>.</>}
+          </p>
+        </>
+      )}
+    </header>
+
+    <figure class="print-sheet mt-8 rounded-3xl border-2 border-border bg-white p-4">
+      <img src={p.preview} alt={p.alt} width={p.width} height={p.height} class="mx-auto h-auto w-full max-w-2xl" />
+    </figure>
+
+    <slot />
+
+    {p.related.length > 0 && (
+      <section class="print:hidden mt-12">
+        <h2 class="font-kids text-2xl font-bold text-primary">{p.relatedTitle}</h2>
+        <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {p.related.map((r) => (
+            <a href={r.href} class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
+              <div class="bg-muted p-3">
+                <img src={r.preview} alt={`${r.title} preview`} loading="lazy" width={r.width} height={r.height} class="mx-auto h-40 w-auto rounded-lg bg-card sm:h-48" />
+              </div>
+              <p class="p-3 font-kids text-base font-bold leading-tight sm:text-lg">{r.title}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</SiteLayout>
+
+<script>
+  // One tap → the device's own print dialog (a web page can't reach printers
+  // directly). Wait for the picture so the dialog never previews a blank page.
+  for (const btn of document.querySelectorAll<HTMLButtonElement>("[data-print]")) {
+    btn.addEventListener("click", async () => {
+      const img = document.querySelector<HTMLImageElement>(".print-sheet img");
+      if (img && !img.complete) await new Promise((r) => img.addEventListener("load", r, { once: true }));
+      window.print();
+    });
+  }
+</script>
+
+<style is:global>
+  /* Print-ready: exactly one portrait page, picture fitted inside safe margins
+     on Letter or A4. margin: 0 drops the browser's own header/footer (URL,
+     date); the sheet's padding is the real margin. Only detail pages load it. */
+  @page { size: portrait; margin: 0; }
+  @media print {
+    html, body { background: #fff !important; margin: 0 !important; }
+    .min-h-screen { min-height: 0 !important; }
+    main, main > .kids { margin: 0 !important; padding: 0 !important; max-width: none !important; }
+    .print-sheet {
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 !important; padding: 0.4in !important; border: 0 !important; border-radius: 0 !important;
+      break-inside: avoid; page-break-inside: avoid;
+    }
+    /* 7.4 x 9.9 in fits inside both Letter (8.5x11) and A4 (8.27x11.69) minus 0.4 in margins. */
+    .print-sheet img { width: auto !important; height: auto !important; max-width: 7.4in !important; max-height: 9.9in !important; }
+  }
+</style>

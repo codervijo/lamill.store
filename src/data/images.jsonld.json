@@ -1,4 +1,137 @@
 {
+  "christmas-christmas-village": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Snowy Christmas village street with decorated houses",
+    "contentUrl": "https://lamill.store/printables/christmas-christmas-village.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Snowy Christmas village street with decorated houses",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas christmas village",
+    "width": 1024
+  },
+  "christmas-cookies-for-santa": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Plate of Christmas cookies and a glass of milk",
+    "contentUrl": "https://lamill.store/printables/christmas-cookies-for-santa.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Plate of Christmas cookies and a glass of milk",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas cookies for santa",
+    "width": 1024
+  },
+  "christmas-gingerbread-house": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Gingerbread house with candy decorations and gingerbread people",
+    "contentUrl": "https://lamill.store/printables/christmas-gingerbread-house.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Gingerbread house with candy decorations and gingerbread people",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas gingerbread house",
+    "width": 1024
+  },
+  "christmas-reindeer-with-bells": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Young reindeer with a jingle-bell collar in the snow",
+    "contentUrl": "https://lamill.store/printables/christmas-reindeer-with-bells.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Young reindeer with a jingle-bell collar in the snow",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas reindeer with bells",
+    "width": 1024
+  },
+  "christmas-santa-sleigh": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Santa's sleigh and reindeer flying over snowy rooftops",
+    "contentUrl": "https://lamill.store/printables/christmas-santa-sleigh.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Santa's sleigh and reindeer flying over snowy rooftops",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas santa sleigh",
+    "width": 1024
+  },
+  "christmas-snowman": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Smiling snowman with a scarf, top hat and candy cane",
+    "contentUrl": "https://lamill.store/printables/christmas-snowman.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Smiling snowman with a scarf, top hat and candy cane",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas snowman",
+    "width": 1024
+  },
+  "christmas-tree-and-presents": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Christmas tree with a star and wrapped presents",
+    "contentUrl": "https://lamill.store/printables/christmas-tree-and-presents.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Christmas tree with a star and wrapped presents",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Christmas tree and presents",
+    "width": 1024
+  },
   "creation": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -37,6 +170,272 @@
     "name": "Daniel and the lions",
     "width": 1024
   },
+  "dog-dalmatian-puppy": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Spotted dalmatian puppy with a bone",
+    "contentUrl": "https://lamill.store/printables/dog-dalmatian-puppy.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Spotted dalmatian puppy with a bone",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog dalmatian puppy",
+    "width": 1024
+  },
+  "dog-dog-and-child-at-park": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Child playing fetch with a dog in the park",
+    "contentUrl": "https://lamill.store/printables/dog-dog-and-child-at-park.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Child playing fetch with a dog in the park",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog dog and child at park",
+    "width": 1024
+  },
+  "dog-dog-bath-time": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Small dog in a bubble bath with a rubber duck",
+    "contentUrl": "https://lamill.store/printables/dog-dog-bath-time.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Small dog in a bubble bath with a rubber duck",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog dog bath time",
+    "width": 1024
+  },
+  "dog-puppies-and-doghouse": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Three puppies playing by a doghouse",
+    "contentUrl": "https://lamill.store/printables/dog-puppies-and-doghouse.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Three puppies playing by a doghouse",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog puppies and doghouse",
+    "width": 1024
+  },
+  "dog-puppy-in-leaves": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Golden retriever puppy jumping in autumn leaves",
+    "contentUrl": "https://lamill.store/printables/dog-puppy-in-leaves.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Golden retriever puppy jumping in autumn leaves",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog puppy in leaves",
+    "width": 1024
+  },
+  "dog-puppy-with-ball": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Happy puppy sitting next to a ball",
+    "contentUrl": "https://lamill.store/printables/dog-puppy-with-ball.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Happy puppy sitting next to a ball",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog puppy with ball",
+    "width": 1024
+  },
+  "dog-sleepy-puppy": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Sleepy puppy curled up in a dog bed",
+    "contentUrl": "https://lamill.store/printables/dog-sleepy-puppy.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Sleepy puppy curled up in a dog bed",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dog sleepy puppy",
+    "width": 1024
+  },
+  "dragon-baby-dragon-hatching": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Cute baby dragon hatching from an egg",
+    "contentUrl": "https://lamill.store/printables/dragon-baby-dragon-hatching.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Cute baby dragon hatching from an egg",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon baby dragon hatching",
+    "width": 1024
+  },
+  "dragon-dragon-campfire": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Dragon toasting marshmallows at a campfire",
+    "contentUrl": "https://lamill.store/printables/dragon-dragon-campfire.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Dragon toasting marshmallows at a campfire",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon dragon campfire",
+    "width": 1024
+  },
+  "dragon-dragon-on-castle": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Friendly dragon curled around a castle tower",
+    "contentUrl": "https://lamill.store/printables/dragon-dragon-on-castle.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Friendly dragon curled around a castle tower",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon dragon on castle",
+    "width": 1024
+  },
+  "dragon-dragon-over-mountains": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Dragon flying over mountains and a forest",
+    "contentUrl": "https://lamill.store/printables/dragon-dragon-over-mountains.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Dragon flying over mountains and a forest",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon dragon over mountains",
+    "width": 1024
+  },
+  "dragon-dragon-reading-a-book": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Friendly dragon reading a book under a tree",
+    "contentUrl": "https://lamill.store/printables/dragon-dragon-reading-a-book.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Friendly dragon reading a book under a tree",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon dragon reading a book",
+    "width": 1024
+  },
+  "dragon-dragon-treasure": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Dragon sleeping on a pile of treasure in a cave",
+    "contentUrl": "https://lamill.store/printables/dragon-dragon-treasure.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Dragon sleeping on a pile of treasure in a cave",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon dragon treasure",
+    "width": 1024
+  },
+  "dragon-dragon-with-flowers": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Small friendly dragon holding flowers",
+    "contentUrl": "https://lamill.store/printables/dragon-dragon-with-flowers.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Small friendly dragon holding flowers",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Dragon dragon with flowers",
+    "width": 1024
+  },
   "jesus-calms-the-storm": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -54,6 +453,139 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "Jesus calms the storm",
+    "width": 1024
+  },
+  "monster-truck-big-wheels-truck": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Simple monster truck with very big wheels",
+    "contentUrl": "https://lamill.store/printables/monster-truck-big-wheels-truck.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Simple monster truck with very big wheels",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck big wheels truck",
+    "width": 1024
+  },
+  "monster-truck-dinosaur-truck": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Dinosaur-shaped monster truck",
+    "contentUrl": "https://lamill.store/printables/monster-truck-dinosaur-truck.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Dinosaur-shaped monster truck",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck dinosaur truck",
+    "width": 1024
+  },
+  "monster-truck-flame-truck": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Monster truck with roof lights and flame shapes",
+    "contentUrl": "https://lamill.store/printables/monster-truck-flame-truck.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Monster truck with roof lights and flame shapes",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck flame truck",
+    "width": 1024
+  },
+  "monster-truck-mud-race": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Two monster trucks racing through mud",
+    "contentUrl": "https://lamill.store/printables/monster-truck-mud-race.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Two monster trucks racing through mud",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck mud race",
+    "width": 1024
+  },
+  "monster-truck-stadium-wheelie": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Monster truck doing a wheelie in a stadium",
+    "contentUrl": "https://lamill.store/printables/monster-truck-stadium-wheelie.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Monster truck doing a wheelie in a stadium",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck stadium wheelie",
+    "width": 1024
+  },
+  "monster-truck-truck-jump": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Monster truck jumping off a dirt ramp",
+    "contentUrl": "https://lamill.store/printables/monster-truck-truck-jump.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Monster truck jumping off a dirt ramp",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck truck jump",
+    "width": 1024
+  },
+  "monster-truck-truck-over-cars": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Monster truck driving over old cars in an arena",
+    "contentUrl": "https://lamill.store/printables/monster-truck-truck-over-cars.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Monster truck driving over old cars in an arena",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Monster truck truck over cars",
     "width": 1024
   },
   "moses-parting-the-red-sea": {
@@ -206,6 +738,139 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "The wise men follow the star",
+    "width": 1024
+  },
+  "winter-cabin-in-the-snow": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Log cabin in snowy woods with a deer and a rabbit",
+    "contentUrl": "https://lamill.store/printables/winter-cabin-in-the-snow.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Log cabin in snowy woods with a deer and a rabbit",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter cabin in the snow",
+    "width": 1024
+  },
+  "winter-hot-cocoa": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Mug of hot cocoa with marshmallows by a frosty window",
+    "contentUrl": "https://lamill.store/printables/winter-hot-cocoa.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Mug of hot cocoa with marshmallows by a frosty window",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter hot cocoa",
+    "width": 1024
+  },
+  "winter-ice-skating-pond": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Children ice skating on a frozen pond",
+    "contentUrl": "https://lamill.store/printables/winter-ice-skating-pond.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Children ice skating on a frozen pond",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter ice skating pond",
+    "width": 1024
+  },
+  "winter-kids-sledding": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Two children sledding down a snowy hill",
+    "contentUrl": "https://lamill.store/printables/winter-kids-sledding.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Two children sledding down a snowy hill",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter kids sledding",
+    "width": 1024
+  },
+  "winter-mittens-and-hat": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Mittens and a pom-pom hat with snowflakes",
+    "contentUrl": "https://lamill.store/printables/winter-mittens-and-hat.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Mittens and a pom-pom hat with snowflakes",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter mittens and hat",
+    "width": 1024
+  },
+  "winter-penguin-on-ice": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Happy penguin in a scarf standing on ice",
+    "contentUrl": "https://lamill.store/printables/winter-penguin-on-ice.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Happy penguin in a scarf standing on ice",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter penguin on ice",
+    "width": 1024
+  },
+  "winter-polar-bear-and-cub": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Polar bear mother and cub walking in the snow",
+    "contentUrl": "https://lamill.store/printables/winter-polar-bear-and-cub.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Polar bear mother and cub walking in the snow",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Winter polar bear and cub",
     "width": 1024
   }
 }

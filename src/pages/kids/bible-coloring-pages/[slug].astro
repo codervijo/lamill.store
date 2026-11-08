@@ -1,6 +1,5 @@
 ---
-import { Download, Printer, ArrowLeft } from "lucide-react";
-import SiteLayout from "../../../layouts/SiteLayout.astro";
+import ColoringDetail from "../../../components/kids/ColoringDetail.astro";
 import { collections, coloringPagePath, type Printable } from "../../../config/site";
 import imageLd from "../../../data/images.jsonld.json";
 
@@ -13,88 +12,23 @@ const { p, all } = Astro.props as { p: Printable; all: Printable[] };
 const related = all.filter((x) => x.slug !== p.slug);
 const ld = (imageLd as Record<string, unknown>)[p.slug]; // imagemill export (ImageObject + rights)
 ---
-<SiteLayout
-  title={`${p.title} — Free Printable | LaMill Store`}
+<ColoringDetail
+  metaTitle={`${p.title} — Free Printable | LaMill Store`}
   description={`Free printable ${p.title.toLowerCase()} for kids (${p.passage}). ${p.blurb} Download or print at home, no sign-up needed.`}
   ogTitle={`${p.title} — Free Printable`}
   ogDescription={`${p.blurb} Free to download and print.`}
+  h1={p.title}
+  backHref="/kids/bible-coloring-pages/"
+  backLabel="All Bible coloring pages"
+  preview={p.preview}
+  file={p.file}
+  pdf={p.pdf}
+  alt={`${p.title}: ${p.blurb}`}
+  width={p.width}
+  height={p.height}
+  ld={ld ? [ld] : []}
+  relatedTitle="More Bible coloring pages"
+  related={related.map((r) => ({ href: coloringPagePath(r), title: r.title, preview: r.preview, width: r.width, height: r.height }))}
 >
-  {ld && <script slot="extra-head" type="application/ld+json" set:html={JSON.stringify(ld)} />}
-  <div class="kids mx-auto max-w-4xl px-4 pt-8">
-    <a href="/kids/bible-coloring-pages/" class="print:hidden inline-flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary">
-      <ArrowLeft className="h-4 w-4" /> All Bible coloring pages
-    </a>
-
-    <header class="print:hidden mt-4">
-      <h1 class="font-kids text-4xl font-bold text-primary">{p.title}</h1>
-      <p class="mt-2 text-muted-foreground">{p.blurb} <span class="font-semibold">Bible story: {p.passage}.</span></p>
-      {p.file && (
-        <>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <button type="button" data-print class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:bg-primary/90">
-              <Printer className="h-5 w-5" /> Print
-            </button>
-            <a href={p.pdf ?? p.file} download class="inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
-              <Download className="h-4 w-4" /> Download {p.pdf ? "PDF" : "free"}
-            </a>
-          </div>
-          <p class="mt-3 text-sm text-muted-foreground">
-            Prints on one page. If printing doesn’t work on your device, download the PDF and print that.
-            {p.pdf && <> Or <a href={p.file} download class="underline">download the picture</a>.</>}
-          </p>
-        </>
-      )}
-    </header>
-
-    <figure class="print-sheet mt-8 rounded-3xl border-2 border-border bg-white p-4">
-      <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} class="mx-auto h-auto w-full max-w-2xl" />
-    </figure>
-
-    {related.length > 0 && (
-      <section class="print:hidden mt-12">
-        <h2 class="font-kids text-2xl font-bold text-primary">More Bible coloring pages</h2>
-        <div class="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {related.map((r) => (
-            <a href={coloringPagePath(r)} class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
-              <div class="bg-muted p-4">
-                <img src={r.preview} alt={`${r.title} preview`} loading="lazy" width={r.width} height={r.height} class="mx-auto h-48 w-auto rounded-lg bg-card" />
-              </div>
-              <p class="p-4 font-kids text-lg font-bold">{r.title}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
-  </div>
-</SiteLayout>
-
-<script>
-  // One tap → the device's own print dialog (a web page can't reach printers
-  // directly). Wait for the picture so the dialog never previews a blank page.
-  for (const btn of document.querySelectorAll<HTMLButtonElement>("[data-print]")) {
-    btn.addEventListener("click", async () => {
-      const img = document.querySelector<HTMLImageElement>(".print-sheet img");
-      if (img && !img.complete) await new Promise((r) => img.addEventListener("load", r, { once: true }));
-      window.print();
-    });
-  }
-</script>
-
-<style is:global>
-  /* Print-ready: exactly one portrait page, picture fitted inside safe margins
-     on Letter or A4. margin: 0 drops the browser's own header/footer (URL,
-     date); the sheet's padding is the real margin. Only this page loads it. */
-  @page { size: portrait; margin: 0; }
-  @media print {
-    html, body { background: #fff !important; margin: 0 !important; }
-    .min-h-screen { min-height: 0 !important; }
-    main, main > .kids { margin: 0 !important; padding: 0 !important; max-width: none !important; }
-    .print-sheet {
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 !important; padding: 0.4in !important; border: 0 !important; border-radius: 0 !important;
-      break-inside: avoid; page-break-inside: avoid;
-    }
-    /* 7.4 x 9.9 in fits inside both Letter (8.5x11) and A4 (8.27x11.69) minus 0.4 in margins. */
-    .print-sheet img { width: auto !important; height: auto !important; max-width: 7.4in !important; max-height: 9.9in !important; }
-  }
-</style>
+  <Fragment slot="context">{p.blurb} <span class="font-semibold">Bible story: {p.passage}.</span></Fragment>
+</ColoringDetail>

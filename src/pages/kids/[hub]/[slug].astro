@@ -1,0 +1,49 @@
+---
+// v2.B — one theme coloring page (dogs, dragons, winter, …).
+import ColoringDetail from "../../../components/kids/ColoringDetail.astro";
+import { themeCollections, designPath, designFiles, hubPath, LEVELS, DESIGN_W, DESIGN_H, type ThemeCollection, type Design } from "../../../config/coloring";
+import imageLd from "../../../data/images.jsonld.json";
+
+export function getStaticPaths() {
+  return themeCollections.flatMap((c) => c.designs.map((d) => ({ params: { hub: c.hub, slug: d.slug }, props: { c, d } })));
+}
+
+const { c, d } = Astro.props as { c: ThemeCollection; d: Design };
+const site = "https://lamill.store";
+const f = designFiles(d);
+const lvl = LEVELS[d.level];
+const others = c.designs.filter((x) => x.slug !== d.slug);
+// Same level first, then the rest — the most likely "next page" for this child.
+const related = [...others.filter((x) => x.level === d.level), ...others.filter((x) => x.level !== d.level)].slice(0, 6);
+const breadcrumb = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Kids’ Activities", item: `${site}/kids/` },
+    { "@type": "ListItem", position: 2, name: c.h1, item: `${site}${hubPath(c)}` },
+    { "@type": "ListItem", position: 3, name: d.title, item: `${site}${designPath(c, d)}` },
+  ],
+};
+---
+<ColoringDetail
+  metaTitle={`${d.title} Coloring Page — Free Printable PDF`}
+  description={`Free printable ${d.title.toLowerCase()} coloring page (${lvl.label.toLowerCase()}, ${lvl.ages}). ${d.alt}. Print on one page or download the PDF, no sign-up.`}
+  ogTitle={`${d.title} Coloring Page`}
+  ogDescription={`${d.alt}. Free to print.`}
+  h1={`${d.title} Coloring Page`}
+  backHref={hubPath(c)}
+  backLabel={`All ${c.nav} coloring pages`}
+  preview={f.preview}
+  file={f.png}
+  pdf={f.pdf}
+  alt={`Coloring page: ${d.alt}`}
+  width={DESIGN_W}
+  height={DESIGN_H}
+  ld={[(imageLd as Record<string, unknown>)[d.stem], breadcrumb]}
+  relatedTitle={`More ${c.nav} coloring pages`}
+  related={related.map((r) => ({ href: designPath(c, r), title: r.title, preview: designFiles(r).preview, width: DESIGN_W, height: DESIGN_H }))}
+>
+  <Fragment slot="context">
+    {d.alt}. <span class="font-semibold">{lvl.label} ({lvl.ages}).</span>
+  </Fragment>
+</ColoringDetail>
