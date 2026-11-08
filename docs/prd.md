@@ -55,6 +55,7 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | v0 | scaffold | local builds, CF wrangler.jsonc + public/_headers in place, repo initialized |
 | v1 | storefront hub + free Bible-based Kids' Activities | homepage with Kids' Activities live and Etsy shop + physical goods store marked "coming soon"; free Bible-based printables live as three hubs (coloring pages incl. Christmas set, word searches, mazes); deployed and indexed in GSC |
 | v2 | Work with LaMill | "Work with LaMill" path for ecommerce prospects (moved from v1.B, operator 2026-11-07); scope not yet planned |
+| v3 | connect the dots + mazes | free printable connect-the-dots and maze hubs targeting the general (non-Bible) printable searches; Bible-themed vs everyday scope decided in v3.A (operator 2026-11-08) |
 
 ## 5. Phases
 
@@ -69,9 +70,13 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v1.F** | Bible mazes page | `/kids/bible-mazes/`: free printable Bible-story mazes. Targets: "maze bible" 390/KD 6, "bible maze" 140/KD 6, "bible mazes" 110/KD 5 | planned |
 | **v1.G** | Bible coloring sub-sets | sub-pages under `/kids/bible-coloring-pages/`: verses (verse text set in code, not generated), preschoolers (simpler pages), characters (King David, Ruth, Paul & Silas), books of the Bible | planned |
 | **v1.H** | download measurement | measure downloads, repeat visits, referrals; method not yet chosen (Cloudflare Web Analytics + beacon, GA4, or GSC only) | planned |
+| **v3.A** | planning / decisions lock | decide theme scope (Bible-themed puzzles aimed at general searches, or everyday themes — v1 non-goal), puzzle generation method, URL structure | planned |
+| **v3.B** | connect the dots hub | `/kids/connect-the-dots/`: free printable dot-to-dot pages, Christmas set. Targets: "dot to dot worksheets" / "dot to dot to print" / "dot-to-dot printables" 9,900*/KD 14–18, "connect the dots print" 9,900/KD 28, "connect the dots coloring pages" 1,300/KD 31, "christmas connect the dots" 590/KD 13; Bible-specific ("bible dot to dot" 70/KD 8) too small to target alone | planned |
+| **v3.C** | printable mazes hub | `/kids/mazes/`: free printable mazes, kindergarten and difficult sets; links v1.F Bible mazes. Targets: "printable mazes" 6,600/KD 18, "free printable mazes for kindergarten" 2,400/KD 27, "maze printable kindergarten" 1,900/KD 24, "difficult printable maze" 880/KD 11–13 | planned |
 
 Keyword figures: Serpstat via treg, Google US, pulled 2026-11-07; US monthly
 search volume / Serpstat difficulty (0–100). Single source, not cross-checked.
+v3 figures pulled 2026-11-08, same source; Serpstat KD-1 rows flagged as misspellings were dropped.
 \* Serpstat assigns one volume to a cluster of near-identical phrasings —
 one page target per cluster, volumes not additive.
 
