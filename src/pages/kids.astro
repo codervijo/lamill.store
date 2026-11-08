@@ -3,7 +3,10 @@ import { Sparkles } from "lucide-react";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import { KidsCollections } from "../components/kids/KidsCollections";
 import { collections } from "../config/site";
-import { themeCollections, hubPath, designFiles, DESIGN_W, DESIGN_H } from "../config/coloring";
+import { themeCollections, hubPath, designFiles, byId, featuredThemeId, DESIGN_W, DESIGN_H } from "../config/coloring";
+
+const featured = byId(featuredThemeId) ?? themeCollections[0];
+const hero = featured.designs[0];
 ---
 <SiteLayout
   title="Kids’ Activities — Free printables | LaMill Store"
@@ -26,7 +29,9 @@ import { themeCollections, hubPath, designFiles, DESIGN_W, DESIGN_H } from "../c
             <a href="#themes" class="inline-flex items-center gap-2 rounded-full bg-card px-4 py-2 font-kids font-semibold text-primary shadow-card">By theme</a>
           </nav>
         </div>
-        <img src="/printables/noahs-ark.svg" alt="Noah’s Ark coloring page" width={850} height={1100} class="mx-auto max-h-96 w-auto rounded-3xl bg-card p-4 shadow-card" />
+        <a href={hubPath(featured)} class="mx-auto block">
+          <img src={designFiles(hero).preview} alt={`${featured.h1}: ${hero.alt}`} width={DESIGN_W} height={DESIGN_H} class="mx-auto max-h-96 w-auto rounded-3xl bg-card p-4 shadow-card" />
+        </a>
       </div>
     </section>
 
