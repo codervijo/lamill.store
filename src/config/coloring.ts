@@ -281,6 +281,9 @@ export const designFiles = (d: Design) => ({
   pdf: `/printables/${d.stem}.pdf`,
 });
 export const setPdf = (c: ThemeCollection) => `/printables/${c.hub}.pdf`;
+/** Seasonal collection featured on the homepage — rotate: Thanksgiving until
+ *  Nov 26, then Christmas, then Winter after Dec 25. */
+export const featuredThemeId = "thanksgiving";
 export const byId = (id: string) => themeCollections.find((c) => c.id === id);
 // imagemill exports 1024×1536 portrait for every design.
 export const DESIGN_W = 1024;

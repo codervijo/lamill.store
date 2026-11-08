@@ -2,21 +2,26 @@
 // src/pages/index.astro
 import { Download, ArrowRight } from "lucide-react";
 import SiteLayout from "../layouts/SiteLayout.astro";
-import { collections, featuredPrintable, storefronts } from "../config/site";
+import { storefronts } from "../config/site";
+import { themeCollections, featuredThemeId, byId, hubPath, designFiles, setPdf, DESIGN_W, DESIGN_H } from "../config/coloring";
 import { href } from "../lib/paths";
 
 const site = "https://lamill.store";
-const title = "LaMill Store — Free Bible activities for kids";
-const description = "Free printable Bible coloring pages for kids from LaMill. Our Etsy shop and physical goods store are coming soon.";
+const title = "LaMill Store — Free Printable Coloring Pages for Kids";
+const description = "Free printable coloring pages for kids: Bible stories, Thanksgiving, Christmas, winter, dogs, dragons and monster trucks. Print at home, no sign-up.";
 const ogTitle = "LaMill Store";
-const ogDescription = "Free printable Bible coloring pages for kids from LaMill.";
+const ogDescription = "Free printable coloring pages for kids from LaMill: Bible stories, holidays, animals, dragons and monster trucks.";
 // Canonical MUST match the served URL incl. trailing slash (trailingSlash:
 // 'always' in astro.config.mjs). A no-slash canonical 308-redirects and
 // breaks indexing (CHECK_161).
 const canonical = `${site}/`;
 
-const col = collections.find((c) => c.id === featuredPrintable.collectionId);
-const p = col?.printables.find((x) => x.id === featuredPrintable.printableId);
+const featured = byId(featuredThemeId);
+const browse = [
+  { href: "/kids/bible-coloring-pages/", label: "Bible stories" },
+  { href: "/kids/bible-coloring-pages/christmas/", label: "The Christmas story" },
+  ...themeCollections.map((c) => ({ href: hubPath(c), label: c.nav })),
+];
 ---
 <SiteLayout>
   <Fragment slot="head">
@@ -66,7 +71,7 @@ const p = col?.printables.find((x) => x.id === featuredPrintable.printableId);
       One home for everything we make.
     </h1>
     <p class="mx-auto mt-4 max-w-xl text-muted-foreground">
-      Start with free Bible coloring pages for kids. Our Etsy shop and physical goods store are coming soon.
+      Start with free printable coloring pages for kids: Bible stories, holidays, puppies, dragons and monster trucks, each from easy to detailed. Our Etsy shop and physical goods store are coming soon.
     </p>
   </section>
 
@@ -95,24 +100,33 @@ const p = col?.printables.find((x) => x.id === featuredPrintable.printableId);
     ))}
   </section>
 
-  {p?.file && (
+  {featured && (
     <section class="mx-auto mt-16 max-w-6xl px-4">
       <div class="grid items-center gap-6 rounded-2xl bg-secondary p-6 sm:grid-cols-[200px_1fr] sm:p-8">
-        <img src={p.preview} alt={`${p.title} preview`} class="mx-auto w-40 rounded-lg border border-border bg-card sm:w-full" />
+        <img src={designFiles(featured.designs[0]).preview} alt={`Coloring page: ${featured.designs[0].alt}`} width={DESIGN_W} height={DESIGN_H} class="mx-auto w-40 rounded-lg border border-border bg-card sm:w-full" />
         <div>
-          <p class="text-sm font-semibold uppercase tracking-widest text-brand">Free printable</p>
-          <h2 class="mt-2 font-display text-3xl font-semibold text-primary">{p.title}</h2>
-          <p class="mt-2 text-muted-foreground">Print at home and color. No sign-up needed.</p>
+          <p class="text-sm font-semibold uppercase tracking-widest text-brand">Free printables</p>
+          <h2 class="mt-2 font-display text-3xl font-semibold text-primary">{featured.h1}</h2>
+          <p class="mt-2 text-muted-foreground">{featured.designs.length} pages from easy to detailed, one PDF for the whole set. No sign-up needed.</p>
           <div class="mt-5 flex flex-wrap gap-3">
-            <a href={p.pdf ?? p.file} download class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
-              <Download className="h-4 w-4" /> Download free
+            <a href={setPdf(featured)} download class="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 font-medium text-primary-foreground hover:bg-primary/90">
+              <Download className="h-4 w-4" /> Download all {featured.designs.length} (PDF)
             </a>
-            <a href="/kids/" class="inline-flex items-center rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
-              More printables
+            <a href={hubPath(featured)} class="inline-flex items-center rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
+              See the pages
             </a>
           </div>
         </div>
       </div>
     </section>
   )}
+
+  <section class="mx-auto mt-12 max-w-6xl px-4">
+    <h2 class="font-display text-2xl font-semibold text-primary">Browse coloring pages</h2>
+    <ul class="mt-4 flex flex-wrap gap-3">
+      {browse.map((b) => (
+        <li><a href={b.href} class="inline-block rounded-full border-2 border-border bg-card px-4 py-2 font-semibold text-primary hover:border-primary">{b.label}</a></li>
+      ))}
+    </ul>
+  </section>
 </SiteLayout>

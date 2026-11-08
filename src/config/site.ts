@@ -19,9 +19,9 @@ export const storefronts: Storefront[] = [
     id: "kids",
     title: "Kids’ Activities",
     path: "/kids",
-    description: "Free printable coloring pages for kids: Bible stories, Christmas, winter, dogs, dragons and monster trucks. Print at home, no sign-up needed.",
+    description: "Free printable coloring pages for kids: Bible stories, Thanksgiving, Christmas, winter, dogs, dragons and monster trucks. Print at home, no sign-up needed.",
     cta: "Explore activities",
-    image: "/printables/noahs-ark.svg",
+    image: "/printables/dog-puppy-with-ball.webp",
     status: "live",
   },
   {
@@ -153,9 +153,6 @@ export const collections: Collection[] = [
     ],
   },
 ];
-
-/** The free printable featured on the homepage. */
-export const featuredPrintable = { collectionId: "bible", printableId: "noah" };
 
 export type EtsyShop = {
   id: string;
