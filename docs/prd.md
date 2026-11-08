@@ -1,8 +1,8 @@
 ---
 project: lamill.store
 prd_version: 1
-project_version: v0.A
-status: planned
+project_version: v1.C
+status: in progress
 owner: Vijo
 last_updated: 2026-11-07
 ---
@@ -60,10 +60,10 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | Phase | Theme | Features | Status |
 |---|---|---|---|
 | **v0.A** | scaffolded | `portfolio new bootstrap` ran; standard files written; git initialized | ✅ |
-| **v1.A** | planning / decisions lock | lock v1 scope, storefront list, download-measurement method | planned |
-| **v1.B** | storefront hub | homepage: Kids' Activities live; Etsy shop + physical goods store marked "coming soon"; "Work with LaMill" path | planned |
-| **v1.C** | Bible coloring pages hub | `/kids/bible-coloring-pages/`: free printable Bible coloring pages; sub-sets for Bible stories, verses, preschoolers, characters (King David, Ruth, Paul & Silas), books of the Bible; each coloring page gets its own page at `/kids/bible-coloring-pages/<story>/` (large view, Download + Print, Bible passage, related pages); print UX: (1) print-ready output — `@page` CSS so each page prints as exactly one page, portrait, fitted to Letter/A4, safe margins, no browser headers/footers or site chrome; (2) one-tap Print button straight to the OS print dialog with the image already filling the page; (3) print-ready PDF download as fallback (more reliable than images, esp. on phones) — a web page cannot discover or configure network printers, so the OS print dialog (AirPrint / Mopria / Windows / ChromeOS driverless discovery) is the printer path; printables are portrait, full-resolution download (needs imagemill portrait-size + original-export support first — operator chose option B, 2026-11-07); deploy + GSC verify + sitemap submit. Targets: "bible coloring pages to print" 5,400*/KD 5, "free bible coloring page" 1,300/KD 3, "bible story coloring sheets" 1,000/KD 4, "bible coloring pages for preschoolers" 1,000/KD 4 | planned |
-| **v1.D** | Christmas Bible coloring pages | nativity / Christmas-story coloring pages under the coloring hub; seasonal — must be live and indexed before mid-December. Target: "christmas bible coloring pages" 140/KD 8 | planned |
+| **v1.A** | planning / decisions lock | lock v1 scope, storefront list, download-measurement method | 🚧 in progress |
+| **v1.B** | storefront hub | homepage: Kids' Activities live; Etsy shop + physical goods store marked "coming soon"; "Work with LaMill" path | 🚧 in progress |
+| **v1.C** | Bible coloring pages hub | `/kids/bible-coloring-pages/`: free printable Bible coloring pages; sub-sets for Bible stories, verses, preschoolers, characters (King David, Ruth, Paul & Silas), books of the Bible; each coloring page gets its own page at `/kids/bible-coloring-pages/<story>/` (large view, Download + Print, Bible passage, related pages); print UX: (1) print-ready output — `@page` CSS so each page prints as exactly one page, portrait, fitted to Letter/A4, safe margins, no browser headers/footers or site chrome; (2) one-tap Print button straight to the OS print dialog with the image already filling the page; (3) print-ready PDF download as fallback (more reliable than images, esp. on phones) — a web page cannot discover or configure network printers, so the OS print dialog (AirPrint / Mopria / Windows / ChromeOS driverless discovery) is the printer path; printables are portrait, full-resolution download (needs imagemill portrait-size + original-export support first — operator chose option B, 2026-11-07); deploy + GSC verify + sitemap submit. Targets: "bible coloring pages to print" 5,400*/KD 5, "free bible coloring page" 1,300/KD 3, "bible story coloring sheets" 1,000/KD 4, "bible coloring pages for preschoolers" 1,000/KD 4 | 🚧 in progress |
+| **v1.D** | Christmas Bible coloring pages | nativity / Christmas-story coloring pages under the coloring hub; seasonal — must be live and indexed before mid-December. Target: "christmas bible coloring pages" 140/KD 8 | 🚧 in progress |
 | **v1.E** | Bible word search hub | `/kids/bible-word-search/`: free printable Bible word searches; kids' and books-of-the-Bible sets. Targets: "word search bible puzzles" 5,400*/KD 1–18 (cluster scores conflict), "bible word search puzzle free" 880/KD 9, "bible books word search" 720/KD 4, "children's bible word search puzzles" 260/KD 8 | planned |
 | **v1.F** | Bible mazes page | `/kids/bible-mazes/`: free printable Bible-story mazes. Targets: "maze bible" 390/KD 6, "bible maze" 140/KD 6, "bible mazes" 110/KD 5 | planned |
 
