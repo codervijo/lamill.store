@@ -436,6 +436,44 @@
     "name": "Dragon dragon with flowers",
     "width": 1024
   },
+  "jesus-as-a-boy-in-the-temple": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The boy Jesus in the temple",
+    "contentUrl": "https://lamill.store/printables/jesus-as-a-boy-in-the-temple.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the boy Jesus talking with teachers in the temple",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus as a boy in the temple",
+    "width": 1024
+  },
+  "jesus-blesses-the-children": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus blesses the children",
+    "contentUrl": "https://lamill.store/printables/jesus-blesses-the-children.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus blessing the children gathered around him",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus blesses the children",
+    "width": 1024
+  },
   "jesus-calms-the-storm": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -453,6 +491,101 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "Jesus calms the storm",
+    "width": 1024
+  },
+  "jesus-feeds-the-five-thousand": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus feeds the five thousand",
+    "contentUrl": "https://lamill.store/printables/jesus-feeds-the-five-thousand.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus feeding the crowd with bread and fish",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus feeds the five thousand",
+    "width": 1024
+  },
+  "jesus-heals-the-blind-man": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus heals the blind man",
+    "contentUrl": "https://lamill.store/printables/jesus-heals-the-blind-man.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus healing a blind man by the road",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus heals the blind man",
+    "width": 1024
+  },
+  "jesus-is-baptized": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus is baptized",
+    "contentUrl": "https://lamill.store/printables/jesus-is-baptized.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus being baptized in the Jordan River with a dove above",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus is baptized",
+    "width": 1024
+  },
+  "jesus-rides-into-jerusalem": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus rides into Jerusalem",
+    "contentUrl": "https://lamill.store/printables/jesus-rides-into-jerusalem.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus riding a donkey into Jerusalem with palm branches",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus rides into jerusalem",
+    "width": 1024
+  },
+  "jesus-walks-on-water": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus walks on water",
+    "contentUrl": "https://lamill.store/printables/jesus-walks-on-water.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Jesus walking on water and reaching out to Peter",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Jesus walks on water",
     "width": 1024
   },
   "monster-truck-big-wheels-truck": {
@@ -759,6 +892,25 @@
     "name": "The angel visits mary",
     "width": 1024
   },
+  "the-empty-tomb": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The empty tomb on Easter morning",
+    "contentUrl": "https://lamill.store/printables/the-empty-tomb.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the empty tomb with an angel and the stone rolled away",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The empty tomb",
+    "width": 1024
+  },
   "the-good-samaritan": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -795,6 +947,25 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "The journey to bethlehem",
+    "width": 1024
+  },
+  "the-lost-sheep": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "The parable of the lost sheep",
+    "contentUrl": "https://lamill.store/printables/the-lost-sheep.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of the shepherd carrying the lost sheep home",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "The lost sheep",
     "width": 1024
   },
   "the-nativity": {
@@ -1004,6 +1175,25 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "Winter polar bear and cub",
+    "width": 1024
+  },
+  "zacchaeus-in-the-tree": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Zacchaeus climbs a tree to see Jesus",
+    "contentUrl": "https://lamill.store/printables/zacchaeus-in-the-tree.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page of Zacchaeus in the tree looking down at Jesus",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Zacchaeus in the tree",
     "width": 1024
   }
 }

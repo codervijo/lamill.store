@@ -16,7 +16,7 @@ const rest = collections.filter((c) => c.id !== "christmas").flatMap((c) => c.pr
 const sections = [
   { id: "old-testament", title: "Old Testament stories", intro: "From the first day of creation to Jonah’s three days inside the big fish.", pages: rest.filter(isOT) },
   { id: "christmas", title: "The Christmas story", intro: "Six pages that tell the nativity in order, from the angel’s visit to Mary to the wise men’s gifts. Color one a day in the week before Christmas.", pages: christmas },
-  { id: "jesus", title: "Jesus’ life and teaching", intro: "Stories Jesus lived and stories he told.", pages: rest.filter((p) => !isOT(p)) },
+  { id: "jesus", title: "Jesus’ life and teaching", intro: "From the boy Jesus in the temple to the empty tomb on Easter morning, with two of the stories he told along the way.", pages: rest.filter((p) => !isOT(p)) },
 ].filter((s) => s.pages.length > 0);
 const all = sections.flatMap((s) => s.pages);
 const total = all.length;
@@ -77,7 +77,7 @@ const ld = [
 ---
 <SiteLayout
   title="Free Bible Coloring Pages to Print (PDF) | LaMill Store"
-  description={`${total} Bible story coloring sheets, Creation to the wise men, each with its Bible passage. One page each, Letter PDF, no sign-up.`}
+  description={`${total} Bible story coloring sheets, Creation to Easter morning, each with its Bible passage. One page each, Letter PDF, no sign-up.`}
   ogTitle="Bible Coloring Pages to Print"
   ogDescription={`${total} free Bible story coloring sheets for kids, each one a single printable page.`}
 >
@@ -92,7 +92,7 @@ const ld = [
       <h1 class="font-kids text-4xl font-bold text-primary sm:text-5xl">Bible Coloring Pages to Print</h1>
       <p class="mt-4 text-lg">
         Here are {total} free Bible story coloring sheets, in the order the stories appear in the Bible, from
-        Creation to the wise men. Each one prints on a single page: open it and tap <strong>Print</strong>, or
+        Creation to Easter morning. Each one prints on a single page: open it and tap <strong>Print</strong>, or
         download the ready-made PDF. Every page names the Bible passage it comes from, so you can read the story
         together before your child colors it. No sign-up, no email.
       </p>

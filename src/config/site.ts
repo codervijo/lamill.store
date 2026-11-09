@@ -69,7 +69,7 @@ export const collections: Collection[] = [
   {
     id: "bible",
     title: "Bible Adventures",
-    blurb: "Favorite Bible stories to color, from Creation and Noah’s Ark to Daniel, Jonah and the Good Samaritan.",
+    blurb: "Favorite Bible stories to color, from Creation and Noah’s Ark to the life of Jesus and the empty tomb.",
     icon: BookOpen,
     printables: [
       {
@@ -103,14 +103,64 @@ export const collections: Collection[] = [
         preview: "/printables/jonah-and-the-big-fish.png", file: "/printables/jonah-and-the-big-fish.png", pdf: "/printables/jonah-and-the-big-fish.pdf", width: 1152, height: 1536,
       },
       {
+        id: "temple", slug: "jesus-as-a-boy-in-the-temple", title: "The Boy Jesus in the Temple Coloring Page", passage: "Luke 2",
+        blurb: "Twelve-year-old Jesus sits in the temple, listening to the teachers and asking them questions.",
+        preview: "/printables/jesus-as-a-boy-in-the-temple.webp", file: "/printables/jesus-as-a-boy-in-the-temple.png", pdf: "/printables/jesus-as-a-boy-in-the-temple.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "baptism", slug: "jesus-is-baptized", title: "Jesus Is Baptized Coloring Page", passage: "Matthew 3",
+        blurb: "John baptizes Jesus in the Jordan River as a dove comes down from heaven.",
+        preview: "/printables/jesus-is-baptized.webp", file: "/printables/jesus-is-baptized.png", pdf: "/printables/jesus-is-baptized.pdf", width: 1024, height: 1536,
+      },
+      {
         id: "storm", slug: "jesus-calms-the-storm", title: "Jesus Calms the Storm Coloring Page", passage: "Mark 4",
         blurb: "Jesus stands in the fishing boat and calms the wind and waves while his friends hold on.",
         preview: "/printables/jesus-calms-the-storm.webp", file: "/printables/jesus-calms-the-storm.png", pdf: "/printables/jesus-calms-the-storm.pdf", width: 1024, height: 1536,
       },
       {
+        id: "loaves", slug: "jesus-feeds-the-five-thousand", title: "Jesus Feeds the 5,000 Coloring Page", passage: "John 6",
+        blurb: "Jesus holds up a basket of bread and fish beside the boy who shared his lunch, as the crowd sits on the grass.",
+        preview: "/printables/jesus-feeds-the-five-thousand.webp", file: "/printables/jesus-feeds-the-five-thousand.png", pdf: "/printables/jesus-feeds-the-five-thousand.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "water", slug: "jesus-walks-on-water", title: "Jesus Walks on Water Coloring Page", passage: "Matthew 14",
+        blurb: "Jesus walks on the waves at night and reaches out to Peter as he steps from the boat.",
+        preview: "/printables/jesus-walks-on-water.webp", file: "/printables/jesus-walks-on-water.png", pdf: "/printables/jesus-walks-on-water.pdf", width: 1024, height: 1536,
+      },
+      {
         id: "samaritan", slug: "the-good-samaritan", title: "Good Samaritan Coloring Page", passage: "Luke 10",
         blurb: "A kind traveler kneels by the road to bandage a hurt man, with his donkey waiting nearby.",
         preview: "/printables/the-good-samaritan.webp", file: "/printables/the-good-samaritan.png", pdf: "/printables/the-good-samaritan.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "lostsheep", slug: "the-lost-sheep", title: "The Lost Sheep Coloring Page", passage: "Luke 15",
+        blurb: "A happy shepherd carries the lost lamb home on his shoulders while the rest of the flock grazes.",
+        preview: "/printables/the-lost-sheep.webp", file: "/printables/the-lost-sheep.png", pdf: "/printables/the-lost-sheep.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "children", slug: "jesus-blesses-the-children", title: "Jesus Blesses the Children Coloring Page", passage: "Mark 10",
+        blurb: "Jesus welcomes the children, with one little boy sitting on his lap.",
+        preview: "/printables/jesus-blesses-the-children.webp", file: "/printables/jesus-blesses-the-children.png", pdf: "/printables/jesus-blesses-the-children.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "blindman", slug: "jesus-heals-the-blind-man", title: "Jesus Heals the Blind Man Coloring Page", passage: "Mark 10",
+        blurb: "Jesus gently touches the eyes of a blind man sitting by the road with his walking stick.",
+        preview: "/printables/jesus-heals-the-blind-man.webp", file: "/printables/jesus-heals-the-blind-man.png", pdf: "/printables/jesus-heals-the-blind-man.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "zacchaeus", slug: "zacchaeus-in-the-tree", title: "Zacchaeus in the Tree Coloring Page", passage: "Luke 19",
+        blurb: "Zacchaeus sits up in a sycamore tree as Jesus looks up and calls him down.",
+        preview: "/printables/zacchaeus-in-the-tree.webp", file: "/printables/zacchaeus-in-the-tree.png", pdf: "/printables/zacchaeus-in-the-tree.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "palms", slug: "jesus-rides-into-jerusalem", title: "Jesus Rides into Jerusalem Coloring Page", passage: "Matthew 21",
+        blurb: "Jesus rides a donkey through the city gate while people wave palm branches and spread cloaks on the road.",
+        preview: "/printables/jesus-rides-into-jerusalem.webp", file: "/printables/jesus-rides-into-jerusalem.png", pdf: "/printables/jesus-rides-into-jerusalem.pdf", width: 1024, height: 1536,
+      },
+      {
+        id: "tomb", slug: "the-empty-tomb", title: "The Empty Tomb Coloring Page", passage: "Matthew 28",
+        blurb: "The stone is rolled away and an angel sits by the empty tomb as the women arrive at sunrise.",
+        preview: "/printables/the-empty-tomb.webp", file: "/printables/the-empty-tomb.png", pdf: "/printables/the-empty-tomb.pdf", width: 1024, height: 1536,
       },
     ],
   },
