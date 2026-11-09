@@ -4,25 +4,25 @@
 
 *one paragraph: what this site is, what it does*
 
-LaMill Store is a hub for LaMill’s storefronts and a live showcase for prospective ecommerce clients. It connects free Kids’ Activities, LaMill’s Etsy shops, and a separate physical goods store. Parents are the first cohort for testing how free products attract and retain visitors.
+LaMill Store is the hub for LaMill’s ecommerce storefronts. It connects free Kids’ Activities (printable coloring pages), LaMill’s Etsy shop, and a separate physical goods store; the last two are “coming soon”. Parents are the first cohort, testing how free products attract and retain visitors. It does not sell services to other businesses.
 
 ## Audience
 
 *one sentence: who this is for (broad demographic)*
 
-Small ecommerce brands and sellers who need storefront help, plus parents looking for free, screen-free activities for their kids.
+Shoppers of LaMill’s storefronts — first, parents looking for free, screen-free activities for their kids.
 
 ## ICP
 
 *the specific ideal customer — demographics, pain points, what they use today. More detail than Audience: Audience is the broad demo ("homeowners with EV chargers"), ICP is the specific targetable subset ("Tesla owners in CA who installed in last 90d, paid $2k+")*
 
-An owner-operated ecommerce business, such as an Etsy seller or small product brand, with existing products and some sales. The owner wants a branded storefront, better product pages, or a way to attract customers directly. Parents of children aged 5–9 are the first consumer cohort for testing the Kids’ Activities storefront.
+Parents of children aged 5–9 who search for free printable coloring pages and activities, print at home, and come back for new themes and seasons. Etsy and physical goods customers follow when those storefronts open.
 
 ## Goals
 
 *1-2 sentences: primary business / product goal*
 
-Attract qualified ecommerce clients by showing how LaMill builds and grows real storefronts. Start with free kids’ downloads and measure downloads, repeat visits, and referrals before adding payments.
+Grow LaMill’s storefronts, starting with organic traffic to free kids’ printables. Measure downloads, repeat visits, and referrals before adding payments.
 
 ## Tech stack
 
@@ -96,7 +96,7 @@ docker exec -w /usr/src/app <name> make test proj=lamill.store
 
 *what content this site needs — page types, initial topics, format mix (long-form vs reference vs tool)*
 
-Link each storefront from the homepage and add a clear “Work with LaMill” path for ecommerce prospects. Kids’ Activities is the first live storefront; the Etsy shop and physical goods store appear on the homepage as “coming soon.” Start by publishing free Bible-based coloring pages, puzzles, and mazes; everyday themes come later (phase not yet placed — see `docs/prd.md` § Open questions). Add Etsy shop profiles, a physical goods catalog, and short case studies as results come in.
+Link each storefront from the homepage. Kids’ Activities is the first live storefront; the Etsy shop and physical goods store appear on the homepage as “coming soon.” Start by publishing free Bible-based coloring pages, puzzles, and mazes; everyday themes come later (phase not yet placed — see `docs/prd.md` § Open questions). Add Etsy shop profiles and a physical goods catalog when those storefronts open.
 
 ### Post-deploy checklist (do these once after the first successful deploy)
 

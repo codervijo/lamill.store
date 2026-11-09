@@ -11,33 +11,33 @@ last_updated: 2026-11-07
 
 ## 1. Problem
 
-Owner-operated ecommerce businesses (Etsy sellers, small product brands)
-need help with branded storefronts, better product pages, and attracting
-customers directly — and want proof a builder can actually grow a store.
-LaMill Store is that proof: a hub for LaMill's own storefronts that doubles
-as a live showcase for prospective ecommerce clients.
+LaMill sells and gives away things it makes, across several channels: free
+printable kids' activities, an Etsy shop, and a physical goods store. Those
+channels need one home that shoppers can find through search, that sends
+them to the right storefront, and that brings them back.
 
 ## 2. Users
 
-- **Primary (business):** owner-operated ecommerce businesses — Etsy
-  sellers or small product brands with existing products and some sales —
-  who want a branded storefront, better product pages, or direct customer
-  acquisition.
-- **First consumer cohort (test):** parents of children aged 5–9 looking
-  for free, screen-free activities for their kids.
+- **Primary:** shoppers of LaMill's storefronts.
+- **First cohort (live now):** parents of children aged 5–9 looking for
+  free, screen-free activities they can print at home.
+- **Later cohorts:** Etsy shop and physical goods customers, once those
+  storefronts open.
 - **Audience size:** *unknown — not yet measured.*
 
 ## 3. Goals & non-goals
 
 **Goals:**
-- Attract qualified ecommerce clients by showing how LaMill builds and
-  grows real storefronts.
-- Start with free kids' downloads; measure downloads, repeat visits, and
-  referrals.
-- Compare standard vs personalized activities, and turn the results into a
-  case study showing prospects how LaMill tests customer acquisition.
+- Be the hub for all of LaMill's ecommerce storefronts: Kids' Activities
+  now, the Etsy shop and physical goods store as they open.
+- Grow organic traffic with free kids' printables; measure downloads,
+  repeat visits, and referrals before adding payments.
+- Compare standard vs personalized activities, and use the results to
+  decide what to sell.
 
 **Non-goals:**
+- Services for other businesses (agency / "work with LaMill" offers) —
+  this site is LaMill's own storefronts only (operator 2026-11-09).
 - Payments — deferred until downloads / repeat visits / referrals are
   measured.
 - Etsy shops and physical goods store in v1 — shown as "coming soon" only.
@@ -58,9 +58,8 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | v3 | connect the dots + mazes | free printable connect-the-dots and maze hubs targeting the general (non-Bible) printable searches; Bible-themed vs everyday scope decided in v3.A (operator 2026-11-08) |
 | v4 | Bible word searches | free printable Bible word search hub (moved from v1.E, operator 2026-11-08) |
 | v5 | everyday + seasonal coloring — backlog | remaining collections from the brief (next, seasonal, expand lists), same bar as v2 (operator 2026-11-08) |
-| v6 | Work with LaMill | "Work with LaMill" path for ecommerce prospects (moved v1.B → v2 on 2026-11-07, v2 → v6 on 2026-11-08); scope not yet planned |
-| v7 | photo → coloring page | parents turn their own photo into a printable coloring page, converted in the browser with no AI; the photo never leaves the device (operator 2026-11-08) |
-| v8 | audience + contact | "new this month" page, email signup, contact form (operator 2026-11-09) |
+| v6 | photo → coloring page | parents turn their own photo into a printable coloring page, converted in the browser with no AI; the photo never leaves the device (operator 2026-11-08) |
+| v7 | audience + contact | "new this month" page, email signup, contact form (operator 2026-11-09) |
 
 ## 5. Phases
 
@@ -68,7 +67,7 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 |---|---|---|---|
 | **v0.A** | scaffolded | `portfolio new bootstrap` ran; standard files written; git initialized | ✅ |
 | **v1.A** | planning / decisions lock | lock v1 scope, storefront list (download measurement → v1.F, operator 2026-11-07) | ✅ |
-| **v1.B** | storefront hub | homepage: Kids' Activities live; Etsy shop + physical goods store marked "coming soon" ("Work with LaMill" path → v2, operator 2026-11-07) | ✅ |
+| **v1.B** | storefront hub | homepage: Kids' Activities live; Etsy shop + physical goods store marked "coming soon" | ✅ |
 | **v1.C** | Bible coloring pages hub | `/kids/bible-coloring-pages/`: free printable Bible coloring pages grouped by Bible story (sub-sets → v1.E, operator 2026-11-07); each coloring page gets its own page at `/kids/bible-coloring-pages/<story>/` (large view, Download + Print, Bible passage, related pages); print UX: (1) print-ready output — `@page` CSS so each page prints as exactly one page, portrait, fitted to Letter/A4, safe margins, no browser headers/footers or site chrome; (2) one-tap Print button straight to the OS print dialog with the image already filling the page; (3) print-ready PDF download as fallback (more reliable than images, esp. on phones) — a web page cannot discover or configure network printers, so the OS print dialog (AirPrint / Mopria / Windows / ChromeOS driverless discovery) is the printer path; printables are portrait, full-resolution download (needs imagemill portrait-size + original-export support first — operator chose option B, 2026-11-07); deploy + GSC verify + sitemap submit. Targets: "bible coloring pages to print" 5,400*/KD 5, "free bible coloring page" 1,300/KD 3, "bible story coloring sheets" 1,000/KD 4, "bible coloring pages for preschoolers" 1,000/KD 4 | ✅ |
 | **v1.D** | Christmas Bible coloring pages | nativity / Christmas-story coloring pages under the coloring hub; seasonal — must be live and indexed before mid-December. Target: "christmas bible coloring pages" 140/KD 8; landing page `/kids/bible-coloring-pages/christmas/` | 🚧 in progress |
 | **v1.E** | Bible coloring sub-sets | sub-pages under `/kids/bible-coloring-pages/`: verses (verse text set in code, not generated), preschoolers (simpler pages), characters (King David, Ruth, Paul & Silas), books of the Bible | planned |
@@ -85,13 +84,13 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v5.B** | next batch | mermaid 18K/0, horse 11K/1, car 10K/1, happy birthday 9.9K/0, butterfly 8.3K/1, shark 7.2K/2, fairy 7.1K/0, cow 7K/0, turtle 6.8K/0 — `/kids/<topic>-coloring-pages/` | planned |
 | **v5.C** | seasonal batch | Valentine's Day 18K/1 (+ hearts inside unless split), St. Patrick's Day 9.3K/0, Easter 19K/1, spring 20K/3, summer 21K/4, pumpkin 12K/1, cute Halloween 8K/3 — each live ≥ 6 weeks before its season | planned |
 | **v5.D** | expand batch | mandala 20K/2, coloring pages for girls 19K/5, for teens 12K/4, kawaii 11K/2, heart 10K/0, cozy 8.3K/0, food 7.6K/0 (+ ice cream 7.5K/0 inside unless split), flower 6.6K/1 | planned |
-| **v7.A** | planning / decisions lock | URL and page (likely `/kids/photo-coloring-page/`, linked from the `/kids/` "Put your child in the story" teaser); conversion method in the browser (canvas edge detection + threshold, line-weight and detail sliders); target keywords (not yet researched — check "photo to coloring page" family before building); privacy copy ("your photo stays on your device"); what counts as done for quality (pets, toys, faces) | planned |
-| **v7.B** | in-browser converter | pick or take a photo → preview as black-and-white line art → adjust detail → Print (one Letter page, same print CSS as coloring pages) or download PDF generated in the browser; no upload, no account, no server cost; works on phone and desktop | planned |
-| **v7.C** | name-on-page personalization | parent types a child's name; the server (Worker) adds it to a chosen coloring page and returns a one-page Letter PDF; no AI, no stored names, no account; AI photo conversion stays out of scope unless added later (operator 2026-11-09) | planned |
-| **v8.A** | planning / decisions lock | email provider; privacy policy (addresses only from adults, unsubscribe, no sharing); spam protection (Cloudflare Turnstile); release cadence for new pages; whether the contact form also serves v6 "Work with LaMill" | planned |
-| **v8.B** | "new this month" page | `/kids/new/`: newest coloring pages across all collections, newest first, driven by a date on each page in the config; linked from `/kids/` and the homepage; the page the email links to | planned |
-| **v8.C** | email signup | parents sign up for new-pages emails; form on `/kids/`, hubs and `/kids/new/`; Worker endpoint stores or forwards the address; double opt-in; never required for any download | planned |
-| **v8.D** | contact form | `/contact/` form → Worker → email to operator; Turnstile spam check; linked from the footer | planned |
+| **v6.A** | planning / decisions lock | URL and page (likely `/kids/photo-coloring-page/`, linked from the `/kids/` "Put your child in the story" teaser); conversion method in the browser (canvas edge detection + threshold, line-weight and detail sliders); target keywords (not yet researched — check "photo to coloring page" family before building); privacy copy ("your photo stays on your device"); what counts as done for quality (pets, toys, faces) | planned |
+| **v6.B** | in-browser converter | pick or take a photo → preview as black-and-white line art → adjust detail → Print (one Letter page, same print CSS as coloring pages) or download PDF generated in the browser; no upload, no account, no server cost; works on phone and desktop | planned |
+| **v6.C** | name-on-page personalization | parent types a child's name; the server (Worker) adds it to a chosen coloring page and returns a one-page Letter PDF; no AI, no stored names, no account; AI photo conversion stays out of scope unless added later (operator 2026-11-09) | planned |
+| **v7.A** | planning / decisions lock | email provider; privacy policy (addresses only from adults, unsubscribe, no sharing); spam protection (Cloudflare Turnstile); release cadence for new pages | planned |
+| **v7.B** | "new this month" page | `/kids/new/`: newest coloring pages across all collections, newest first, driven by a date on each page in the config; linked from `/kids/` and the homepage; the page the email links to | planned |
+| **v7.C** | email signup | parents sign up for new-pages emails; form on `/kids/`, hubs and `/kids/new/`; Worker endpoint stores or forwards the address; double opt-in; never required for any download | planned |
+| **v7.D** | contact form | `/contact/` form → Worker → email to operator; Turnstile spam check; linked from the footer | planned |
 
 Keyword figures: Serpstat via treg, Google US, pulled 2026-11-07; US monthly
 search volume / Serpstat difficulty (0–100). Single source, not cross-checked.
@@ -108,6 +107,8 @@ one page target per cluster, volumes not additive.
   - *Partly answered 2026-11-07:* Etsy shop and physical store are
     "coming soon" placeholders in v1; v1 starts with Kids' Activities,
     Bible-based only. Tier/phase for their full build still open.
+  - *Partly answered 2026-11-09:* case studies dropped — they were for
+    selling services to other businesses, which this site does not do.
 - Which phase adds everyday-theme activities?
   - *Answered 2026-11-08:* v2 (urgent batch) and v5 (backlog).
 - How are downloads, repeat visits, and referrals measured (GA, GSC,
@@ -117,4 +118,4 @@ one page target per cluster, volumes not additive.
 - What does "personalized activities" mean concretely, and which phase
   ships it?
   - *Partly answered 2026-11-08:* first form is photo → coloring page in the
-    browser (v7). Name/picture-in-story pages still open.
+    browser (v6). Name/picture-in-story pages still open.
