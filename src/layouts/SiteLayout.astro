@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Logo from "../components/site/Logo.astro";
+import Analytics from "../components/site/Analytics.astro";
 import { MobileNav } from "../components/site/MobileNav";
 import { navLinks } from "../config/site";
 import { href, isActive } from "../lib/paths";
@@ -52,6 +53,7 @@ const hasHeadSlot = Astro.slots.has("head");
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Fraunces:opsz,wght@9..144,600&family=Manrope:wght@400;500;600&display=swap" />
+    <Analytics />
   </head>
   <body>
     <div class="min-h-screen bg-background text-foreground">
