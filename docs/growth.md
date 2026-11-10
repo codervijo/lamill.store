@@ -154,3 +154,38 @@ lamill.store --url https://lamill.store/image-sitemap.xml` → submitted
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-10 — Index snapshot: 76/78 indexed, 0 impressions
+
+**Status:** active · **Review:** 2026-11-17 (first-impressions check), then with the 2026-12-06 v2.B review
+
+**Hypothesis:** now that 76 of 78 sitemap URLs are indexed, the first GSC
+impressions (web or image) appear within 7 days, without any new content,
+links or resubmission.
+
+**KPI:** any non-zero GSC impressions (`type=web` or `type=image`) for the
+site by 2026-11-17; the 2 pending URLs indexed by then.
+
+**Baseline (2026-11-10):**
+- URL inspection of all 78 sitemap URLs: 76 "Submitted and indexed" (PASS),
+  all first crawled 2026-11-10 between ~00:09 and 05:03 UTC.
+- 2 "Discovered – currently not indexed" (never crawled):
+  `/kids/dragon-coloring-pages/dragon-campfire/`,
+  `/kids/winter-coloring-pages/polar-bear-and-cub/` — siblings on the same
+  template are indexed, so read as crawl queue, not quality.
+- GSC performance 2026-11-07 → 2026-11-10 (`dataState=all`): 0 impressions,
+  0 clicks, both web and image.
+- Ahrefs Domain Rating: 0 (no referring domains).
+- Sitemaps: `sitemap-index.xml` (GSC reports 68 submitted vs 78 live — cause
+  unknown) and `image-sitemap.xml` (63 pages / 63 images), both fetched
+  2026-11-10 with 0 errors.
+
+**Why 0 impressions (working read, not verified):** indexed < 1 day; DR 0
+puts new pages below the viewed results even for KD-0 terms; no branded
+searches; GSC lags ~2 days. The crawl batch started ~00:09 UTC, before the
+image sitemap submission (01:29 UTC), so the fast indexing can't be credited
+to that submission.
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*
