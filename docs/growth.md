@@ -130,3 +130,27 @@ Pinterest pin; none sorts by age, and none has a blank "thankful tree" page.
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-09 — Image sitemap submitted to GSC
+
+**Status:** active · **Review:** 2026-12-07
+
+**Hypothesis:** submitting `image-sitemap.xml` directly in GSC (it was only
+declared in robots.txt) gets coloring-page images indexed sooner and earns
+Google Images impressions — the search surface parents browse for printables.
+
+**KPI:** GSC image-search impressions (`type=image`) for the site; image
+sitemap fetched with 0 errors.
+
+**Baseline (2026-11-09):** 0 impressions / 0 clicks (28d, web); image search
+not yet measured. `sitemap-index.xml` in GSC: 68 submitted / 0 indexed (last
+fetched 2026-11-07; live sitemap now has 78 URLs). URL inspection: 6 of 10
+sampled URLs indexed.
+
+**What was done:** `uv run portfolio settings gsc submit-sitemap --site
+lamill.store --url https://lamill.store/image-sitemap.xml` → submitted
+(63 images), pending first fetch.
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*
