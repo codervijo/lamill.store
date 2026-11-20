@@ -97,7 +97,7 @@ units were exhausted, so no third read.
 
 **Not built:** Thanksgiving coloring pages (27K / 2 Ahrefs, 40.5K / 17
 Serpstat) — Thanksgiving is 2026-11-26, 18 days out, on a site Google has
-not indexed yet. Moved to v5.C for 2027 (live by mid-October).
+not indexed yet. Moved to v6.C for 2027 (live by mid-October).
 
 **What shipped:** 35 imagemill designs (7 per hub; 2 truck designs redone
 because the first versions had cartoon faces too close to a TV

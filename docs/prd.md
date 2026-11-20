@@ -55,10 +55,10 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | v0 | scaffold | local builds, CF wrangler.jsonc + public/_headers in place, repo initialized |
 | v1 | storefront hub + free Bible-based Kids' Activities | homepage with Kids' Activities live and Etsy shop + physical goods store marked "coming soon"; free Bible-based coloring pages hub live (incl. Christmas set); deployed and indexed in GSC |
 | v2 | everyday + seasonal coloring — urgent batch | up to 6 non-Bible coloring collections from the first-batch list, each validated against the live US top 10 (concrete gap recorded), 6–8 original B/W designs, per-page Letter PDFs + print-all PDF, linked from `/kids/`; Bible collections stay live and unchanged (operator 2026-11-08) |
-| v3 | connect the dots + mazes | free printable connect-the-dots and maze hubs targeting the general (non-Bible) printable searches; Bible-themed vs everyday scope decided in v3.A (operator 2026-11-08) |
-| v4 | Bible word searches | free printable Bible word search hub (moved from v1.E, operator 2026-11-08) |
-| v5 | everyday + seasonal coloring — backlog | remaining collections from the brief (next, seasonal, expand lists), same bar as v2 (operator 2026-11-08) |
-| v6 | photo → coloring page | parents turn their own photo into a printable coloring page, converted in the browser with no AI; the photo never leaves the device (operator 2026-11-08) |
+| v3 | photo → coloring page | parents turn their own photo into a printable coloring page, converted in the browser with no AI; the photo never leaves the device (operator 2026-11-08) |
+| v4 | connect the dots + mazes | free printable connect-the-dots and maze hubs targeting the general (non-Bible) printable searches; Bible-themed vs everyday scope decided in v4.A (operator 2026-11-08) |
+| v5 | Bible word searches | free printable Bible word search hub (moved from v1.E, operator 2026-11-08) |
+| v6 | everyday + seasonal coloring — backlog | remaining collections from the brief (next, seasonal, expand lists), same bar as v2 (operator 2026-11-08) |
 | v7 | audience + contact | "new this month" page, email signup, contact form (operator 2026-11-09) |
 
 ## 5. Phases
@@ -76,18 +76,18 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v2.A** | planning / validation | refresh first-batch numbers via treg; review live US top 10 per candidate; record the gap we can beat (artwork, age/difficulty options, direct PDF, print-all pack) — low KD alone does not qualify; pick ≤ 6; URL pattern `/kids/<topic>-coloring-pages/` + `/<design>/` detail pages; sub-intents start inside parent (puppies → dogs, hearts → Valentine's, ice cream → food) unless the SERP shows a distinct intent; download tracking deferred to v1.F (operator 2026-11-08); result 2026-11-08: 5 picked (Christmas, winter, dogs + puppies, dragons, monster trucks), Thanksgiving first deferred (18 days to the holiday on an unindexed site), then added back to v2.B by operator 2026-11-08 to test fast ranking; evidence in `docs/growth.md` | ✅ |
 | **v2.B** | first-batch collections | candidates (Ahrefs SV / KD, operator screenshots): Thanksgiving 27K/2, dog 22K/0 (+ puppy 8K/0), dragon 21K/0, winter 19K/3, cute Christmas 9.9K/6 (one general `/kids/christmas-coloring-pages/` covering cute/free/printable, cross-linked with the Bible Christmas set), monster truck 8K/0; per collection: 6–8 original B/W designs (imagemill, no franchise characters), large previews, Letter PDF per design + print-all PDF, unique title/description/alt, page + image sitemap, links from `/kids/` and related collections; per-page log of gap, target keyword, final URL | ✅ |
 | **v2.C** | share button | Share button on every coloring detail page (Bible + theme), every hub and the Christmas Bible page; behavior by device (operator 2026-11-08): **phone** (coarse pointer + Web Share API) → native share sheet with page title + link; second action "Send the PDF" shares the printable file via `navigator.share({files})` when `navigator.canShare` allows it (hubs: the print-all PDF), PDF pre-fetched when the menu opens so the share keeps the tap's user activation; **desktop** → "Copy link" with a "Copied" confirmation (clipboard API, text-select fallback); shared links carry `?utm_source=share&utm_medium=<sheet|copy|pdf>` for v1.F referral counting (canonical unchanged); no third-party scripts, no share counts; button hidden in print; acceptance: verified on iPhone Safari, Android Chrome, desktop Chrome/Firefox/Safari | planned |
-| **v3.A** | planning / decisions lock | decide theme scope (Bible-themed puzzles aimed at general searches, or everyday themes — v1 non-goal), puzzle generation method, URL structure | planned |
-| **v3.B** | connect the dots hub | `/kids/connect-the-dots/`: free printable dot-to-dot pages, Christmas set. Targets: "dot to dot worksheets" / "dot to dot to print" / "dot-to-dot printables" 9,900*/KD 14–18, "connect the dots print" 9,900/KD 28, "connect the dots coloring pages" 1,300/KD 31, "christmas connect the dots" 590/KD 13; Bible-specific ("bible dot to dot" 70/KD 8) too small to target alone | planned |
-| **v3.C** | printable mazes hub | `/kids/mazes/`: free printable mazes, kindergarten and difficult sets; includes the Bible mazes page `/kids/bible-mazes/` (moved from v1.F, operator 2026-11-08: "maze bible" 390/KD 6, "bible maze" 140/KD 6, "bible mazes" 110/KD 5). Targets: "printable mazes" 6,600/KD 18, "free printable mazes for kindergarten" 2,400/KD 27, "maze printable kindergarten" 1,900/KD 24, "difficult printable maze" 880/KD 11–13 | planned |
-| **v4.A** | planning / decisions lock | word search scope, puzzle generation method (grid generator in code vs. images) | planned |
-| **v4.B** | Bible word search hub | `/kids/bible-word-search/`: free printable Bible word searches; kids' and books-of-the-Bible sets. Targets: "word search bible puzzles" 5,400*/KD 1–18 (cluster scores conflict), "bible word search puzzle free" 880/KD 9, "bible books word search" 720/KD 4, "children's bible word search puzzles" 260/KD 8 (moved from v1.E, operator 2026-11-08) | planned |
-| **v5.A** | planning / validation | same validation bar as v2.A for each backlog collection; decide order by season deadline | planned |
-| **v5.B** | next batch | mermaid 18K/0, horse 11K/1, car 10K/1, happy birthday 9.9K/0, butterfly 8.3K/1, shark 7.2K/2, fairy 7.1K/0, cow 7K/0, turtle 6.8K/0 — `/kids/<topic>-coloring-pages/` | planned |
-| **v5.C** | seasonal batch | Valentine's Day 18K/1 (+ hearts inside unless split), St. Patrick's Day 9.3K/0, Easter 19K/1, spring 20K/3, summer 21K/4, pumpkin 12K/1, cute Halloween 8K/3 — each live ≥ 6 weeks before its season | planned |
-| **v5.D** | expand batch | mandala 20K/2, coloring pages for girls 19K/5, for teens 12K/4, kawaii 11K/2, heart 10K/0, cozy 8.3K/0, food 7.6K/0 (+ ice cream 7.5K/0 inside unless split), flower 6.6K/1 | planned |
-| **v6.A** | planning / decisions lock | URL and page (likely `/kids/photo-coloring-page/`, linked from the `/kids/` "Put your child in the story" teaser); conversion method in the browser (canvas edge detection + threshold, line-weight and detail sliders); target keywords (not yet researched — check "photo to coloring page" family before building); privacy copy ("your photo stays on your device"); what counts as done for quality (pets, toys, faces) | planned |
-| **v6.B** | in-browser converter | pick or take a photo → preview as black-and-white line art → adjust detail → Print (one Letter page, same print CSS as coloring pages) or download PDF generated in the browser; no upload, no account, no server cost; works on phone and desktop | planned |
-| **v6.C** | name-on-page personalization | parent types a child's name; the server (Worker) adds it to a chosen coloring page and returns a one-page Letter PDF; no AI, no stored names, no account; AI photo conversion stays out of scope unless added later (operator 2026-11-09) | planned |
+| **v3.A** | planning / decisions lock | URL and page (likely `/kids/photo-coloring-page/`, linked from the `/kids/` "Put your child in the story" teaser); conversion method in the browser (canvas edge detection + threshold, line-weight and detail sliders); target keywords (not yet researched — check "photo to coloring page" family before building); privacy copy ("your photo stays on your device"); what counts as done for quality (pets, toys, faces) | planned |
+| **v3.B** | in-browser converter | pick or take a photo → preview as black-and-white line art → adjust detail → Print (one Letter page, same print CSS as coloring pages) or download PDF generated in the browser; no upload, no account, no server cost; works on phone and desktop | planned |
+| **v3.C** | name-on-page personalization | parent types a child's name; the server (Worker) adds it to a chosen coloring page and returns a one-page Letter PDF; no AI, no stored names, no account; AI photo conversion stays out of scope unless added later (operator 2026-11-09) | planned |
+| **v4.A** | planning / decisions lock | decide theme scope (Bible-themed puzzles aimed at general searches, or everyday themes — v1 non-goal), puzzle generation method, URL structure | planned |
+| **v4.B** | connect the dots hub | `/kids/connect-the-dots/`: free printable dot-to-dot pages, Christmas set. Targets: "dot to dot worksheets" / "dot to dot to print" / "dot-to-dot printables" 9,900*/KD 14–18, "connect the dots print" 9,900/KD 28, "connect the dots coloring pages" 1,300/KD 31, "christmas connect the dots" 590/KD 13; Bible-specific ("bible dot to dot" 70/KD 8) too small to target alone | planned |
+| **v4.C** | printable mazes hub | `/kids/mazes/`: free printable mazes, kindergarten and difficult sets; includes the Bible mazes page `/kids/bible-mazes/` (moved from v1.F, operator 2026-11-08: "maze bible" 390/KD 6, "bible maze" 140/KD 6, "bible mazes" 110/KD 5). Targets: "printable mazes" 6,600/KD 18, "free printable mazes for kindergarten" 2,400/KD 27, "maze printable kindergarten" 1,900/KD 24, "difficult printable maze" 880/KD 11–13 | planned |
+| **v5.A** | planning / decisions lock | word search scope, puzzle generation method (grid generator in code vs. images) | planned |
+| **v5.B** | Bible word search hub | `/kids/bible-word-search/`: free printable Bible word searches; kids' and books-of-the-Bible sets. Targets: "word search bible puzzles" 5,400*/KD 1–18 (cluster scores conflict), "bible word search puzzle free" 880/KD 9, "bible books word search" 720/KD 4, "children's bible word search puzzles" 260/KD 8 (moved from v1.E, operator 2026-11-08) | planned |
+| **v6.A** | planning / validation | same validation bar as v2.A for each backlog collection; decide order by season deadline | planned |
+| **v6.B** | next batch | mermaid 18K/0, horse 11K/1, car 10K/1, happy birthday 9.9K/0, butterfly 8.3K/1, shark 7.2K/2, fairy 7.1K/0, cow 7K/0, turtle 6.8K/0 — `/kids/<topic>-coloring-pages/` | planned |
+| **v6.C** | seasonal batch | Valentine's Day 18K/1 (+ hearts inside unless split), St. Patrick's Day 9.3K/0, Easter 19K/1, spring 20K/3, summer 21K/4, pumpkin 12K/1, cute Halloween 8K/3 — each live ≥ 6 weeks before its season | planned |
+| **v6.D** | expand batch | mandala 20K/2, coloring pages for girls 19K/5, for teens 12K/4, kawaii 11K/2, heart 10K/0, cozy 8.3K/0, food 7.6K/0 (+ ice cream 7.5K/0 inside unless split), flower 6.6K/1 | planned |
 | **v7.A** | planning / decisions lock | email provider; privacy policy (addresses only from adults, unsubscribe, no sharing); spam protection (Cloudflare Turnstile); release cadence for new pages | planned |
 | **v7.B** | "new this month" page | `/kids/new/`: newest coloring pages across all collections, newest first, driven by a date on each page in the config; linked from `/kids/` and the homepage; the page the email links to | planned |
 | **v7.C** | email signup | parents sign up for new-pages emails; form on `/kids/`, hubs and `/kids/new/`; Worker endpoint stores or forwards the address; double opt-in; never required for any download | planned |
@@ -95,7 +95,7 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 
 Keyword figures: Serpstat via treg, Google US, pulled 2026-11-07; US monthly
 search volume / Serpstat difficulty (0–100). Single source, not cross-checked.
-v2/v5 figures: Ahrefs (operator screenshots, 2026-11-08), to be refreshed in v2.A/v5.A. v3 figures pulled 2026-11-08, Serpstat; Serpstat KD-1 rows flagged as misspellings were dropped.
+v2/v6 figures: Ahrefs (operator screenshots, 2026-11-08), to be refreshed in v2.A/v6.A. v4 figures pulled 2026-11-08, Serpstat; Serpstat KD-1 rows flagged as misspellings were dropped.
 \* Serpstat assigns one volume to a cluster of near-identical phrasings —
 one page target per cluster, volumes not additive.
 
@@ -111,7 +111,7 @@ one page target per cluster, volumes not additive.
   - *Partly answered 2026-11-09:* case studies dropped — they were for
     selling services to other businesses, which this site does not do.
 - Which phase adds everyday-theme activities?
-  - *Answered 2026-11-08:* v2 (urgent batch) and v5 (backlog).
+  - *Answered 2026-11-08:* v2 (urgent batch) and v6 (backlog).
 - How are downloads, repeat visits, and referrals measured (GA, GSC,
   something else)?
   - *Deferred 2026-11-07:* moved to v1.F; method still open.
@@ -119,4 +119,4 @@ one page target per cluster, volumes not additive.
 - What does "personalized activities" mean concretely, and which phase
   ships it?
   - *Partly answered 2026-11-08:* first form is photo → coloring page in the
-    browser (v6). Name/picture-in-story pages still open.
+    browser (v3). Name/picture-in-story pages still open.
