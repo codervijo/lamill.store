@@ -2,7 +2,7 @@
 // v2.B — theme coloring hub: one indexable page per search intent.
 import { FileDown } from "lucide-react";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
-import { themeCollections, designPath, designFiles, hubPath, setPdf, byId, LEVELS, DESIGN_W, DESIGN_H, type ThemeCollection, type Level } from "../../../config/coloring";
+import { themeCollections, designAlt, designPath, designFiles, hubPath, setPdf, byId, LEVELS, DESIGN_W, DESIGN_H, type ThemeCollection, type Level } from "../../../config/coloring";
 
 export function getStaticPaths() {
   return themeCollections.map((c) => ({ params: { hub: c.hub }, props: { c } }));
@@ -73,7 +73,7 @@ const ld = [
           {g.designs.map((d) => (
             <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
               <a href={designPath(c, d)} class="block p-3">
-                <img src={designFiles(d).preview} alt={`Coloring page: ${d.alt}`} width={DESIGN_W} height={DESIGN_H} loading="lazy" class="mx-auto h-auto w-full" />
+                <img src={designFiles(d).preview} alt={designAlt(d)} width={DESIGN_W} height={DESIGN_H} loading="lazy" class="mx-auto h-auto w-full" />
                 <span class="mt-2 block font-kids text-lg font-semibold leading-tight text-primary">{d.title}</span>
               </a>
               <a href={designFiles(d).pdf} download class="mx-3 mb-3 inline-flex items-center gap-1 text-sm font-semibold text-primary underline">PDF</a>

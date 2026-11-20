@@ -3,7 +3,7 @@
 // "bible story coloring sheets", "bible coloring pages for preschoolers").
 import { Printer, FileDown } from "lucide-react";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
-import { collections, coloringPagePath, type Printable } from "../../../config/site";
+import { collections, coloringPagePath, printableAlt, type Printable } from "../../../config/site";
 
 const site = "https://lamill.store";
 const url = `${site}/kids/bible-coloring-pages/`;
@@ -114,7 +114,7 @@ const ld = [
           {s.pages.map((p) => (
             <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
               <a href={coloringPagePath(p)} class="block p-3">
-                <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} loading="lazy" class="mx-auto h-56 w-auto" />
+                <img src={p.preview} alt={printableAlt(p)} width={p.width} height={p.height} loading="lazy" class="mx-auto h-56 w-auto" />
                 <span class="mt-2 block font-kids text-lg font-semibold leading-tight text-primary">{p.title.replace(/ Coloring Page$/, "")}</span>
                 <span class="block text-sm text-muted-foreground">{p.passage}</span>
               </a>

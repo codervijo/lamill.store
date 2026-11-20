@@ -55,6 +55,9 @@ export type Printable = {
   height: number;
 };
 
+// Image alt for Bible pages — same wording rule as designAlt in coloring.ts.
+export const printableAlt = (p: Printable) => `${p.title} for kids, black-and-white outline drawing: ${p.blurb}`;
+
 export const coloringPagePath = (p: Printable) => `/kids/bible-coloring-pages/${p.slug}/`;
 
 export type Collection = {

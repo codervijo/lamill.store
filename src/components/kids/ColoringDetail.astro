@@ -5,7 +5,7 @@
 import { Download, Printer, ArrowLeft } from "lucide-react";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 
-export type RelatedCard = { href: string; title: string; preview: string; width: number; height: number };
+export type RelatedCard = { href: string; title: string; alt: string; preview: string; width: number; height: number };
 
 interface Props {
   metaTitle: string;
@@ -70,7 +70,7 @@ const lds = (p.ld ?? []).filter(Boolean);
           {p.related.map((r) => (
             <a href={r.href} class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
               <div class="bg-muted p-3">
-                <img src={r.preview} alt={`${r.title} preview`} loading="lazy" width={r.width} height={r.height} class="mx-auto h-40 w-auto rounded-lg bg-card sm:h-48" />
+                <img src={r.preview} alt={r.alt} loading="lazy" width={r.width} height={r.height} class="mx-auto h-40 w-auto rounded-lg bg-card sm:h-48" />
               </div>
               <p class="p-3 font-kids text-base font-bold leading-tight sm:text-lg">{r.title}</p>
             </a>

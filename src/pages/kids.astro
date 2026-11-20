@@ -3,7 +3,7 @@ import { Sparkles } from "lucide-react";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import { KidsCollections } from "../components/kids/KidsCollections";
 import { collections } from "../config/site";
-import { themeCollections, hubPath, designFiles, byId, featuredThemeId, DESIGN_W, DESIGN_H } from "../config/coloring";
+import { themeCollections, designAlt, hubPath, designFiles, byId, featuredThemeId, DESIGN_W, DESIGN_H } from "../config/coloring";
 
 const featured = byId(featuredThemeId) ?? themeCollections[0];
 const hero = featured.designs[0];
@@ -30,7 +30,7 @@ const hero = featured.designs[0];
           </nav>
         </div>
         <a href={hubPath(featured)} class="mx-auto block">
-          <img src={designFiles(hero).preview} alt={`${featured.h1}: ${hero.alt}`} width={DESIGN_W} height={DESIGN_H} class="mx-auto max-h-96 w-auto rounded-3xl bg-card p-4 shadow-card" />
+          <img src={designFiles(hero).preview} alt={designAlt(hero)} width={DESIGN_W} height={DESIGN_H} class="mx-auto max-h-96 w-auto rounded-3xl bg-card p-4 shadow-card" />
         </a>
       </div>
     </section>
@@ -53,7 +53,7 @@ const hero = featured.designs[0];
         {themeCollections.map((c) => (
           <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
             <a href={hubPath(c)} class="block p-3">
-              <img src={designFiles(c.designs[1] ?? c.designs[0]).preview} alt={`${c.h1}: ${(c.designs[1] ?? c.designs[0]).alt}`} width={DESIGN_W} height={DESIGN_H} loading="lazy" class="mx-auto h-auto w-full" />
+              <img src={designFiles(c.designs[1] ?? c.designs[0]).preview} alt={designAlt(c.designs[1] ?? c.designs[0])} width={DESIGN_W} height={DESIGN_H} loading="lazy" class="mx-auto h-auto w-full" />
               <span class="mt-2 block font-kids text-lg font-semibold leading-tight text-primary">{c.h1}</span>
             </a>
           </li>

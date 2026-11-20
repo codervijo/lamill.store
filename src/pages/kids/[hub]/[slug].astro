@@ -1,8 +1,9 @@
 ---
 // v2.B — one theme coloring page (dogs, dragons, winter, …).
 import ColoringDetail from "../../../components/kids/ColoringDetail.astro";
-import { themeCollections, designPath, designFiles, hubPath, LEVELS, DESIGN_W, DESIGN_H, type ThemeCollection, type Design } from "../../../config/coloring";
+import { themeCollections, designAlt, designPath, designFiles, hubPath, LEVELS, DESIGN_W, DESIGN_H, type ThemeCollection, type Design } from "../../../config/coloring";
 import imageLd from "../../../data/images.jsonld.json";
+import { withDescription } from "../../../lib/image-ld";
 
 export function getStaticPaths() {
   return themeCollections.flatMap((c) => c.designs.map((d) => ({ params: { hub: c.hub, slug: d.slug }, props: { c, d } })));
@@ -36,12 +37,12 @@ const breadcrumb = {
   preview={f.preview}
   file={f.png}
   pdf={f.pdf}
-  alt={`Coloring page: ${d.alt}`}
+  alt={designAlt(d)}
   width={DESIGN_W}
   height={DESIGN_H}
-  ld={[(imageLd as Record<string, unknown>)[d.stem], breadcrumb]}
+  ld={[withDescription((imageLd as Record<string, unknown>)[d.stem], designAlt(d)), breadcrumb]}
   relatedTitle={`More ${c.nav} coloring pages`}
-  related={related.map((r) => ({ href: designPath(c, r), title: r.title, preview: designFiles(r).preview, width: DESIGN_W, height: DESIGN_H }))}
+  related={related.map((r) => ({ href: designPath(c, r), title: r.title, alt: designAlt(r), preview: designFiles(r).preview, width: DESIGN_W, height: DESIGN_H }))}
 >
   <Fragment slot="context">
     {d.alt}. <span class="font-semibold">{lvl.label} ({lvl.ages}).</span>

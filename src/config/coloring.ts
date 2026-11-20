@@ -280,6 +280,13 @@ export const designFiles = (d: Design) => ({
   png: `/printables/${d.stem}.png`,
   pdf: `/printables/${d.stem}.pdf`,
 });
+// Image-search wording (AI_AGENTS.md § Image search wording): alt
+// text uses the words image searchers type — "coloring page", "for kids",
+// "simple" (easy level only, so it stays true), "outline" — then what the
+// picture shows.
+const LOOK: Record<Level, string> = { easy: "simple ", medium: "", detailed: "detailed " };
+export const designAlt = (d: Design) =>
+  `${d.title} coloring page for kids, ${LOOK[d.level]}black-and-white outline: ${d.alt}`;
 export const setPdf = (c: ThemeCollection) => `/printables/${c.hub}.pdf`;
 /** Seasonal collection featured on the homepage — rotate: Thanksgiving until
  *  Nov 26, then Christmas, then Winter after Dec 25. */

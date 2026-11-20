@@ -1,5 +1,5 @@
 import { Download } from "lucide-react";
-import { collections, coloringPagePath, type Printable } from "../../config/site";
+import { collections, coloringPagePath, printableAlt, type Printable } from "../../config/site";
 
 /** Printable collections (island). */
 export function KidsCollections() {
@@ -24,7 +24,7 @@ function PrintableCard({ p }: { p: Printable }) {
   return (
     <article className="overflow-hidden rounded-3xl border-2 border-border bg-card">
       <a href={coloringPagePath(p)} className="block bg-muted p-4">
-        <img src={p.preview} alt={`${p.title} preview`} loading="lazy" width={p.width} height={p.height} className={`mx-auto h-56 w-auto rounded-lg bg-card ${p.file ? "" : "opacity-40"}`} />
+        <img src={p.preview} alt={printableAlt(p)} loading="lazy" width={p.width} height={p.height} className={`mx-auto h-56 w-auto rounded-lg bg-card ${p.file ? "" : "opacity-40"}`} />
       </a>
       <div className="flex items-center justify-between gap-3 p-4">
         <h3 className="font-kids text-lg font-bold"><a href={coloringPagePath(p)} className="hover:underline">{p.title}</a></h3>

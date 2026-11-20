@@ -1,7 +1,8 @@
 ---
 import ColoringDetail from "../../../components/kids/ColoringDetail.astro";
-import { collections, coloringPagePath, type Printable } from "../../../config/site";
+import { collections, coloringPagePath, printableAlt, type Printable } from "../../../config/site";
 import imageLd from "../../../data/images.jsonld.json";
+import { withDescription } from "../../../lib/image-ld";
 
 export function getStaticPaths() {
   const all = collections.flatMap((c) => c.printables);
@@ -23,12 +24,12 @@ const ld = (imageLd as Record<string, unknown>)[p.slug]; // imagemill export (Im
   preview={p.preview}
   file={p.file}
   pdf={p.pdf}
-  alt={`${p.title}: ${p.blurb}`}
+  alt={printableAlt(p)}
   width={p.width}
   height={p.height}
-  ld={ld ? [ld] : []}
+  ld={ld ? [withDescription(ld, printableAlt(p))] : []}
   relatedTitle="More Bible coloring pages"
-  related={related.map((r) => ({ href: coloringPagePath(r), title: r.title, preview: r.preview, width: r.width, height: r.height }))}
+  related={related.map((r) => ({ href: coloringPagePath(r), title: r.title, alt: printableAlt(r), preview: r.preview, width: r.width, height: r.height }))}
 >
   <Fragment slot="context">{p.blurb} <span class="font-semibold">Bible story: {p.passage}.</span></Fragment>
 </ColoringDetail>

@@ -2,7 +2,7 @@
 // v1.D — targets "christmas bible coloring pages".
 import { FileDown } from "lucide-react";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
-import { collections, coloringPagePath } from "../../../config/site";
+import { collections, coloringPagePath, printableAlt } from "../../../config/site";
 
 const site = "https://lamill.store";
 const url = `${site}/kids/bible-coloring-pages/christmas/`;
@@ -99,7 +99,7 @@ const ld = [
         {pages.map((p, i) => (
           <li class="grid gap-4 rounded-3xl border-2 border-border bg-card p-4 sm:grid-cols-[10rem_1fr] sm:items-center">
             <a href={coloringPagePath(p)} class="block">
-              <img src={p.preview} alt={`${p.title}: ${p.blurb}`} width={p.width} height={p.height} loading="lazy" class="mx-auto h-56 w-auto sm:h-auto sm:w-40" />
+              <img src={p.preview} alt={printableAlt(p)} width={p.width} height={p.height} loading="lazy" class="mx-auto h-56 w-auto sm:h-auto sm:w-40" />
             </a>
             <div>
               <h3 class="font-kids text-2xl font-bold text-primary">

@@ -105,6 +105,46 @@ Link each storefront from the homepage. Kids’ Activities is the first live sto
 - [ ] Update the **Live URL** above with the actual deploy URL.
 - [ ] Run `make run ARGS="cleanup"` from `sites/portfolio/` so `data/portfolio.json` reflects the new project's state (and `project status lamill.store` resolves cleanly).
 
+### Image search wording
+
+Google Images is a real search surface here. In GSC (28 days to 2026-11-20), about
+50 image impressions came from searches like "simple noah's ark outline",
+"noahs ark simple drawing" and "printable simple noah's ark coloring page":
+searchers type *simple / easy / outline / for kids / coloring page*.
+Every coloring image must follow these rules:
+
+- **Alt text comes from the helpers. Never hand-write it.** Use `designAlt(d)`
+  (`src/config/coloring.ts`) for theme designs and `printableAlt(p)`
+  (`src/config/site.ts`) for Bible pages. Pattern: `<Title> coloring page for kids,
+  <look> black-and-white outline: <what the picture shows>`.
+- **"Simple" only where true.** Only `easy`-level designs get "simple"; `detailed`
+  ones get "detailed". Don't stuff modifiers onto pictures they don't describe.
+- **The `what it shows` part names concrete objects**, e.g. "puppy curled up
+  asleep in a round dog bed". Image searchers type objects, not moods.
+- **JSON-LD `ImageObject.description` uses the same alt text.** Use
+  `withDescription()` in `src/lib/image-ld.ts`, which overrides the imagemill
+  export at render time.
+- **Never rename an image file that is already published.** Its URL is what
+  Google Images has indexed. For new designs, choose the file stem with the
+  search in mind (`<topic>-<object>`).
+- **Future designs:** for topics with "simple / easy drawing" searches, include
+  at least one genuinely simple, chunky-line design per collection.
+
+### Printable PDFs
+
+Google ranks the PDFs as standalone results; a PDF has ranked at position ~6.
+Every PDF therefore links back to the site (shipped in v1.G):
+
+- `scripts/printable_pdfs.py` prints a "More free coloring pages at lamill.store"
+  footer on every page, makes it a clickable link to the design's page
+  (`?utm_source=pdf&utm_medium=link`), and sets the PDF Title, Subject and Author.
+- It reads titles and URLs from `src/data/printables.json`, which is generated
+  from the config. After adding designs, run
+  `docker exec -w /usr/src/app/lamill.store sites1 node scripts/printables-manifest.ts`,
+  then `uv run scripts/printable_pdfs.py` (add `--force` after changing the layout).
+  `src/__tests__/printables-manifest.test.ts` fails if the JSON is stale or a PDF
+  has no entry.
+
 ## How to run
 
 ```bash
