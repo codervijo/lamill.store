@@ -158,7 +158,7 @@ lamill.store --url https://lamill.store/image-sitemap.xml` → submitted
 
 ## 2026-11-10 — Index snapshot: 76/78 indexed, 0 impressions
 
-**Status:** active · **Review:** 2026-11-17 (first-impressions check), then with the 2026-12-06 v2.B review
+**Status:** shipped (reviewed 2026-11-20) · **Review:** 2026-11-17 (first-impressions check), then with the 2026-12-06 v2.B review
 
 **Hypothesis:** now that 76 of 78 sitemap URLs are indexed, the first GSC
 impressions (web or image) appear within 7 days, without any new content,
@@ -186,6 +186,43 @@ puts new pages below the viewed results even for KD-0 terms; no branded
 searches; GSC lags ~2 days. The crawl batch started ~00:09 UTC, before the
 image sitemap submission (01:29 UTC), so the fast indexing can't be credited
 to that submission.
+
+**Result (reviewed 2026-11-20, 3 days late):** hypothesis passed. GSC 28d to
+2026-11-20 (`dataState=all`): web 38 impressions / 0 clicks across 23 URLs;
+image ~50 impressions / 0 clicks, almost all on `/kids/bible-coloring-pages/noahs-ark/`.
+Both pending URLs now "Submitted and indexed" (dragon-campfire crawled
+2026-11-13, polar-bear-and-cub 2026-11-11). Visible queries are long-tail,
+one scene each ("coloring page of jesus calming the storm", "puppy coloring
+pages pdf", "pumpkin pie coloring sheet"), positions 35–100. Best web URL
+was a PDF: `/printables/the-angel-visits-mary.pdf`, 28 impressions, pos 6.4.
+Image queries use "simple / outline / easy drawing" wording.
+**Learning:** first impressions arrive without links or resubmission, but only
+for single-design long-tail queries and PDFs. No hub head term shows yet (DR 0).
+Follow-ups: v1.G (PDFs link back) and image-search alt wording — see the
+2026-11-20 entry.
+
+
+## 2026-11-20 — v1.G PDFs link back + image-search alt wording
+
+**Status:** active · **Review:** 2026-12-18 (28 d after deploy)
+
+**Hypothesis:** (1) PDFs rank on their own (the best web URL was a PDF at
+pos 6.4), so a titled PDF with a clickable "lamill.store" footer turns PDF
+impressions into site visits. (2) Alt text in searchers' words ("coloring page
+for kids", "simple" for easy designs, "outline") lifts Google Images impressions
+beyond the Noah's Ark page.
+
+**KPI:** (1) GA4 sessions with `utm_source=pdf`; GSC clicks on `/printables/*.pdf`.
+(2) GSC image impressions (`type=image`) and number of distinct pages with
+image impressions.
+
+**Baseline (28d to 2026-11-20):** PDF clicks 0; `utm_source=pdf` sessions 0
+(the link didn't exist); image ~50 impressions on 3 pages (≈48 on Noah's Ark).
+
+**Action:** all 73 PDFs rebuilt with footer, clickable link to the design's
+page (`?utm_source=pdf&utm_medium=link`) and Title/Subject/Author metadata;
+alt text and ImageObject `description` regenerated from `designAlt()` /
+`printableAlt()` on every coloring image. No image files renamed.
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
