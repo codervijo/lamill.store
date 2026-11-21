@@ -2,6 +2,7 @@
 // v1.D — targets "christmas bible coloring pages".
 import { FileDown } from "lucide-react";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
+import ShareButton from "../../../components/kids/ShareButton.astro";
 import { collections, coloringPagePath, printableAlt } from "../../../config/site";
 
 const site = "https://lamill.store";
@@ -88,9 +89,12 @@ const ld = [
         the verses it is drawn from, so you can read the story aloud while your child colors. Print them one at a
         time, or download all six in one PDF.
       </p>
-      <a href={setPdf} download class="mt-5 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:bg-primary/90">
-        <FileDown className="h-5 w-5" aria-hidden="true" /> Download all {pages.length} (PDF)
-      </a>
+      <div class="mt-5 flex flex-wrap items-center gap-3">
+        <a href={setPdf} download class="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-lg font-semibold text-primary-foreground hover:bg-primary/90">
+          <FileDown className="h-5 w-5" aria-hidden="true" /> Download all {pages.length} (PDF)
+        </a>
+        <ShareButton title="Christmas Bible Coloring Pages" pdf={setPdf} />
+      </div>
     </header>
 
     <section class="mt-12">

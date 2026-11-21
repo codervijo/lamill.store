@@ -39,7 +39,9 @@ const ld = (imageLd as Record<string, unknown>)[stem] ?? (text && {
   license: "https://lamill.io/image-license",
   acquireLicensePage: "https://lamill.io/contact",
 });
-const back = c.hub ? { href: c.hub, label: `All ${c.title.toLowerCase()} coloring pages` } : { href: "/kids/bible-coloring-pages/", label: "All Bible coloring pages" };
+// Lowercase the set name for running text, but keep "Bible" capitalized.
+const setName = c.title.toLowerCase().replace(/\bbible\b/, "Bible");
+const back = c.hub ? { href: c.hub, label: `All ${setName} coloring pages` } : { href: "/kids/bible-coloring-pages/", label: "All Bible coloring pages" };
 ---
 <ColoringDetail
   metaTitle={`${p.title} — Free Printable | LaMill Store`}
@@ -56,10 +58,10 @@ const back = c.hub ? { href: c.hub, label: `All ${c.title.toLowerCase()} colorin
   width={p.width}
   height={p.height}
   ld={ld ? [withDescription(ld, alt)] : []}
-  relatedTitle={c.hub ? `More ${c.title.toLowerCase()} coloring pages` : "More Bible coloring pages"}
+  relatedTitle={c.hub ? `More ${setName} coloring pages` : "More Bible coloring pages"}
   related={related.map((r) => ({ href: coloringPagePath(r), title: r.title, alt: printableAlt(r), preview: r.preview, width: r.width, height: r.height }))}
 >
-  <Fragment slot="context">{p.blurb} <span class="font-semibold">Bible: {p.passage}.</span></Fragment>
+  <Fragment slot="context">{p.blurb}{" "}<span class="font-semibold">Bible: {p.passage}.</span></Fragment>
   {text?.kind === "verse" && (
     <section class="print:hidden mt-8 max-w-3xl">
       <h2 class="font-kids text-2xl font-bold text-primary">The verse</h2>

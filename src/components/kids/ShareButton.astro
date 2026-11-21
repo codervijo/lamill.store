@@ -1,0 +1,119 @@
+---
+// v2.C — share a coloring page or hub.
+//   phone (coarse pointer + Web Share API): "Share" opens a small menu —
+//     "Share link" → native share sheet; "Send the PDF" → shares the file itself
+//     (only when navigator.canShare allows files; the PDF is fetched when the menu
+//     opens, so the second tap still counts as the user's own action).
+//   desktop: "Copy link" → clipboard, "Copied" confirmation; falls back to a
+//     selected text box when the clipboard API is blocked.
+// Shared URLs carry ?utm_source=share&utm_medium=<sheet|copy|pdf> (canonical
+// unchanged); each completed share pings /api/event (v1.F) as action "share".
+// No third-party scripts, no share counts. Hidden on paper.
+import { Share2 } from "lucide-react";
+
+interface Props {
+  title: string; // what the share sheet shows, e.g. "Sleepy Puppy Coloring Page"
+  pdf?: string; // printable to offer as a file (detail: its PDF; hub: the print-all PDF)
+}
+const { title, pdf } = Astro.props;
+---
+<div class="share print:hidden relative inline-block" data-share data-title={title} data-pdf={pdf}>
+  <button type="button" data-share-open class="inline-flex items-center gap-2 rounded-lg border border-primary px-5 py-3 font-medium text-primary hover:bg-card">
+    <Share2 className="h-4 w-4" aria-hidden="true" /> <span data-share-label>Share</span>
+  </button>
+  <div data-share-menu hidden class="absolute left-0 z-20 mt-2 w-56 rounded-xl border-2 border-border bg-card p-2 shadow-card">
+    <button type="button" data-share-link class="block w-full rounded-lg px-3 py-2 text-left font-medium hover:bg-muted">Share link</button>
+    <button type="button" data-share-file hidden class="block w-full rounded-lg px-3 py-2 text-left font-medium hover:bg-muted">Send the PDF</button>
+  </div>
+  <input data-share-fallback hidden readonly class="mt-2 w-72 max-w-full rounded-lg border border-border bg-card px-2 py-1 text-sm" aria-label="Link to copy" />
+  <span data-share-status class="ml-2 text-sm text-muted-foreground" aria-live="polite"></span>
+</div>
+
+<script>
+  const isPhone = () => matchMedia("(pointer: coarse)").matches && typeof navigator.share === "function";
+
+  function shareUrl(medium: "sheet" | "copy" | "pdf"): string {
+    const u = new URL(location.href);
+    u.hash = "";
+    for (const k of [...u.searchParams.keys()]) if (k.startsWith("utm_")) u.searchParams.delete(k);
+    u.searchParams.set("utm_source", "share");
+    u.searchParams.set("utm_medium", medium);
+    return u.toString();
+  }
+
+  // v1.F counter — same ping shape as print; never blocks the share.
+  function count() {
+    const source = new URLSearchParams(location.search).get("utm_source") ?? "";
+    try { navigator.sendBeacon?.("/api/event", JSON.stringify({ action: "share", page: location.pathname, source })); } catch { /* ignore */ }
+  }
+
+  for (const root of document.querySelectorAll<HTMLElement>("[data-share]")) {
+    const title = root.dataset.title ?? document.title;
+    const pdf = root.dataset.pdf;
+    const open = root.querySelector<HTMLButtonElement>("[data-share-open]")!;
+    const label = root.querySelector<HTMLElement>("[data-share-label]")!;
+    const menu = root.querySelector<HTMLElement>("[data-share-menu]")!;
+    const linkBtn = root.querySelector<HTMLButtonElement>("[data-share-link]")!;
+    const fileBtn = root.querySelector<HTMLButtonElement>("[data-share-file]")!;
+    const fallback = root.querySelector<HTMLInputElement>("[data-share-fallback]")!;
+    const status = root.querySelector<HTMLElement>("[data-share-status]")!;
+    let file: File | null = null;
+
+    if (!isPhone()) {
+      label.textContent = "Copy link";
+      open.addEventListener("click", async () => {
+        const url = shareUrl("copy");
+        try {
+          await navigator.clipboard.writeText(url);
+          status.textContent = "Copied";
+          setTimeout(() => (status.textContent = ""), 2500);
+        } catch {
+          fallback.value = url; // clipboard blocked → let them copy by hand
+          fallback.hidden = false;
+          fallback.focus();
+          fallback.select();
+          status.textContent = "Press Ctrl+C (⌘C) to copy";
+        }
+        count();
+      });
+      continue;
+    }
+
+    open.addEventListener("click", () => {
+      menu.hidden = !menu.hidden;
+      if (menu.hidden || !pdf || file) return;
+      // Fetch the PDF now so "Send the PDF" can share it on the next tap.
+      fetch(pdf)
+        .then((r) => (r.ok ? r.blob() : Promise.reject(r.status)))
+        .then((b) => {
+          const f = new File([b], pdf.split("/").pop() ?? "coloring-page.pdf", { type: "application/pdf" });
+          if (navigator.canShare?.({ files: [f] })) {
+            file = f;
+            fileBtn.hidden = false;
+          }
+        })
+        .catch(() => { /* no file option; the link still works */ });
+    });
+
+    linkBtn.addEventListener("click", async () => {
+      menu.hidden = true;
+      try {
+        await navigator.share({ title, url: shareUrl("sheet") });
+        count();
+      } catch { /* cancelled */ }
+    });
+
+    fileBtn.addEventListener("click", async () => {
+      menu.hidden = true;
+      if (!file) return;
+      try {
+        await navigator.share({ files: [file], title, text: `${title} — ${shareUrl("pdf")}` });
+        count();
+      } catch { /* cancelled */ }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!root.contains(e.target as Node)) menu.hidden = true;
+    });
+  }
+</script>

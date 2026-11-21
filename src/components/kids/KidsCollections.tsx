@@ -16,7 +16,7 @@ export function KidsCollections() {
           </div>
           {c.hub && (
             <p className="mt-4">
-              <a href={c.hub} className="font-semibold text-primary underline">See all {c.printables.length} {c.title.toLowerCase()} coloring pages</a>
+              <a href={c.hub} className="font-semibold text-primary underline">See all {c.printables.length} {c.title.toLowerCase().replace(/\bbible\b/, "Bible")} coloring pages</a>
             </p>
           )}
         </section>

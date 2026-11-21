@@ -3,6 +3,7 @@
 // "bible story coloring sheets", "bible coloring pages for preschoolers").
 import { Printer, FileDown } from "lucide-react";
 import SiteLayout from "../../../layouts/SiteLayout.astro";
+import ShareButton from "../../../components/kids/ShareButton.astro";
 import { collections, coloringPagePath, printableAlt, type Printable } from "../../../config/site";
 
 const site = "https://lamill.store";
@@ -98,6 +99,7 @@ const ld = [
         download the ready-made PDF. Every page names the Bible passage it comes from, so you can read the story
         together before your child colors it. No sign-up, no email.
       </p>
+      <div class="mt-5"><ShareButton title="Bible Coloring Pages to Print" /></div>
       <nav class="mt-5 flex flex-wrap gap-2" aria-label="Sections">
         {sections.map((s) => (
           <a href={`#${s.id}`} class="rounded-full bg-card px-4 py-2 font-kids font-semibold text-primary shadow-card">{s.title}</a>
