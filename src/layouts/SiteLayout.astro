@@ -30,6 +30,8 @@ const hasHeadSlot = Astro.slots.has("head");
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {/* Pinterest website claim (@lamillcoloringpages). Keep — removing it unclaims the site. */}
+    <meta name="p:domain_verify" content="999aba34f7df3fa6a5ba42d136e8f2e0" />
     {hasHeadSlot ? (
       <slot name="head" />
     ) : (
