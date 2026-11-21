@@ -1804,6 +1804,139 @@
     "name": "The wise men follow the star",
     "width": 1024
   },
+  "unicorn-baby-unicorn": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Baby unicorn with big eyes sitting on the grass",
+    "contentUrl": "https://lamill.store/printables/unicorn-baby-unicorn.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Baby unicorn with big eyes sitting on the grass",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn baby unicorn",
+    "width": 1024
+  },
+  "unicorn-pegasus": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Winged horse flying among clouds and stars",
+    "contentUrl": "https://lamill.store/printables/unicorn-pegasus.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Winged horse flying among clouds and stars",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn pegasus",
+    "width": 1024
+  },
+  "unicorn-rainbow-unicorn": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Unicorn prancing over a rainbow between two clouds",
+    "contentUrl": "https://lamill.store/printables/unicorn-rainbow-unicorn.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Unicorn prancing over a rainbow between two clouds",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn rainbow unicorn",
+    "width": 1024
+  },
+  "unicorn-unicorn-cake": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Unicorn birthday cake with a horn, ears and frosting flowers",
+    "contentUrl": "https://lamill.store/printables/unicorn-unicorn-cake.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Unicorn birthday cake with a horn, ears and frosting flowers",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn unicorn cake",
+    "width": 1024
+  },
+  "unicorn-unicorn-family": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Mother unicorn and two foals in a flower meadow under the moon and stars",
+    "contentUrl": "https://lamill.store/printables/unicorn-unicorn-family.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Mother unicorn and two foals in a flower meadow under the moon and stars",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn unicorn family",
+    "width": 1024
+  },
+  "unicorn-unicorn-forest": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Unicorn in a magical forest by a waterfall, with mushrooms and butterflies",
+    "contentUrl": "https://lamill.store/printables/unicorn-unicorn-forest.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Unicorn in a magical forest by a waterfall, with mushrooms and butterflies",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn unicorn forest",
+    "width": 1024
+  },
+  "unicorn-unicorn-head": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Smiling unicorn head with a spiral horn and a flowing mane",
+    "contentUrl": "https://lamill.store/printables/unicorn-unicorn-head.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Smiling unicorn head with a spiral horn and a flowing mane",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Unicorn unicorn head",
+    "width": 1024
+  },
   "winter-cabin-in-the-snow": {
     "@context": "https://schema.org",
     "@type": "ImageObject",

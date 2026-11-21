@@ -298,7 +298,7 @@ export const themeCollections: ThemeCollection[] = [
       { q: "Are these Disney princesses?", a: "No. They are original princesses drawn for LaMill Store, so they can be printed and shared freely." },
       { q: "Which page is best for a three-year-old?", a: "The little princess holding a flower, or the crown on its cushion: each is one large shape with thick lines." },
     ],
-    related: ["ballerina", "dragon"],
+    related: ["unicorn", "ballerina"],
     designs: [
       { slug: "little-princess", stem: "princess-little-princess", title: "Little Princess", level: "easy", alt: "Smiling little princess in a crown, holding a flower" },
       { slug: "princess-crown", stem: "princess-princess-crown", title: "Princess Crown", level: "easy", alt: "Big jeweled crown on a cushion with tassels" },
@@ -421,6 +421,44 @@ export const themeCollections: ThemeCollection[] = [
       { slug: "butterfly-and-flowers", stem: "flower-butterfly-and-flowers", title: "Butterfly and Flowers", level: "medium", alt: "Butterfly with patterned wings landing on a cluster of flowers" },
       { slug: "flower-garden", stem: "flower-flower-garden", title: "Flower Garden", level: "detailed", alt: "Flower garden with sunflowers, tulips, daisies and roses, a watering can, a bee and a butterfly" },
       { slug: "flower-bouquet", stem: "flower-flower-bouquet", title: "Flower Bouquet", level: "detailed", alt: "Bouquet of roses, tulips, daisies and lilies in a patterned vase" },
+    ],
+  },
+  {
+    id: "unicorn",
+    hub: "unicorn-coloring-pages",
+    keyword: "unicorn coloring pages",
+    h1: "Unicorn Coloring Pages",
+    metaTitle: "Unicorn Coloring Pages for Kids — Free Printable PDFs",
+    description: "Free unicorn coloring pages for kids: a unicorn head, a baby unicorn, a rainbow unicorn, a unicorn cake, a pegasus, a magic forest and a unicorn family.",
+    nav: "Unicorns",
+    intro:
+      "Seven free unicorn coloring pages, sorted from easy to detailed. The smiling unicorn head and the baby unicorn are big, simple shapes for preschoolers; the unicorn prancing over a rainbow, the unicorn birthday cake and the flying pegasus suit five- to eight-year-olds; the magical forest and the unicorn family under the moon are full scenes for older kids. Every page prints on one US Letter sheet, and the whole set comes as one PDF.",
+    sections: [
+      {
+        heading: "Rainbows, cakes and a pegasus",
+        body:
+          "The rainbow unicorn is the page most children reach for first, because the rainbow has its own stripes to fill in any order they like. The unicorn cake is made for birthday parties: print one per guest and let everyone decorate their own cake. The pegasus is a winged horse without a horn, a good one for talking about the difference between a unicorn and a pegasus.",
+      },
+      {
+        heading: "Mane, horn and stars",
+        body:
+          "Unicorn manes are long, flowing shapes split into strands, so they are good practice for coloring inside curved lines. Younger children can color the whole mane one color; older kids often give every strand its own color, like a rainbow. The stars and hearts around the pictures are small extra spaces for finishing touches.",
+      },
+    ],
+    faq: [
+      { q: "Are these unicorn coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account or email." },
+      { q: "Which page is easiest for a toddler?", a: "The unicorn head and the baby unicorn: each is one big shape with thick lines and almost no background." },
+      { q: "What is the difference between a unicorn and a pegasus?", a: "A unicorn is a horse with a single horn on its forehead; a pegasus is a horse with wings. Our pegasus page shows the wings and no horn." },
+    ],
+    related: ["princess", "dragon"],
+    designs: [
+      { slug: "unicorn-head", stem: "unicorn-unicorn-head", title: "Unicorn Head", level: "easy", alt: "Smiling unicorn head with a spiral horn and a flowing mane" },
+      { slug: "baby-unicorn", stem: "unicorn-baby-unicorn", title: "Baby Unicorn", level: "easy", alt: "Baby unicorn with big eyes sitting on the grass" },
+      { slug: "rainbow-unicorn", stem: "unicorn-rainbow-unicorn", title: "Rainbow Unicorn", level: "medium", alt: "Unicorn prancing over a rainbow between two clouds" },
+      { slug: "unicorn-cake", stem: "unicorn-unicorn-cake", title: "Unicorn Cake", level: "medium", alt: "Unicorn birthday cake with a horn, ears and frosting flowers on a cake stand" },
+      { slug: "pegasus", stem: "unicorn-pegasus", title: "Pegasus", level: "medium", alt: "Winged horse flying among clouds and stars" },
+      { slug: "unicorn-forest", stem: "unicorn-unicorn-forest", title: "Unicorn in the Magic Forest", level: "detailed", alt: "Unicorn in a magical forest by a waterfall, with mushrooms, flowers and butterflies" },
+      { slug: "unicorn-family", stem: "unicorn-unicorn-family", title: "Unicorn Family", level: "detailed", alt: "Mother unicorn and two foals in a flower meadow under the moon and stars, a castle on a far hill" },
     ],
   },
 ];

@@ -313,3 +313,27 @@ from `/kids/` and the homepage. The sitewide descriptions now list the new theme
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-21 — v2.F: unicorn coloring pages
+
+**Status:** active · **Review:** 2026-12-19 (28 d after deploy, with v2.E)
+
+**Hypothesis:** like flowers, the head term ("unicorn coloring pages", 49,500/mo) is
+held by Crayola and big roundups (mondaymandala 81, sarahtitus 100+, abcmouse 90+,
+printabulls 150, online-coloring 207), so impressions come first from named
+long-tail pages: rainbow unicorn (1,900), unicorn cake (390), pegasus (880),
+baby unicorn, unicorn head.
+
+**KPI:** GSC impressions + clicks for `/kids/unicorn-coloring-pages/` and its 7
+design URLs; `pdf` / `print-all` downloads in `/api/stats`.
+
+**Baseline (2026-11-21):** 0 / 0 (URLs new). Volumes: Google Ads US via DataForSEO
+(treg, $0.09); top 10 via treg.
+
+**What shipped:** 7 imagemill designs ($0.08): head, baby, rainbow, cake, pegasus
+(winged, no horn), forest, family. 7 PDFs + a print-all PDF. Linked from `/kids/`,
+the homepage and the princess hub.
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*

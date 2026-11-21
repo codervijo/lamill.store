@@ -19,7 +19,7 @@ export const storefronts: Storefront[] = [
     id: "kids",
     title: "Kids’ Activities",
     path: "/kids",
-    description: "Free printable coloring pages for kids: Bible stories, holidays, princesses, ballerinas, flowers, music, dogs, dragons and monster trucks. No sign-up.",
+    description: "Free printable coloring pages for kids: Bible stories, holidays, princesses, unicorns, ballerinas, flowers, music, dogs, dragons and more. No sign-up.",
     cta: "Explore activities",
     image: "/printables/dog-puppy-with-ball.webp",
     status: "live",
