@@ -337,3 +337,17 @@ the homepage and the princess hub.
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-21 — Ballerina hub: boy dancer removed
+
+**Status:** shipped (change to the v2.E ballerina hub)
+
+**Action:** operator 2026-11-21: removed the boy ballet dancer design (page, picture,
+PDF) and every mention of it in the hub text and FAQ. Regenerated the Ballet Class
+picture with an all-girl class ($0.01). The ballerina hub now has 6 designs. The
+v2.D and v2.E entries above still mention a boy dancer; that was the plan as built
+on that day.
+
+**Effect on KPI:** the "boy ballerina" related search named in v2.D is no longer
+targeted. Judge the hub on "ballerina coloring pages" and its other long tail.

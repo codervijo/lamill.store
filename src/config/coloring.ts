@@ -353,15 +353,15 @@ export const themeCollections: ThemeCollection[] = [
     keyword: "ballerina coloring pages",
     h1: "Ballerina and Ballet Coloring Pages",
     metaTitle: "Ballerina Coloring Pages — Free Ballet Printables for Kids",
-    description: "Free ballerina and ballet coloring pages: a twirling little ballerina, pointe shoes, a boy dancer leaping, a bunny ballerina, a recital and a ballet class.",
+    description: "Free ballerina and ballet coloring pages: a twirling little ballerina, pointe shoes, a ballerina at the barre, a bunny ballerina, a recital and a ballet class.",
     nav: "Ballet",
     intro:
-      "Seven free ballet coloring pages, from a little ballerina twirling in her tutu to a whole ballet class at the barre. The ballerina and the pointe shoes are big, simple shapes for preschoolers; the boy dancer mid-leap, the ballerina with curly puffs at the barre and the bunny ballerina suit five- to eight-year-olds; the recital stage and the ballet class are full scenes for older dancers. Every page is one US Letter sheet, and the set comes as one PDF.",
+      "Six free ballet coloring pages, from a little ballerina twirling in her tutu to a whole ballet class at the barre. The ballerina and the pointe shoes are big, simple shapes for preschoolers; the ballerina with curly puffs at the barre and the bunny ballerina suit five- to eight-year-olds; the recital stage and the ballet class are full scenes for older dancers. Every page is one US Letter sheet, and the set comes as one PDF.",
     sections: [
       {
         heading: "Dancers who look like your dancer",
         body:
-          "Ballet classes are full of different children, so these pages are too. There is a boy dancer leaping across the floor, a ballerina with her curly hair in two puffs, and a class of five children who don’t all look alike. Coloring a dancer who looks like them, or like a friend from class, is often what makes a child pick a page first.",
+          "Ballet classes are full of different children, so these pages are too. There is a ballerina with her curly hair in two puffs, and a class of five young dancers who don’t all look alike. Coloring a dancer who looks like them, or like a friend from class, is often what makes a child pick a page first.",
       },
       {
         heading: "Before and after dance class",
@@ -371,18 +371,16 @@ export const themeCollections: ThemeCollection[] = [
     ],
     faq: [
       { q: "Are these ballerina coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account or email." },
-      { q: "Is there a boy ballet dancer?", a: "Yes. One page shows a boy dancer leaping, and the ballet class page includes a boy at the barre." },
       { q: "Which page suits a preschooler?", a: "The little ballerina twirling, or the pair of pointe shoes with ribbons: both have a few large shapes and thick lines." },
     ],
     related: ["princess", "music"],
     designs: [
       { slug: "little-ballerina", stem: "ballet-little-ballerina", title: "Little Ballerina", level: "easy", alt: "Little ballerina twirling on her toes in a puffy tutu" },
       { slug: "ballet-shoes", stem: "ballet-ballet-shoes", title: "Ballet Shoes", level: "easy", alt: "Pair of pointe shoes with long ribbons tied in a bow" },
-      { slug: "boy-ballet-dancer", stem: "ballet-boy-ballet-dancer", title: "Boy Ballet Dancer", level: "medium", alt: "Boy ballet dancer leaping with his arms stretched out" },
       { slug: "ballerina-at-the-barre", stem: "ballet-ballerina-at-the-barre", title: "Ballerina at the Barre", level: "medium", alt: "Ballerina with curly hair in two puffs practicing at the barre" },
       { slug: "bunny-ballerina", stem: "ballet-bunny-ballerina", title: "Bunny Ballerina", level: "medium", alt: "Bunny ballerina in a tutu posing on a little stage with flowers" },
       { slug: "ballet-recital", stem: "ballet-ballet-recital", title: "Ballet Recital", level: "detailed", alt: "Two young dancers performing on a theater stage with curtains and bouquets" },
-      { slug: "ballet-class", stem: "ballet-ballet-class", title: "Ballet Class", level: "detailed", alt: "Ballet class with a teacher and five children posing at the barre, a mirror and a piano" },
+      { slug: "ballet-class", stem: "ballet-ballet-class", title: "Ballet Class", level: "detailed", alt: "Ballet class with a teacher and five young ballerinas posing at the barre, a mirror and a piano" },
     ],
   },
   {

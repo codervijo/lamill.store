@@ -41,7 +41,7 @@
     "@context": "https://schema.org",
     "@type": "ImageObject",
     "acquireLicensePage": "https://lamill.io/contact",
-    "caption": "Ballet class with a teacher and five children posing at the barre",
+    "caption": "Ballet class with a teacher and five young ballerinas posing at the barre",
     "contentUrl": "https://lamill.store/printables/ballet-ballet-class.webp",
     "copyrightNotice": "© 2026 lamill.io",
     "creator": {
@@ -49,7 +49,7 @@
       "name": "lamill.io"
     },
     "creditText": "lamill.io",
-    "description": "Coloring page: Ballet class with a teacher and five children posing at the barre",
+    "description": "Coloring page: Ballet class with a teacher and five young ballerinas posing at the barre",
     "encodingFormat": "image/webp",
     "height": 1536,
     "license": "https://lamill.io/image-license",
@@ -92,25 +92,6 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "Ballet ballet shoes",
-    "width": 1024
-  },
-  "ballet-boy-ballet-dancer": {
-    "@context": "https://schema.org",
-    "@type": "ImageObject",
-    "acquireLicensePage": "https://lamill.io/contact",
-    "caption": "Boy ballet dancer leaping with arms stretched out",
-    "contentUrl": "https://lamill.store/printables/ballet-boy-ballet-dancer.webp",
-    "copyrightNotice": "© 2026 lamill.io",
-    "creator": {
-      "@type": "Organization",
-      "name": "lamill.io"
-    },
-    "creditText": "lamill.io",
-    "description": "Coloring page: Boy ballet dancer leaping with arms stretched out",
-    "encodingFormat": "image/webp",
-    "height": 1536,
-    "license": "https://lamill.io/image-license",
-    "name": "Ballet boy ballet dancer",
     "width": 1024
   },
   "ballet-bunny-ballerina": {
