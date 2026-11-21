@@ -226,3 +226,42 @@ alt text and ImageObject `description` regenerated from `designAlt()` /
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-20 — v1.E Bible sub-hubs: verses, preschool, characters, books of the Bible
+
+**Status:** active · **Review:** 2026-12-18 (28 d after deploy)
+
+**Hypothesis:** four Bible sub-hubs (6 pages each + print-all PDF) earn impressions on
+long-tail queries the main Bible hub can't rank for: verse, character and
+books-of-the-Bible searches, where the US top 10 is mostly adult verse art, charts,
+Pinterest pins and paid Etsy packs.
+
+**KPI:** GSC impressions + clicks for the 4 hub URLs and 24 detail URLs; image
+impressions on the new pages; print-all downloads per set (v1.F `/api/stats`, action
+`print-all`).
+
+**Baseline (2026-11-20):** 0 impressions / 0 clicks (URLs new).
+
+**Volumes:** Google Ads US monthly via DataForSEO (treg, 2026-11-20); no KD
+(Serpstat and SE Ranking were out of capacity on treg).
+
+| Hub | Target | US / mo | Live US top 10 (2026-11-20) |
+|---|---|---|---|
+| `/kids/bible-coloring-pages/verses/` | bible verse coloring pages | 2,900 | seekingscripture, Pinterest, blog roundups, adult verse art (joditt), Etsy paid bundle — few kids' verse pages with outline letters |
+| `/kids/bible-coloring-pages/preschool/` | preschool bible coloring pages | 1,000 | established ministry sites (ministryspark 52 pages, christianpreschoolprintables, ministry-to-children, kids-bible-lessons) — hardest of the four |
+| `/kids/bible-coloring-pages/characters/` | per-character terms | david 590, joseph's coat 480, esther 390, abraham 320, ruth & naomi 210, paul & silas 90 | "david coloring page": Pinterest ×2, Etsy, David & Goliath pages — king David with harp is open |
+| `/kids/bible-coloring-pages/books-of-the-bible/` | books of the bible printable / coloring pages | 1,000 / 480 | charts and lists (answeredfaith, radiantpearl), Pinterest ×4, Etsy — almost no colorable versions |
+
+Hub term "bible character coloring pages" is only 70/mo, so characters were chosen
+by individual name volume. Higher-volume verse topics not yet built: fruit of the
+spirit 1,900 (one page shipped), armor of god 880 (one page shipped).
+
+**What shipped:** 24 imagemill images ($0.26). Verse and books pages are composed:
+the picture is generated and the words are set in code (`scripts/typeset_pages.py`,
+Baloo 2). Verses use the WEB with "the LORD" for "Yahweh". Also: 24 detail pages,
+4 hubs, 28 PDFs (24 singles + 4 print-all), `public/image-sitemap-text.xml` for the
+12 composed images, and links from `/kids/` and the main Bible hub.
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*

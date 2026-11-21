@@ -1,4 +1,23 @@
 {
+  "abraham-counting-stars": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Abraham looking up at a sky full of stars",
+    "contentUrl": "https://lamill.store/printables/abraham-counting-stars.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Abraham looking up at a sky full of stars",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Abraham counting stars",
+    "width": 1024
+  },
   "christmas-christmas-village": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -588,6 +607,44 @@
     "name": "Jesus walks on water",
     "width": 1024
   },
+  "joseph-coat-of-many-colors": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Joseph in his coat of many colors, with his father Jacob",
+    "contentUrl": "https://lamill.store/printables/joseph-coat-of-many-colors.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Joseph in his coat of many colors, with his father Jacob",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Joseph coat of many colors",
+    "width": 1024
+  },
+  "king-david-with-harp": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "King David with a crown, playing his harp beside his sheep",
+    "contentUrl": "https://lamill.store/printables/king-david-with-harp.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: King David with a crown, playing his harp beside his sheep",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "King david with harp",
+    "width": 1024
+  },
   "monster-truck-big-wheels-truck": {
     "@context": "https://schema.org",
     "@type": "ImageObject",
@@ -738,6 +795,177 @@
     "height": 1536,
     "license": "https://lamill.io/image-license",
     "name": "Moses parting the red sea",
+    "width": 1024
+  },
+  "paul-and-silas-in-prison": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Paul and Silas singing in jail as their chains fall open",
+    "contentUrl": "https://lamill.store/printables/paul-and-silas-in-prison.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Paul and Silas singing in jail as their chains fall open",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Paul and silas in prison",
+    "width": 1024
+  },
+  "preschool-baby-moses": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Baby Moses asleep in a basket among the reeds",
+    "contentUrl": "https://lamill.store/printables/preschool-baby-moses.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Baby Moses asleep in a basket among the reeds",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Preschool baby moses",
+    "width": 1024
+  },
+  "preschool-jesus-and-lamb": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus holding a little lamb",
+    "contentUrl": "https://lamill.store/printables/preschool-jesus-and-lamb.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Jesus holding a little lamb",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Preschool jesus and lamb",
+    "width": 1024
+  },
+  "preschool-jesus-loves-me": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jesus hugging a child, with a big heart behind them",
+    "contentUrl": "https://lamill.store/printables/preschool-jesus-loves-me.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Jesus hugging a child, with a big heart behind them",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Preschool jesus loves me",
+    "width": 1024
+  },
+  "preschool-jonah": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Jonah beside a big friendly fish",
+    "contentUrl": "https://lamill.store/printables/preschool-jonah.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Jonah beside a big friendly fish",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Preschool jonah",
+    "width": 1024
+  },
+  "preschool-noahs-animals": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Two elephants walking to Noah’s ark",
+    "contentUrl": "https://lamill.store/printables/preschool-noahs-animals.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Two elephants walking to Noah’s ark",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Preschool noahs animals",
+    "width": 1024
+  },
+  "preschool-sun-moon-stars": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "A big smiling sun, a moon and three stars",
+    "contentUrl": "https://lamill.store/printables/preschool-sun-moon-stars.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: A big smiling sun, a moon and three stars",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Preschool sun moon stars",
+    "width": 1024
+  },
+  "queen-esther": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Queen Esther before the king, who holds out his scepter",
+    "contentUrl": "https://lamill.store/printables/queen-esther.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Queen Esther before the king, who holds out his scepter",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Queen esther",
+    "width": 1024
+  },
+  "ruth-and-naomi": {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "acquireLicensePage": "https://lamill.io/contact",
+    "caption": "Ruth and Naomi walking together, Ruth carrying barley",
+    "contentUrl": "https://lamill.store/printables/ruth-and-naomi.webp",
+    "copyrightNotice": "© 2026 lamill.io",
+    "creator": {
+      "@type": "Organization",
+      "name": "lamill.io"
+    },
+    "creditText": "lamill.io",
+    "description": "Coloring page: Ruth and Naomi walking together, Ruth carrying barley",
+    "encodingFormat": "image/webp",
+    "height": 1536,
+    "license": "https://lamill.io/image-license",
+    "name": "Ruth and naomi",
     "width": 1024
   },
   "thanksgiving-cornucopia": {

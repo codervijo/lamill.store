@@ -22,6 +22,10 @@ export function buildManifest(): Record<string, PdfEntry> {
   for (const p of collections.flatMap((c) => c.printables)) {
     if (p.pdf) out[stemOf(p.pdf)] = { title: p.title, url: withUtm(coloringPagePath(p)) };
   }
+  // v1.E Bible sub-hubs: their print-all set links back to the sub-hub.
+  for (const c of collections) {
+    if (c.set && c.hub) out[c.set] = { title: `${c.title} Coloring Pages (Full Set)`, url: withUtm(c.hub) };
+  }
   for (const c of themeCollections) {
     for (const d of c.designs) out[d.stem] = { title: `${d.title} Coloring Page`, url: withUtm(designPath(c, d)) };
     out[c.hub] = { title: `${c.h1} (Full Set)`, url: withUtm(hubPath(c)) };

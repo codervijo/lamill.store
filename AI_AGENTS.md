@@ -176,6 +176,13 @@ Every PDF therefore links back to the site (shipped in v1.G):
   then `uv run scripts/printable_pdfs.py` (add `--force` after changing the layout).
   `src/__tests__/printables-manifest.test.ts` fails if the JSON is stale or a PDF
   has no entry.
+- **Pages with words (verses, books of the Bible).** imagemill draws only the
+  picture, in the top half of the page (CSV rows `<stem>-art`, `publish=no`).
+  `uv run scripts/typeset_pages.py` adds the words in code, using the font
+  bundled in `scripts/fonts/`, and writes the final `.png`/`.webp` plus
+  `public/image-sitemap-text.xml`. imagemill owns `image-sitemap.xml`, so
+  don't edit that file by hand. Never ask the image model to draw text. Order:
+  imagemill run → typeset → manifest → PDFs.
 
 ## How to run
 

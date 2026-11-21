@@ -1,4 +1,44 @@
 {
+  "abraham-counting-stars": {
+    "title": "Abraham Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/abraham-and-the-stars/?utm_source=pdf&utm_medium=link"
+  },
+  "bible-character-coloring-pages": {
+    "title": "Bible Characters Coloring Pages (Full Set)",
+    "url": "https://lamill.store/kids/bible-coloring-pages/characters/?utm_source=pdf&utm_medium=link"
+  },
+  "bible-verse-coloring-pages": {
+    "title": "Bible Verses Coloring Pages (Full Set)",
+    "url": "https://lamill.store/kids/bible-coloring-pages/verses/?utm_source=pdf&utm_medium=link"
+  },
+  "books-gospels-acts": {
+    "title": "Gospels and Acts Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible-gospels-and-acts/?utm_source=pdf&utm_medium=link"
+  },
+  "books-history": {
+    "title": "History Books of the Bible Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible-history/?utm_source=pdf&utm_medium=link"
+  },
+  "books-law": {
+    "title": "Books of the Law Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible-law/?utm_source=pdf&utm_medium=link"
+  },
+  "books-letters-revelation": {
+    "title": "Letters and Revelation Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible-letters-and-revelation/?utm_source=pdf&utm_medium=link"
+  },
+  "books-of-the-bible-coloring-pages": {
+    "title": "Books of the Bible Coloring Pages (Full Set)",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible/?utm_source=pdf&utm_medium=link"
+  },
+  "books-poetry": {
+    "title": "Poetry Books of the Bible Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible-poetry/?utm_source=pdf&utm_medium=link"
+  },
+  "books-prophets": {
+    "title": "Books of the Prophets Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/books-of-the-bible-prophets/?utm_source=pdf&utm_medium=link"
+  },
   "christmas-christmas-village": {
     "title": "Christmas Village Street Coloring Page",
     "url": "https://lamill.store/kids/christmas-coloring-pages/christmas-village/?utm_source=pdf&utm_medium=link"
@@ -147,6 +187,14 @@
     "title": "Jonah and the Big Fish Coloring Page",
     "url": "https://lamill.store/kids/bible-coloring-pages/jonah-and-the-big-fish/?utm_source=pdf&utm_medium=link"
   },
+  "joseph-coat-of-many-colors": {
+    "title": "Joseph’s Coat of Many Colors Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/joseph-and-his-coat/?utm_source=pdf&utm_medium=link"
+  },
+  "king-david-with-harp": {
+    "title": "King David Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/king-david/?utm_source=pdf&utm_medium=link"
+  },
   "monster-truck-big-wheels-truck": {
     "title": "Big Wheels Truck Coloring Page",
     "url": "https://lamill.store/kids/monster-truck-coloring-pages/big-wheels-truck/?utm_source=pdf&utm_medium=link"
@@ -186,6 +234,46 @@
   "noahs-ark": {
     "title": "Noah’s Ark Coloring Page",
     "url": "https://lamill.store/kids/bible-coloring-pages/noahs-ark/?utm_source=pdf&utm_medium=link"
+  },
+  "paul-and-silas-in-prison": {
+    "title": "Paul and Silas Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/paul-and-silas/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-baby-moses": {
+    "title": "Baby Moses Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool-baby-moses/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-bible-coloring-pages": {
+    "title": "Preschool Bible Coloring Pages (Full Set)",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-jesus-and-lamb": {
+    "title": "Jesus and the Lamb Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool-jesus-and-the-lamb/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-jesus-loves-me": {
+    "title": "Jesus Loves Me Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool-jesus-loves-me/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-jonah": {
+    "title": "Easy Jonah and the Whale Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool-jonah-and-the-whale/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-noahs-animals": {
+    "title": "Noah’s Ark Animals Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool-noahs-ark-animals/?utm_source=pdf&utm_medium=link"
+  },
+  "preschool-sun-moon-stars": {
+    "title": "God Made the Sun, Moon and Stars Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/preschool-god-made-the-sun-moon-and-stars/?utm_source=pdf&utm_medium=link"
+  },
+  "queen-esther": {
+    "title": "Queen Esther Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/queen-esther/?utm_source=pdf&utm_medium=link"
+  },
+  "ruth-and-naomi": {
+    "title": "Ruth and Naomi Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/ruth-and-naomi/?utm_source=pdf&utm_medium=link"
   },
   "thanksgiving-coloring-pages": {
     "title": "Thanksgiving Coloring Pages (Full Set)",
@@ -254,6 +342,30 @@
   "the-wise-men-follow-the-star": {
     "title": "Wise Men Follow the Star Coloring Page",
     "url": "https://lamill.store/kids/bible-coloring-pages/the-wise-men-follow-the-star/?utm_source=pdf&utm_medium=link"
+  },
+  "verse-ephesians-6-11": {
+    "title": "Armor of God Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/armor-of-god/?utm_source=pdf&utm_medium=link"
+  },
+  "verse-galatians-5-22": {
+    "title": "Fruit of the Spirit Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/fruit-of-the-spirit/?utm_source=pdf&utm_medium=link"
+  },
+  "verse-john-3-16": {
+    "title": "John 3:16 Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/john-3-16/?utm_source=pdf&utm_medium=link"
+  },
+  "verse-joshua-1-9": {
+    "title": "Joshua 1:9 Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/joshua-1-9/?utm_source=pdf&utm_medium=link"
+  },
+  "verse-matthew-19-14": {
+    "title": "Let the Little Children Come Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/let-the-children-come/?utm_source=pdf&utm_medium=link"
+  },
+  "verse-psalm-23-1": {
+    "title": "Psalm 23 Coloring Page",
+    "url": "https://lamill.store/kids/bible-coloring-pages/psalm-23/?utm_source=pdf&utm_medium=link"
   },
   "winter-cabin-in-the-snow": {
     "title": "Cabin in the Snowy Woods Coloring Page",

@@ -20,3 +20,10 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > and metadata. Applied image-search alt wording on all coloring images and
 > documented the rule in AI_AGENTS.md. Marked v1.D, v1.G and v2.B done, v1.E
 > partial; filled the overdue 2026-11-17 growth review.
+
+## 2026-11-20 — v1.E Bible sub-hubs
+
+> "do v1.E" — operator locked: WEB translation with "the LORD" for "Yahweh", 6 designs
+> per sub-set, books of the Bible as one page per group, quick keyword check first.
+> Built verses / preschool / characters / books-of-the-Bible hubs (24 pages, 28 PDFs);
+> verse and book text typeset in code over imagemill art.

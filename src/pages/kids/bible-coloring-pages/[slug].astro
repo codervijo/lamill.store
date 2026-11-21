@@ -1,17 +1,45 @@
 ---
 import ColoringDetail from "../../../components/kids/ColoringDetail.astro";
-import { collections, coloringPagePath, printableAlt, type Printable } from "../../../config/site";
+import { collections, coloringPagePath, printableAlt, type Collection, type Printable } from "../../../config/site";
 import imageLd from "../../../data/images.jsonld.json";
+import textPages from "../../../data/text-pages.json";
 import { withDescription } from "../../../lib/image-ld";
 
 export function getStaticPaths() {
-  const all = collections.flatMap((c) => c.printables);
-  return all.map((p) => ({ params: { slug: p.slug }, props: { p, all } }));
+  return collections.flatMap((c) => c.printables.map((p) => ({ params: { slug: p.slug }, props: { p, c } })));
 }
 
-const { p, all } = Astro.props as { p: Printable; all: Printable[] };
-const related = all.filter((x) => x.slug !== p.slug);
-const ld = (imageLd as Record<string, unknown>)[p.slug]; // imagemill export (ImageObject + rights)
+const { p, c } = Astro.props as { p: Printable; c: Collection };
+const site = "https://lamill.store";
+const stem = p.preview.replace(/^\/printables\//, "").replace(/\.\w+$/, "");
+// v1.E: related = the same set first (a child doing verses wants more verses), then the main stories.
+const main = collections.find((x) => x.id === "bible")?.printables ?? [];
+const related = [...c.printables.filter((x) => x.slug !== p.slug), ...(c.hub ? main.slice(0, 3) : [])];
+const alt = printableAlt(p);
+
+// Verse + books pages: the words are typeset into the picture by scripts/typeset_pages.py;
+// repeat them as page text so they can be read, searched and copied.
+type TextPage = { kind: "verse"; ref: string; text: string } | { kind: "books"; heading: string; books: string[] };
+const text = (textPages as Record<string, TextPage>)[stem];
+
+// imagemill pictures carry their ImageObject in images.jsonld.json; typeset pages get one built here
+// with the same rights fields.
+const ld = (imageLd as Record<string, unknown>)[stem] ?? (text && {
+  "@context": "https://schema.org",
+  "@type": "ImageObject",
+  contentUrl: `${site}${p.preview}`,
+  name: p.title,
+  caption: p.blurb,
+  width: p.width,
+  height: p.height,
+  encodingFormat: "image/webp",
+  creator: { "@type": "Organization", name: "lamill.io" },
+  creditText: "lamill.io",
+  copyrightNotice: "© 2026 lamill.io",
+  license: "https://lamill.io/image-license",
+  acquireLicensePage: "https://lamill.io/contact",
+});
+const back = c.hub ? { href: c.hub, label: `All ${c.title.toLowerCase()} coloring pages` } : { href: "/kids/bible-coloring-pages/", label: "All Bible coloring pages" };
 ---
 <ColoringDetail
   metaTitle={`${p.title} — Free Printable | LaMill Store`}
@@ -19,17 +47,37 @@ const ld = (imageLd as Record<string, unknown>)[p.slug]; // imagemill export (Im
   ogTitle={`${p.title} — Free Printable`}
   ogDescription={`${p.blurb} Free to download and print.`}
   h1={p.title}
-  backHref="/kids/bible-coloring-pages/"
-  backLabel="All Bible coloring pages"
+  backHref={back.href}
+  backLabel={back.label}
   preview={p.preview}
   file={p.file}
   pdf={p.pdf}
-  alt={printableAlt(p)}
+  alt={alt}
   width={p.width}
   height={p.height}
-  ld={ld ? [withDescription(ld, printableAlt(p))] : []}
-  relatedTitle="More Bible coloring pages"
+  ld={ld ? [withDescription(ld, alt)] : []}
+  relatedTitle={c.hub ? `More ${c.title.toLowerCase()} coloring pages` : "More Bible coloring pages"}
   related={related.map((r) => ({ href: coloringPagePath(r), title: r.title, alt: printableAlt(r), preview: r.preview, width: r.width, height: r.height }))}
 >
-  <Fragment slot="context">{p.blurb} <span class="font-semibold">Bible story: {p.passage}.</span></Fragment>
+  <Fragment slot="context">{p.blurb} <span class="font-semibold">Bible: {p.passage}.</span></Fragment>
+  {text?.kind === "verse" && (
+    <section class="print:hidden mt-8 max-w-3xl">
+      <h2 class="font-kids text-2xl font-bold text-primary">The verse</h2>
+      <blockquote class="mt-3 border-l-4 border-brand pl-4 text-lg">{text.text}</blockquote>
+      <p class="mt-2 text-sm text-muted-foreground">
+        {text.ref}, World English Bible (public domain){text.text.includes("LORD") && <>, with “the LORD” where the WEB has “Yahweh”</>}.
+        The letters on the page are outlines, so your child can color each word while you read it together.
+      </p>
+    </section>
+  )}
+  {text?.kind === "books" && (
+    <section class="print:hidden mt-8 max-w-3xl">
+      <h2 class="font-kids text-2xl font-bold text-primary">{text.heading}: {text.books.length} books</h2>
+      <p class="mt-3">{text.books.join(", ")}.</p>
+      <p class="mt-2 text-sm text-muted-foreground">
+        Each book is a tile on the page. Color one tile each time your child can say the books in order up to it.
+        All 66 books are on the <a href="/kids/bible-coloring-pages/books-of-the-bible/" class="font-semibold text-primary underline">books of the Bible coloring pages</a>.
+      </p>
+    </section>
+  )}
 </ColoringDetail>

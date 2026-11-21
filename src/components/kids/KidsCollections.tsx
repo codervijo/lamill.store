@@ -10,10 +10,15 @@ export function KidsCollections() {
           <h2 className="flex items-center gap-2 font-kids text-3xl font-bold text-primary"><c.icon className="h-7 w-7 shrink-0" aria-hidden="true" /> {c.title}</h2>
           <p className="mt-1 text-muted-foreground">{c.blurb}</p>
           <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {c.printables.map((p) => (
+            {(c.hub ? c.printables.slice(0, 3) : c.printables).map((p) => (
               <PrintableCard key={p.id} p={p} />
             ))}
           </div>
+          {c.hub && (
+            <p className="mt-4">
+              <a href={c.hub} className="font-semibold text-primary underline">See all {c.printables.length} {c.title.toLowerCase()} coloring pages</a>
+            </p>
+          )}
         </section>
       ))}
     </>

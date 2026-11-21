@@ -12,7 +12,9 @@ const url = `${site}/kids/bible-coloring-pages/`;
 const OT_BOOKS = ["Genesis", "Exodus", "Numbers", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "Esther", "Daniel", "Jonah"];
 const isOT = (p: Printable) => OT_BOOKS.some((b) => p.passage.startsWith(b + " "));
 const christmas = collections.find((c) => c.id === "christmas")?.printables ?? [];
-const rest = collections.filter((c) => c.id !== "christmas").flatMap((c) => c.printables);
+const rest = collections.find((c) => c.id === "bible")?.printables ?? [];
+// v1.E sub-hubs (verses, preschool, characters, books) get their own pages, linked below.
+const subsets = collections.filter((c) => c.hub);
 const sections = [
   { id: "old-testament", title: "Old Testament stories", intro: "From the first day of creation to Jonah’s three days inside the big fish.", pages: rest.filter(isOT) },
   { id: "christmas", title: "The Christmas story", intro: "Six pages that tell the nativity in order, from the angel’s visit to Mary to the wise men’s gifts. Color one a day in the week before Christmas.", pages: christmas },
@@ -103,6 +105,21 @@ const ld = [
       </nav>
     </header>
 
+    <section class="mt-10" aria-labelledby="sets">
+      <h2 id="sets" class="font-kids text-3xl font-bold text-primary">More ways to color the Bible</h2>
+      <ul class="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {subsets.map((c) => (
+          <li class="overflow-hidden rounded-3xl border-2 border-border bg-card hover:border-primary">
+            <a href={c.hub} class="block p-3">
+              <img src={c.printables[0].preview} alt={printableAlt(c.printables[0])} width={c.printables[0].width} height={c.printables[0].height} loading="lazy" class="mx-auto h-48 w-auto" />
+              <span class="mt-2 block font-kids text-lg font-semibold leading-tight text-primary">{c.title}</span>
+              <span class="block text-sm text-muted-foreground">{c.blurb}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
     {sections.map((s) => (
       <section id={s.id} class="mt-12 scroll-mt-20">
         <h2 class="font-kids text-3xl font-bold text-primary">{s.title}</h2>
@@ -149,7 +166,9 @@ const ld = [
         hands do best with a few big shapes and lots of open space. Start with
         {easy.map((p, i) => (<>{i > 0 && (i === easy.length - 1 ? ", and " : ", ")}<a href={coloringPagePath(p)} class="font-semibold text-primary underline">{p.title.replace(/ Coloring Page$/, "")}</a></>))}.
         Save the busier scenes, like {names(busy).join(", ")}, for when they can stay inside smaller spaces, or
-        color those together.
+        color those together. For two- to four-year-olds, the
+        <a href="/kids/bible-coloring-pages/preschool/" class="font-semibold text-primary underline">preschool Bible coloring pages</a>
+        have even thicker lines and fewer shapes.
       </p>
       <p class="mt-3">
         A short routine helps the story stick: read the passage printed on the page (or tell it in your own words),

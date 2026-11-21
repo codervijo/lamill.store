@@ -1,0 +1,158 @@
+{
+  "verse-john-3-16": {
+    "kind": "verse",
+    "art": "verse-john-3-16-art",
+    "slug": "john-3-16",
+    "ref": "John 3:16",
+    "text": "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life."
+  },
+  "verse-psalm-23-1": {
+    "kind": "verse",
+    "art": "verse-psalm-23-1-art",
+    "slug": "psalm-23",
+    "ref": "Psalm 23:1",
+    "text": "The LORD is my shepherd: I shall lack nothing."
+  },
+  "verse-galatians-5-22": {
+    "kind": "verse",
+    "art": "verse-galatians-5-22-art",
+    "slug": "fruit-of-the-spirit",
+    "ref": "Galatians 5:22–23",
+    "text": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control."
+  },
+  "verse-ephesians-6-11": {
+    "kind": "verse",
+    "art": "verse-ephesians-6-11-art",
+    "slug": "armor-of-god",
+    "ref": "Ephesians 6:11",
+    "text": "Put on the whole armor of God, that you may be able to stand against the wiles of the devil."
+  },
+  "verse-joshua-1-9": {
+    "kind": "verse",
+    "art": "verse-joshua-1-9-art",
+    "slug": "joshua-1-9",
+    "ref": "Joshua 1:9",
+    "text": "Be strong and courageous. Don’t be afraid. Don’t be dismayed, for the LORD your God is with you wherever you go."
+  },
+  "verse-matthew-19-14": {
+    "kind": "verse",
+    "art": "verse-matthew-19-14-art",
+    "slug": "let-the-children-come",
+    "ref": "Matthew 19:14",
+    "text": "Allow the little children, and don’t forbid them to come to me; for the Kingdom of Heaven belongs to ones like these."
+  },
+  "books-law": {
+    "kind": "books",
+    "art": "books-law-art",
+    "slug": "books-of-the-bible-law",
+    "heading": "The Law",
+    "books": [
+      "Genesis",
+      "Exodus",
+      "Leviticus",
+      "Numbers",
+      "Deuteronomy"
+    ]
+  },
+  "books-history": {
+    "kind": "books",
+    "art": "books-history-art",
+    "slug": "books-of-the-bible-history",
+    "heading": "History",
+    "books": [
+      "Joshua",
+      "Judges",
+      "Ruth",
+      "1 Samuel",
+      "2 Samuel",
+      "1 Kings",
+      "2 Kings",
+      "1 Chronicles",
+      "2 Chronicles",
+      "Ezra",
+      "Nehemiah",
+      "Esther"
+    ]
+  },
+  "books-poetry": {
+    "kind": "books",
+    "art": "books-poetry-art",
+    "slug": "books-of-the-bible-poetry",
+    "heading": "Poetry & Wisdom",
+    "books": [
+      "Job",
+      "Psalms",
+      "Proverbs",
+      "Ecclesiastes",
+      "Song of Solomon"
+    ]
+  },
+  "books-prophets": {
+    "kind": "books",
+    "art": "books-prophets-art",
+    "slug": "books-of-the-bible-prophets",
+    "heading": "The Prophets",
+    "books": [
+      "Isaiah",
+      "Jeremiah",
+      "Lamentations",
+      "Ezekiel",
+      "Daniel",
+      "Hosea",
+      "Joel",
+      "Amos",
+      "Obadiah",
+      "Jonah",
+      "Micah",
+      "Nahum",
+      "Habakkuk",
+      "Zephaniah",
+      "Haggai",
+      "Zechariah",
+      "Malachi"
+    ]
+  },
+  "books-gospels-acts": {
+    "kind": "books",
+    "art": "books-gospels-acts-art",
+    "slug": "books-of-the-bible-gospels-and-acts",
+    "heading": "Gospels & Acts",
+    "books": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John",
+      "Acts"
+    ]
+  },
+  "books-letters-revelation": {
+    "kind": "books",
+    "art": "books-letters-revelation-art",
+    "slug": "books-of-the-bible-letters-and-revelation",
+    "heading": "Letters & Revelation",
+    "books": [
+      "Romans",
+      "1 Corinthians",
+      "2 Corinthians",
+      "Galatians",
+      "Ephesians",
+      "Philippians",
+      "Colossians",
+      "1 Thessalonians",
+      "2 Thessalonians",
+      "1 Timothy",
+      "2 Timothy",
+      "Titus",
+      "Philemon",
+      "Hebrews",
+      "James",
+      "1 Peter",
+      "2 Peter",
+      "1 John",
+      "2 John",
+      "3 John",
+      "Jude",
+      "Revelation"
+    ]
+  }
+}
