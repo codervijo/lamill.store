@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/ballerina-at-the-barre/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-ballerina-at-the-barre.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/ballet-class/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-ballet-class.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/ballet-recital/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-ballet-recital.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/ballet-shoes/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-ballet-shoes.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/boy-ballet-dancer/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-boy-ballet-dancer.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/bunny-ballerina/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-bunny-ballerina.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/ballerina-coloring-pages/little-ballerina/</loc>
+    <image:image><image:loc>https://lamill.store/printables/ballet-little-ballerina.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://lamill.store/kids/bible-coloring-pages/abraham-and-the-stars/</loc>
     <image:image><image:loc>https://lamill.store/printables/abraham-counting-stars.webp</image:loc></image:image>
   </url>
@@ -217,6 +245,34 @@
     <image:image><image:loc>https://lamill.store/printables/dragon-dragon-with-flowers.webp</image:loc></image:image>
   </url>
   <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/butterfly-and-flowers/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-butterfly-and-flowers.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/daisy/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-daisy.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/flower-bouquet/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-flower-bouquet.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/flower-garden/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-flower-garden.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/rose/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-rose.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/sunflower/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-sunflower.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/flower-coloring-pages/tulips/</loc>
+    <image:image><image:loc>https://lamill.store/printables/flower-tulips.webp</image:loc></image:image>
+  </url>
+  <url>
     <loc>https://lamill.store/kids/monster-truck-coloring-pages/big-wheels-truck/</loc>
     <image:image><image:loc>https://lamill.store/printables/monster-truck-big-wheels-truck.webp</image:loc></image:image>
   </url>
@@ -243,6 +299,62 @@
   <url>
     <loc>https://lamill.store/kids/monster-truck-coloring-pages/truck-over-cars/</loc>
     <image:image><image:loc>https://lamill.store/printables/monster-truck-truck-over-cars.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/drum/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-drum.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/guitar/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-guitar.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/instrument-collection/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-instrument-collection.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/kids-band/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-kids-band.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/music-notes/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-music-notes.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/piano/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-piano.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/musical-instrument-coloring-pages/violin/</loc>
+    <image:image><image:loc>https://lamill.store/printables/music-violin.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/little-princess/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-little-princess.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/princess-and-dragon/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-princess-and-dragon.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/princess-castle/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-princess-castle.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/princess-crown/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-princess-crown.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/princess-tea-party/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-princess-tea-party.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/royal-garden/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-royal-garden.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://lamill.store/kids/princess-coloring-pages/unicorn-princess/</loc>
+    <image:image><image:loc>https://lamill.store/printables/princess-unicorn-princess.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://lamill.store/kids/thanksgiving-coloring-pages/cornucopia/</loc>

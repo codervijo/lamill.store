@@ -290,3 +290,26 @@ also appear in v6.D, which was left unchanged (operator 2026-11-21).
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-21 — v2.E: princess, musical instrument, ballerina, flower hubs
+
+**Status:** active · **Review:** 2026-12-19 (28 d after deploy)
+
+**Hypothesis:** the four v2.D hubs earn impressions first on their long tail
+(named flowers, guitar/piano/violin, unicorn princess and princess castle, boy and
+curly-hair ballerina pages), not the head terms. The ballerina hub moves first,
+because the v2.D top 10 left its related searches unanswered.
+
+**KPI:** GSC impressions + clicks per hub and per design URL; image impressions;
+`print-all` and `pdf` downloads per hub in `/api/stats`.
+
+**Baseline (2026-11-21):** 0 impressions / 0 clicks (URLs new). Evidence and target
+volumes are in the 2026-11-21 v2.D entry.
+
+**What shipped:** 28 imagemill designs ($0.31), 7 per hub sorted easy → detailed;
+28 PDFs + 4 print-all PDFs; hub + detail pages with the same schema as v2.B; links
+from `/kids/` and the homepage. The sitewide descriptions now list the new themes.
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*

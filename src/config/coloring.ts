@@ -271,6 +271,158 @@ export const themeCollections: ThemeCollection[] = [
       { slug: "stadium-wheelie", stem: "monster-truck-stadium-wheelie", title: "Stadium Wheelie", level: "detailed", alt: "Monster truck doing a wheelie in a stadium full of fans" },
     ],
   },
+  {
+    id: "princess",
+    hub: "princess-coloring-pages",
+    keyword: "princess coloring pages",
+    h1: "Princess Coloring Pages",
+    metaTitle: "Princess Coloring Pages for Kids — Free Printable PDFs",
+    description: "Free princess coloring pages with original princesses: a castle balcony, a unicorn ride, a friendly dragon and a garden tea party. Easy to detailed.",
+    nav: "Princesses",
+    intro:
+      "Seven free princess coloring pages with our own princesses, sorted from easy to detailed. The smiling little princess and the jeweled crown are big, simple shapes for preschoolers; the castle, the unicorn ride and the princess reading to a friendly dragon suit five- to eight-year-olds; the garden tea party and the royal garden are full scenes for older kids. Every page prints on one US Letter sheet, and the whole set is one PDF.",
+    sections: [
+      {
+        heading: "A princess for every age",
+        body:
+          "Small children do best with one big figure and wide spaces, which is why the first two pages are a single princess and a single crown. The middle pages add a setting: towers and a drawbridge, a meadow with a unicorn, a rock where the princess reads to a dragon. The last two are busy scenes, a tea table set with cakes and teacups for a teddy bear, a bunny and a kitten, and a garden path past a fountain and rose bushes to the castle.",
+      },
+      {
+        heading: "Not a movie princess",
+        body:
+          "These princesses are drawn for this site and don’t copy any film or toy character, so your child decides her hair, her dress and her colors. That makes them a good match for a dress-up afternoon: color the princess to look like your child’s own costume, then color the crown to match.",
+      },
+    ],
+    faq: [
+      { q: "Are these princess coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account or email." },
+      { q: "Are these Disney princesses?", a: "No. They are original princesses drawn for LaMill Store, so they can be printed and shared freely." },
+      { q: "Which page is best for a three-year-old?", a: "The little princess holding a flower, or the crown on its cushion: each is one large shape with thick lines." },
+    ],
+    related: ["ballerina", "dragon"],
+    designs: [
+      { slug: "little-princess", stem: "princess-little-princess", title: "Little Princess", level: "easy", alt: "Smiling little princess in a crown, holding a flower" },
+      { slug: "princess-crown", stem: "princess-princess-crown", title: "Princess Crown", level: "easy", alt: "Big jeweled crown on a cushion with tassels" },
+      { slug: "princess-castle", stem: "princess-princess-castle", title: "Princess Castle", level: "medium", alt: "Princess waving from a castle balcony with towers, flags and a drawbridge" },
+      { slug: "unicorn-princess", stem: "princess-unicorn-princess", title: "Unicorn Princess", level: "medium", alt: "Princess in a flower crown riding a unicorn through a meadow" },
+      { slug: "princess-and-dragon", stem: "princess-princess-and-dragon", title: "Princess and the Friendly Dragon", level: "medium", alt: "Princess reading a book to a small friendly dragon" },
+      { slug: "princess-tea-party", stem: "princess-princess-tea-party", title: "Princess Tea Party", level: "detailed", alt: "Princess at a garden tea party with a teddy bear, a bunny and a kitten" },
+      { slug: "royal-garden", stem: "princess-royal-garden", title: "Princess in the Royal Garden", level: "detailed", alt: "Princess in a royal garden with a fountain, rose bushes and a castle" },
+    ],
+  },
+  {
+    id: "music",
+    hub: "musical-instrument-coloring-pages",
+    keyword: "musical instruments coloring pages",
+    h1: "Music and Musical Instrument Coloring Pages",
+    metaTitle: "Musical Instrument Coloring Pages — Free Printable PDFs",
+    description: "Free music coloring pages for kids: a guitar, a drum, a violin, a piano, dancing music notes, a kids’ band and a room full of instruments.",
+    nav: "Music & Instruments",
+    intro:
+      "Seven free music coloring pages, from a single guitar to a room full of instruments. Preschoolers start with the big acoustic guitar or the drum; school-age kids get the violin on its music stand, a child at the piano and a line of dancing music notes; older kids can color a four-piece kids’ band on stage or name every instrument in the music room. Each page prints on one US Letter sheet, or download the whole set as one PDF.",
+    sections: [
+      {
+        heading: "Learn the instruments while you color",
+        body:
+          "The instrument room is a quiet quiz: there is a piano, a guitar, a violin, a trumpet, a flute, a xylophone, a tambourine and a drum set. Ask your child to point to the one you name, then which ones you blow, strum, hit or play with a bow. The band page shows four of them being played, so children can see how each one is held.",
+      },
+      {
+        heading: "For music lessons and classrooms",
+        body:
+          "Pages like these work for the first minutes of a music lesson or as a quiet activity after a concert. A child who has just started violin or piano lessons usually wants to color their own instrument first, and the notes page is a gentle way to talk about notes and the treble clef without any reading.",
+      },
+    ],
+    faq: [
+      { q: "Are these music coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account or email." },
+      { q: "Which instruments are included?", a: "Guitar, drum, violin, piano and music notes on their own pages; the band page adds a trumpet, and the instrument room adds a flute, a xylophone, a tambourine and a drum set." },
+      { q: "Is there an electric guitar?", a: "Not yet; the guitar page is an acoustic guitar, and the band page shows a guitar being played on stage." },
+    ],
+    related: ["ballerina", "princess"],
+    designs: [
+      { slug: "guitar", stem: "music-guitar", title: "Guitar", level: "easy", alt: "Big acoustic guitar standing upright" },
+      { slug: "drum", stem: "music-drum", title: "Drum", level: "easy", alt: "Big round drum with two drumsticks" },
+      { slug: "violin", stem: "music-violin", title: "Violin", level: "medium", alt: "Violin and bow on a music stand, with music notes floating around" },
+      { slug: "piano", stem: "music-piano", title: "Piano", level: "medium", alt: "Child playing an upright piano with music notes floating above" },
+      { slug: "music-notes", stem: "music-music-notes", title: "Music Notes", level: "medium", alt: "Big music notes and a treble clef dancing along a wavy music staff" },
+      { slug: "kids-band", stem: "music-kids-band", title: "Kids’ Band", level: "detailed", alt: "Four kids playing guitar, drums, trumpet and violin on a stage" },
+      { slug: "instrument-collection", stem: "music-instrument-collection", title: "Music Room", level: "detailed", alt: "Room of instruments: a piano, guitar, violin, trumpet, flute, xylophone, tambourine and drum set" },
+    ],
+  },
+  {
+    id: "ballerina",
+    hub: "ballerina-coloring-pages",
+    keyword: "ballerina coloring pages",
+    h1: "Ballerina and Ballet Coloring Pages",
+    metaTitle: "Ballerina Coloring Pages — Free Ballet Printables for Kids",
+    description: "Free ballerina and ballet coloring pages: a twirling little ballerina, pointe shoes, a boy dancer leaping, a bunny ballerina, a recital and a ballet class.",
+    nav: "Ballet",
+    intro:
+      "Seven free ballet coloring pages, from a little ballerina twirling in her tutu to a whole ballet class at the barre. The ballerina and the pointe shoes are big, simple shapes for preschoolers; the boy dancer mid-leap, the ballerina with curly puffs at the barre and the bunny ballerina suit five- to eight-year-olds; the recital stage and the ballet class are full scenes for older dancers. Every page is one US Letter sheet, and the set comes as one PDF.",
+    sections: [
+      {
+        heading: "Dancers who look like your dancer",
+        body:
+          "Ballet classes are full of different children, so these pages are too. There is a boy dancer leaping across the floor, a ballerina with her curly hair in two puffs, and a class of five children who don’t all look alike. Coloring a dancer who looks like them, or like a friend from class, is often what makes a child pick a page first.",
+      },
+      {
+        heading: "Before and after dance class",
+        body:
+          "Pages like these fill the wait before a lesson or the evening after a recital. The pointe shoes page is a good one for talking about the shoes older dancers wear, and the recital page, with its curtains and bouquets, is a nice keepsake to color after a first performance.",
+      },
+    ],
+    faq: [
+      { q: "Are these ballerina coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account or email." },
+      { q: "Is there a boy ballet dancer?", a: "Yes. One page shows a boy dancer leaping, and the ballet class page includes a boy at the barre." },
+      { q: "Which page suits a preschooler?", a: "The little ballerina twirling, or the pair of pointe shoes with ribbons: both have a few large shapes and thick lines." },
+    ],
+    related: ["princess", "music"],
+    designs: [
+      { slug: "little-ballerina", stem: "ballet-little-ballerina", title: "Little Ballerina", level: "easy", alt: "Little ballerina twirling on her toes in a puffy tutu" },
+      { slug: "ballet-shoes", stem: "ballet-ballet-shoes", title: "Ballet Shoes", level: "easy", alt: "Pair of pointe shoes with long ribbons tied in a bow" },
+      { slug: "boy-ballet-dancer", stem: "ballet-boy-ballet-dancer", title: "Boy Ballet Dancer", level: "medium", alt: "Boy ballet dancer leaping with his arms stretched out" },
+      { slug: "ballerina-at-the-barre", stem: "ballet-ballerina-at-the-barre", title: "Ballerina at the Barre", level: "medium", alt: "Ballerina with curly hair in two puffs practicing at the barre" },
+      { slug: "bunny-ballerina", stem: "ballet-bunny-ballerina", title: "Bunny Ballerina", level: "medium", alt: "Bunny ballerina in a tutu posing on a little stage with flowers" },
+      { slug: "ballet-recital", stem: "ballet-ballet-recital", title: "Ballet Recital", level: "detailed", alt: "Two young dancers performing on a theater stage with curtains and bouquets" },
+      { slug: "ballet-class", stem: "ballet-ballet-class", title: "Ballet Class", level: "detailed", alt: "Ballet class with a teacher and five children posing at the barre, a mirror and a piano" },
+    ],
+  },
+  {
+    id: "flower",
+    hub: "flower-coloring-pages",
+    keyword: "flower coloring pages",
+    h1: "Flower Coloring Pages for Kids",
+    metaTitle: "Flower Coloring Pages for Kids — Sunflower, Rose & More",
+    description: "Free flower coloring pages for kids: a sunflower, a daisy, tulips in a pot, a rose, a butterfly on flowers, a garden and a bouquet. Easy to detailed.",
+    nav: "Flowers",
+    intro:
+      "Seven free flower coloring pages for kids, each a flower you can name: a sunflower and a daisy with big, easy petals; tulips in a pot, a single rose and a butterfly landing on flowers for school-age kids; and a whole garden and a bouquet in a patterned vase for older children. Every page prints on one US Letter sheet, or download all seven in one PDF.",
+    sections: [
+      {
+        heading: "Easy flowers first",
+        body:
+          "Flowers are one of the best first coloring pages because every petal is its own closed space. The sunflower and the daisy have big petals around a round middle, so a toddler can color petal by petal. The rose is the trickiest of the single flowers: its petals overlap, which is good practice for children who are starting to stay inside smaller shapes.",
+      },
+      {
+        heading: "Real flowers to compare",
+        body:
+          "Children enjoy coloring a flower they can find outside. Sunflowers are yellow with a dark middle, daisies are white with a yellow center, and tulips and roses grow in many colors, so there is no wrong answer. The garden page has all four together, plus a watering can, a bee and a butterfly to color.",
+      },
+    ],
+    faq: [
+      { q: "Are these flower coloring pages free?", a: "Yes. Every page and the full-set PDF download directly, with no account or email." },
+      { q: "Which flowers are included?", a: "A sunflower, a daisy, tulips, a rose, mixed flowers with a butterfly, a garden with all of them, and a bouquet with roses, tulips, daisies and lilies." },
+      { q: "Are these for kids or adults?", a: "They are drawn for children, sorted from easy to detailed. The bouquet and the garden are detailed enough for older kids and grown-ups who want a calmer page." },
+    ],
+    related: ["ballerina", "princess"],
+    designs: [
+      { slug: "sunflower", stem: "flower-sunflower", title: "Sunflower", level: "easy", alt: "One big sunflower with large petals and two leaves" },
+      { slug: "daisy", stem: "flower-daisy", title: "Daisy", level: "easy", alt: "One big daisy with wide petals, a short stem and two leaves" },
+      { slug: "tulips", stem: "flower-tulips", title: "Tulips", level: "medium", alt: "Three tulips in a clay flower pot" },
+      { slug: "rose", stem: "flower-rose", title: "Rose", level: "medium", alt: "Single blooming rose with layered petals and leaves on a long stem" },
+      { slug: "butterfly-and-flowers", stem: "flower-butterfly-and-flowers", title: "Butterfly and Flowers", level: "medium", alt: "Butterfly with patterned wings landing on a cluster of flowers" },
+      { slug: "flower-garden", stem: "flower-flower-garden", title: "Flower Garden", level: "detailed", alt: "Flower garden with sunflowers, tulips, daisies and roses, a watering can, a bee and a butterfly" },
+      { slug: "flower-bouquet", stem: "flower-flower-bouquet", title: "Flower Bouquet", level: "detailed", alt: "Bouquet of roses, tulips, daisies and lilies in a patterned vase" },
+    ],
+  },
 ];
 
 export const hubPath = (c: ThemeCollection) => `/kids/${c.hub}/`;
