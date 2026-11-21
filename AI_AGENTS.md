@@ -38,6 +38,8 @@ per-stack work to the central builder at `~/work/projects/builder/`.
 - `Makefile` — thin forwarder to `../Makefile`
 - `wrangler.jsonc` — Cloudflare deploy config
 - `scripts/` *(if present)* — ingester or build-time helpers
+- `functions/` — Cloudflare Pages Functions (download + print counter); shared logic in `src/server/events.ts`
+- `migrations/` — D1 schema for the counter
 
 ## Building info
 
@@ -91,6 +93,36 @@ docker exec -w /usr/src/app <name> make test proj=lamill.store
 - **Live URL:** https://lamill.store/  *(update once first deploy succeeds)*
 - **Canonical host:** the **apex** (`https://lamill.store/`) is the ONLY canonical host fleet-wide — `www` and `http` must 308→apex, and there is no `www`-canonical option. Set Astro's `site: "https://lamill.store"` (apex, never `www`) so every `<link rel="canonical">` and the generated sitemap `<loc>` URLs use the apex. Enforced by CHECK_150 (redirect) + CHECK_158 (canonical tags) + CHECK_159 (sitemap) + CHECK_160 (GSC-registered sitemap).
 - **Legacy:** if a `vercel.json` or `.vercelignore` is present from a Lovable export, it's inert on Cloudflare and safe to delete.
+
+### Download + print counter
+
+The site runs as a **Cloudflare Pages** project (`lamill-store`, built from git).
+`portfolio project hosting lamill.store` confirms this; the Workers-style
+`wrangler.jsonc` is ignored by Pages builds. The counter shipped in v1.F and
+uses Pages Functions with D1:
+
+- `functions/printables/_middleware.ts` counts every PDF download
+  server-side. That covers a single design (`pdf`), a whole set (`print-all`),
+  and direct hits from off-site (source `direct`). Images pass straight through.
+- `functions/api/event.ts` receives `POST /api/event` pings. The detail-page
+  Print button and Ctrl/Cmd+P send them through the `beforeprint` event. The
+  v2.C share button will send `action: "share"`.
+- `functions/api/stats.ts` serves `GET /api/stats?key=<STATS_TOKEN>&days=28`,
+  the operator's totals view. It returns 404 without the key.
+- **Privacy:** no cookies. D1 stores only day × page × collection × action ×
+  source counts. IP addresses are held in memory for rate limiting
+  (30 events/min per IP, per isolate) and never written. Bots and link
+  previews are skipped by user agent. For a PDF, only the first byte range
+  counts.
+- **Binding:** D1 database `lamill-store-events`, bound as `DB` in the Pages
+  project settings. Schema: `migrations/0001_daily_counts.sql`. Without the
+  binding, every function is a no-op: pages and PDFs still serve, nothing is
+  counted.
+- **Cost:** every `/printables/*` request now invokes a Function, images
+  included. The Pages Functions free plan allows 100k requests/day.
+- **Local test:** inside the container, run `npx wrangler@4 pages dev` with a
+  scratch `wrangler.jsonc` that declares the D1 binding. Run it from a temp
+  dir, not the repo.
 
 ## Content strategy
 

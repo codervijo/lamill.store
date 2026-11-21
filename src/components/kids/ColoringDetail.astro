@@ -82,6 +82,14 @@ const lds = (p.ld ?? []).filter(Boolean);
 </SiteLayout>
 
 <script>
+  // v1.F: count prints — the Print button and Ctrl/Cmd+P both fire beforeprint.
+  // No cookies, no personal data: page, action and utm_source only.
+  const countPrint = () => {
+    const source = new URLSearchParams(location.search).get("utm_source") ?? "";
+    const body = JSON.stringify({ action: "print", page: location.pathname, source });
+    try { navigator.sendBeacon?.("/api/event", body); } catch { /* counting must never block printing */ }
+  };
+  window.addEventListener("beforeprint", countPrint);
   // One tap → the device's own print dialog (a web page can't reach printers
   // directly). Wait for the picture so the dialog never previews a blank page.
   for (const btn of document.querySelectorAll<HTMLButtonElement>("[data-print]")) {
