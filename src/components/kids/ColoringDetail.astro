@@ -59,6 +59,7 @@ const lds = (p.ld ?? []).filter(Boolean);
 
     <figure class="print-sheet mt-8 rounded-3xl border-2 border-border bg-white p-4">
       <img src={p.preview} alt={p.alt} width={p.width} height={p.height} class="mx-auto h-auto w-full max-w-2xl" />
+      <figcaption class="print-footer">More free coloring pages at lamill.store</figcaption>
     </figure>
 
     <slot />
@@ -106,16 +107,20 @@ const lds = (p.ld ?? []).filter(Boolean);
      on Letter or A4. margin: 0 drops the browser's own header/footer (URL,
      date); the sheet's padding is the real margin. Only detail pages load it. */
   @page { size: portrait; margin: 0; }
+  /* v1.H: site line under the picture — printed sheet only, like the PDF footer. */
+  .print-footer { display: none; }
   @media print {
     html, body { background: #fff !important; margin: 0 !important; }
     .min-h-screen { min-height: 0 !important; }
     main, main > .kids { margin: 0 !important; padding: 0 !important; max-width: none !important; }
     .print-sheet {
-      display: flex; align-items: center; justify-content: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
       margin: 0 !important; padding: 0.4in !important; border: 0 !important; border-radius: 0 !important;
       break-inside: avoid; page-break-inside: avoid;
     }
-    /* 7.4 x 9.9 in fits inside both Letter (8.5x11) and A4 (8.27x11.69) minus 0.4 in margins. */
-    .print-sheet img { width: auto !important; height: auto !important; max-width: 7.4in !important; max-height: 9.9in !important; }
+    /* 7.4 x 9.6 in + the 0.3 in footer fits inside both Letter (8.5x11) and A4
+       (8.27x11.69) minus 0.4 in margins. */
+    .print-sheet img { width: auto !important; height: auto !important; max-width: 7.4in !important; max-height: 9.6in !important; }
+    .print-footer { display: block; margin-top: 0.12in; font: 9pt/1 system-ui, sans-serif; color: #000; }
   }
 </style>
