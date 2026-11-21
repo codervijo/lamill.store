@@ -265,3 +265,28 @@ Baloo 2). Verses use the WEB with "the LORD" for "Yahweh". Also: 24 detail pages
 
 **Result:** *(fill on review day)*
 **Learning:** *(fill on review day)*
+
+
+## 2026-11-21 — v2.D validation: princesses, musical instruments, ballet, flowers
+
+**Status:** active (evidence for v2.E) · **Review:** with the v2.E hubs, 28 d after deploy
+
+**Data:** Google Ads US monthly volume via DataForSEO; DataForSEO Labs KD; live US top
+10 via treg (2026-11-21); total ≈ $0.11. DataForSEO KD came back 0–5 for every term,
+including 40K+ head terms, so it does not separate these themes. The decision rests on
+the top 10, not on KD.
+
+| Hub (final URL) | Target | US / mo | Long tail inside | Live US top 10 | Gap we can beat | Verdict |
+|---|---|---|---|---|---|---|
+| `/kids/princess-coloring-pages/` | princess coloring pages | 40,500 (printable 5,400) | castle 590, unicorn princess 390 | Crayola Disney #1, Disney PDF #3, littlecolorables (Disney names), mondaymandala 500 pages, yaycoloringpages, Pinterest, Etsy | intent is largely Disney, which we can't serve; original-princess results do rank (mondaymandala, yay). No age-sorted kids' set. Realistic target is the long tail (castle, unicorn princess, princess and dragon), not the head term at DR 0 | keep, long-tail focus |
+| `/kids/musical-instrument-coloring-pages/` | music coloring pages / musical instruments coloring pages | 2,400 / 880 | guitar 1,600, music notes 880, piano 590, violin 480, drum 390, electric guitar 320, trumpet 210 | Crayola music & dance, Pinterest, mondaymandala 49, preschoolplayandlearn 47 instruments, thecolor (online), a paid 151-page bundle, first-school, Crate & Barrel, Etsy | kids' set sorted by age with one instrument per page plus a band scene. "Guitar coloring page" has its own dedicated collections (mondaymandala 30, colorconfetti 30, iheartcraftythings 50), so a separate guitar hub would be justified later. One hub per operator 2026-11-21 | keep |
+| `/kids/ballerina-coloring-pages/` | ballerina / ballet coloring pages (one cluster) | 6,600 | dance 1,600, ballet shoes 170 | homemade-gifts, mondaymandala 37, Pinterest, coloring.ws (cute), Vecteezy stock, thecolor (online), YouTube | Google's related searches show unmet asks: "black ballerina", "boy ballerina", "easy ballerina". Set includes a boy dancer and dancers with different hair and features, sorted easy to detailed | keep — strongest gap |
+| `/kids/flower-coloring-pages/` | flower coloring pages | 60,500 (seasonal peak 90,500 Apr–May) | rose 3,600, sunflower 1,900, tulip 1,900 (spring), daisy 1,300, easy flower 1,000 | Crayola adult flowers #1, abcmouse 200+, mondaymandala 66, Pinterest ×2, Crayola plants, Adobe Stock, homemade-gifts 100+ | head term held by big sites. Named-flower detail pages (rose, sunflower, tulip, daisy) are the realistic entry. Live by spring 2027 for the peak | keep, named-flower focus |
+
+URL choice: "ballerina coloring page(s)" and "ballet coloring pages" share one cluster
+volume (6,600). Ballerina is the phrasing people type and matches the top results, so
+the hub is `/kids/ballerina-coloring-pages/` (PRD candidate was `ballet`). Flowers
+also appear in v6.D, which was left unchanged (operator 2026-11-21).
+
+**Result:** *(fill on review day)*
+**Learning:** *(fill on review day)*
